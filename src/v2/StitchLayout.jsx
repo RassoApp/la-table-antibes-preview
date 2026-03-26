@@ -6,6 +6,7 @@ import { buildLocalizedPath } from '../utils/paths';
 const languageFlags = {
   fr: '🇫🇷',
   en: '🇬🇧',
+  it: '🇮🇹',
 };
 
 function LanguageSwitcher({ basePath, lang, locale, isOpen, onToggle, onClose }) {

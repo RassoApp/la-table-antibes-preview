@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="italy" width="512" height="512" version="1.1">
+  <defs id="defs4410">
+    <clipPath id="clipPath3146" clipPathUnits="userSpaceOnUse">
+      <path id="path3148" d="m -479.99183,20.215956 a 156.8,156.8 0 1 1 -0.008,1.602218" style="fill:#579bd3;fill-opacity:1;stroke:none" transform="matrix(1.49937 0 0 1.49937 740.133 -223.272)"></path>
+    </clipPath>
+  </defs>
+  <g id="layer1" transform="translate(0 448)">
+    <path id="rect3220" d="M 176 29.996094 A 240 240 0 0 0 16 256 A 240 240 0 0 0 176 481.96875 L 176 29.996094 z " style="fill:#27ae60;fill-opacity:1;stroke:none" transform="translate(0 -448)"></path>
+    <path id="rect3990" d="M 256 16 A 240 240 0 0 0 176 29.996094 L 176 481.96875 A 240 240 0 0 0 256 496 A 240 240 0 0 0 336 482.00391 L 336 30.03125 A 240 240 0 0 0 256 16 z " style="fill:#fff;fill-opacity:1;stroke:none" transform="translate(0 -448)"></path>
+    <path id="rect3992" d="M 336 30.03125 L 336 482.00391 A 240 240 0 0 0 496 256 A 240 240 0 0 0 336 30.03125 z " style="fill:#c0392b;fill-opacity:1;stroke:none" transform="translate(0 -448)"></path>
+  </g>
+</svg>

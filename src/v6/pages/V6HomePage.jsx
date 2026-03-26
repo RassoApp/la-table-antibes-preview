@@ -36,6 +36,17 @@ export function V6HomePage() {
               <CutleryIcon />
               {locale.actions.menu}
             </Link>
+            <div>
+              <a
+                className="v3-button v3-button--secondary v6-hero-directions-button"
+                href={locale.contactLinks.directionsHref}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <PinIcon />
+                {locale.actions.directions}
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -46,10 +57,12 @@ export function V6HomePage() {
             <span className="v3-kicker">{home.cuisine.eyebrow}</span>
             <h2>{home.cuisine.title}</h2>
             <p>{home.cuisine.text}</p>
-            <Link className="v3-button v3-button--primary" to={buildLocalizedPath('menu')}>
-              <CutleryIcon />
-              {locale.actions.menu}
-            </Link>
+            <div>
+              <Link className="v3-button v3-button--primary" to={buildLocalizedPath('menu')}>
+                <CutleryIcon />
+                {locale.actions.menu}
+              </Link>
+            </div>
           </div>
 
           <div className="v5-cuisine__grid">
@@ -94,7 +107,7 @@ export function V6HomePage() {
                 <span className="v3-kicker">Événements & groupes</span>
                 <h2>Privatisez pour vos événements !</h2>
                 <p>
-                  La Table d&apos;Antibes peut accueillir vos groupes en salle ou en terrasse pour un
+                  La Table Antibes peut accueillir vos groupes en salle ou en terrasse pour un
                   événement privé ou professionnel dans le Vieil Antibes, dans un cadre pensé pour
                   les moments à partager.
                 </p>
@@ -109,7 +122,7 @@ export function V6HomePage() {
                 <span className="v3-kicker">Events & groups</span>
                 <h2>Host your events with us</h2>
                 <p>
-                  La Table d&apos;Antibes can host private or professional groups indoors or on its
+                  La Table Antibes can host private or professional groups indoors or on its
                   terrace in the heart of Vieil Antibes, in a setting designed for shared moments.
                 </p>
                 <div className="v6-events__tags" aria-label="Event types">

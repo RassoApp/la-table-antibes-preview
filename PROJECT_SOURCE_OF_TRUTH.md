@@ -1,4 +1,4 @@
-# La Table D'Antibes Website
+# La Table Antibes Website
 
 Status: Planning  
 Version: 0.3  
@@ -11,7 +11,7 @@ It tracks what has already been agreed, what is still open, and what we are deli
 
 ## Project Goal
 
-Build a modern, sleek, responsive restaurant website for La Table D'Antibes.
+Build a modern, sleek, responsive restaurant website for La Table Antibes.
 
 The site should:
 

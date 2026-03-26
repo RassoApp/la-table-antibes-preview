@@ -89,6 +89,10 @@
   background: rgba(153, 65, 39, 0.08);
 }
 
+.v6-shell .v6-hero-directions-button {
+  display: none;
+}
+
 .v6-shell .v6-reserve {
   position: relative;
   display: inline-flex;
@@ -728,6 +732,10 @@
 }
 
 @media (min-width: 960px) {
+  .v6-shell .v6-hero-directions-button {
+    display: inline-flex;
+  }
+
   .v6-shell .v6-menu-chip-row a:hover,
   .v6-shell .v6-menu-chip-row a:focus-visible {
     transform: translateY(-2px);

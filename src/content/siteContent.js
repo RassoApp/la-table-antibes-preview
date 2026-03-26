@@ -1,4 +1,4 @@
-export const supportedLanguages = ['fr', 'en'];
+export const supportedLanguages = ['fr', 'en', 'it'];
 
 export const navItems = [
   { slug: '', key: 'home' },
@@ -24,9 +24,10 @@ export const siteContent = {
     alternateLanguages: {
       fr: 'Français',
       en: 'English',
+      it: 'Italiano',
     },
     brand: {
-      name: "La Table D'Antibes",
+      name: 'La Table Antibes',
       district: 'Vieil Antibes',
       microTag: 'Grande terrasse • Four à bois • Du déjeuner au soir',
     },
@@ -304,7 +305,7 @@ export const siteContent = {
     footer: {
       summary:
         "Prototype bilingue prêt à être remplacé ensuite par les textes, visuels et informations définitives du restaurant.",
-      copyright: "Prototype local • La Table D'Antibes",
+      copyright: 'Prototype local • La Table Antibes',
     },
     quickActions: [
       { label: 'Appeler', href: commonContact.phoneHref },
@@ -320,9 +321,10 @@ export const siteContent = {
     alternateLanguages: {
       fr: 'Français',
       en: 'English',
+      it: 'Italiano',
     },
     brand: {
-      name: "La Table D'Antibes",
+      name: 'La Table Antibes',
       district: 'Vieil Antibes',
       microTag: 'Large terrace • Wood oven • Lunch to late evening',
     },
@@ -600,7 +602,7 @@ export const siteContent = {
     footer: {
       summary:
         'Bilingual local prototype ready to be replaced later with the restaurant’s final copy, visuals, and business information.',
-      copyright: "Local prototype • La Table D'Antibes",
+      copyright: 'Local prototype • La Table Antibes',
     },
     quickActions: [
       { label: 'Call', href: commonContact.phoneHref },
@@ -610,4 +612,302 @@ export const siteContent = {
     ],
     contactLinks: commonContact,
   },
+};
+
+siteContent.it = {
+  localeName: 'Italiano',
+  shortCode: 'IT',
+  alternateLanguages: {
+    fr: 'Français',
+    en: 'English',
+    it: 'Italiano',
+  },
+  brand: {
+    name: 'La Table Antibes',
+    district: 'Vieil Antibes',
+    microTag: 'Grande terrazza • Forno a legna • Dal pranzo alla sera',
+  },
+  navLabels: {
+    home: 'Home',
+    menu: 'Menu',
+    gallery: 'Galleria',
+    about: 'Chi siamo',
+    contact: 'Contatti',
+  },
+  uiLabels: {
+    languageSwitcher: 'Selettore della lingua',
+    toggleMenu: 'Apri il menu',
+    toggleReserveMenu: 'Apri le opzioni di prenotazione',
+    reserveMenuLabel: 'Opzioni di prenotazione',
+    toggleSocialMenu: 'Apri i link social',
+    socialMenuLabel: 'Link social',
+    reserveMenuPhone: 'Telefono',
+    reserveMenuWhatsapp: 'WhatsApp',
+    aboutDetailsEyebrow: 'Dettagli',
+    aboutDetailsTitle: 'Riferimenti di materiali e spazi da sviluppare poi nel contenuto finale.',
+  },
+  actions: {
+    contact: 'Contattare',
+    reserve: 'Prenotare',
+    menu: 'Vedi il menu',
+    directions: 'Itinerario',
+    social: 'Social',
+    call: 'Chiamare',
+    whatsapp: 'WhatsApp',
+    email: 'Email',
+    gallery: 'Scopri la galleria',
+    about: 'Scopri il locale',
+    legal: 'Note legali',
+    jumpToCategory: 'Vai alla categoria',
+  },
+  hero: {
+    eyebrow: 'Bistrot luminoso nel cuore del Vieil Antibes',
+    title: 'Un indirizzo di terrazza, materiali autentici e cucina generosa.',
+    text:
+      'Prototipo di presentazione per un grande ristorante vivo, pensato per il pranzo, la sera e i bicchieri che si allungano in terrazza.',
+    primaryLabel: 'Contatta il ristorante',
+    secondaryLabel: 'Vedi il menu',
+    imageLabel: 'Terrazza hero',
+  },
+  infoStrip: [
+    { label: 'Indirizzo', value: 'Indirizzo finale da confermare' },
+    { label: 'Orari', value: 'Servizio pranzo e cena' },
+    { label: 'Telefono', value: '+33 0 00 00 00 00' },
+    { label: 'Atmosfera', value: 'Terrazza, bar, forno a legna' },
+  ],
+  home: {
+    intro: {
+      eyebrow: 'Lo spirito del luogo',
+      title: 'Un ristorante pensato per convincere subito e far venire voglia di restare.',
+      text:
+        'La struttura mette subito in risalto la terrazza, la cucina francese classica, le pizze al forno a legna e le informazioni pratiche attese da un visitatore mobile.',
+    },
+    terrace: {
+      eyebrow: 'Firma terrazza',
+      title: 'Mostrare fin dai primi secondi perché la terrazza conta davvero.',
+      text:
+        "Questa zona è pensata per accogliere l'immagine più forte del locale. Deve vendere luce, volume e comfort senza appesantire il resto della pagina.",
+      imageLabel: 'Grande terrazza',
+    },
+    cuisine: {
+      eyebrow: 'Cucina & forno',
+      title: 'Cucina bistrot, piatti confortanti e pizze al forno a legna.',
+      text:
+        "Il testo finale preciserà l'offerta, ma la gerarchia è già pronta per presentare i grandi classici, le insalate, i piatti a lunga cottura e il forno visibile.",
+      ctaLabel: 'Esplora il menu',
+      imageLabel: 'Forno visibile',
+    },
+    gallery: {
+      eyebrow: 'Atmosfera',
+      title: 'Far percepire il luogo prima ancora della prima visita.',
+      text:
+        'I futuri visual prenderanno posto qui per mostrare la sala, il bar, i materiali e il ritmo del ristorante. Nel frattempo, i blocchi fanno da riferimenti chiari.',
+      ctaLabel: 'Vedi la galleria',
+      images: ['Sala ampia', 'Bar in ottone', 'Tavola apparecchiata'],
+    },
+    story: {
+      eyebrow: 'Il tono',
+      title: 'Autentico nei materiali, curato nell’esecuzione, accogliente ogni giorno.',
+      text:
+        'Questa zona serve a raccontare il ristorante senza perdersi in un lungo racconto. L’obiettivo è fissare una personalità credibile e immediatamente leggibile.',
+      ctaLabel: 'Leggi la pagina',
+      stats: [
+        { value: 'Grande', label: 'terrazza da valorizzare' },
+        { value: 'Pranzo > sera', label: 'ritmo pensato per tutta la giornata' },
+        { value: 'Forno a legna', label: 'elemento visibile del luogo' },
+      ],
+    },
+    access: {
+      eyebrow: 'Contatti & accesso',
+      title: 'Tutto ciò che serve per passare all’azione senza cercare.',
+      text:
+        'Contatti, orari, itinerario e accessi rapidi sono riuniti qui per massimizzare la conversione su mobile e desktop.',
+      imageLabel: 'Mappa accesso',
+    },
+  },
+  menuPage: {
+    eyebrow: 'Il menu',
+    title: 'Una pagina leggibile, mobile e pronta per essere aggiornata in modo pulito.',
+    text:
+      'Il menu finale sostituirà questi contenuti indicativi. La struttura è già pensata per categorie chiare, prezzi visibili e una lettura semplice da telefono.',
+    note:
+      'Le voci qui sotto sono esempi di struttura. Serviranno come base per permettere al cliente di fornire i piatti definitivi.',
+    tagLabels: {
+      vegetarian: 'Vegetariano',
+      vegan: 'Vegano',
+      fish: 'Pesce',
+      pork: 'Maiale',
+      spicy: 'Piccante',
+    },
+    categories: [
+      {
+        id: 'starters',
+        title: 'Antipasti',
+        items: [
+          { name: 'Antipasto del giorno', description: 'Antipasto stagionale da precisare', price: '00 €' },
+          { name: 'Verdure grigliate', description: 'Versione finale da definire', price: '00 €', tags: ['vegan'] },
+          { name: 'Piccola burrata', description: 'Richiamo fresco ed estivo', price: '00 €', tags: ['vegetarian'] },
+        ],
+      },
+      {
+        id: 'salads',
+        title: 'Insalate',
+        items: [
+          { name: 'Insalata della casa', description: 'Grande insalata da pranzo da precisare', price: '00 €', tags: ['vegetarian'] },
+          { name: 'Pollo croccante', description: 'Ricetta e contorni da confermare', price: '00 €' },
+          { name: 'Versione nizzarda', description: 'Interpretazione finale da validare', price: '00 €', tags: ['fish'] },
+        ],
+      },
+      {
+        id: 'mains',
+        title: 'Piatti',
+        items: [
+          { name: 'Entrecôte signature', description: 'Taglio, salsa e contorno da precisare', price: '00 €' },
+          { name: 'Piatto stufato', description: 'Ricetta della casa da completare', price: '00 €', tags: ['pork'] },
+          { name: 'Pesce del giorno', description: 'Arrivo e cottura da definire', price: '00 €', tags: ['fish'] },
+        ],
+      },
+      {
+        id: 'pizzas',
+        title: 'Pizze al forno a legna',
+        items: [
+          { name: 'Margherita del forno', description: 'Base cotta a legna da precisare', price: '00 €', tags: ['vegetarian'] },
+          { name: 'Pizza signature', description: 'Ricetta della casa da completare', price: '00 €', tags: ['pork', 'spicy'] },
+          { name: 'Pizza bianca', description: 'Versione finale da confermare', price: '00 €', tags: ['pork'] },
+        ],
+      },
+      {
+        id: 'desserts',
+        title: 'Dolci',
+        items: [
+          { name: 'Dessert del giorno', description: 'Da finalizzare secondo il menu reale', price: '00 €' },
+          { name: 'Grande classico', description: 'Versione bistrot da precisare', price: '00 €' },
+          { name: 'Coppa gelato', description: 'Opzione fresca per l’estate', price: '00 €' },
+        ],
+      },
+      {
+        id: 'drinks',
+        title: 'Bevande',
+        items: [
+          { name: 'Cocktail della casa', description: 'Signature da terrazza da definire', price: '00 €' },
+          { name: 'Calice di vino', description: 'Selezione da confermare', price: '00 €' },
+          { name: 'Bevanda fresca', description: 'Offerta finale da completare', price: '00 €' },
+        ],
+      },
+    ],
+  },
+  galleryPage: {
+    eyebrow: 'La galleria',
+    title: 'Preparare i futuri visual senza dover rifare il sito.',
+    text:
+      'Questa pagina è pensata per accogliere poi le vere foto del locale. I blocchi già presenti servono a fissare inquadrature, dimensioni e ritmo visivo.',
+    sections: [
+      {
+        title: 'Terrazza',
+        text: 'Mostrare ampiezza, luce, tavoli e la sensazione di spazio.',
+        images: ['Terrazza angolo', 'Terrazza servizio', 'Dettaglio terrazza'],
+      },
+      {
+        title: 'Sala & bar',
+        text: 'Definire il tono interno con legno, pietra, specchi, ottone e profondità.',
+        images: ['Sala ampia', 'Grande bar', 'Dettaglio specchio'],
+      },
+      {
+        title: 'Cucina & tavola',
+        text: 'Far vivere il piatto, il forno a legna e i dettagli di servizio.',
+        images: ['Forno a legna', 'Pizza in uscita', 'Piatto close-up'],
+      },
+    ],
+  },
+  aboutPage: {
+    eyebrow: 'Chi siamo',
+    title: 'Una pagina per fissare la personalità del luogo senza esagerare.',
+    text:
+      'Il contenuto finale spiegherà l’intenzione, l’accoglienza e la promessa del ristorante. La struttura mantiene un tono calmo, premium e leggibile per visitatori di passaggio.',
+    sections: [
+      {
+        title: 'Il contesto',
+        text:
+          'Vieil Antibes, grande terrazza, materiali autentici, sala generosa, vero bar bistrot e forno visibile. L’idea è rendere questa atmosfera tangibile fin dal primo scroll.',
+        imageLabel: 'Atmosfera del luogo',
+      },
+      {
+        title: 'La promessa',
+        text:
+          'Cucina francese accessibile, classici ben eseguiti, pizze al forno a legna e un locale pensato tanto per un pranzo semplice quanto per una cena più lunga.',
+        imageLabel: 'Cucina della casa',
+      },
+      {
+        title: 'Il ritmo',
+        text:
+          'Il sito lascia spazio per raccontare tutta la giornata del ristorante: pranzo, aperitivo, cena, ombra estiva e l’energia autentica della grande terrazza.',
+        imageLabel: 'Bar vivace',
+      },
+    ],
+    highlights: [
+      'Grande terrazza turistica',
+      'Bar bistrot in legno e ottone',
+      'Forno a legna visibile',
+      'Materiali autentici rinnovati',
+    ],
+  },
+  contactPage: {
+    eyebrow: 'Contatti',
+    title: 'Tutte le informazioni pratiche in una pagina semplice ed efficace.',
+    text:
+      'Questa pagina è pensata per rispondere rapidamente ai bisogni concreti: contattare il ristorante, preparare il percorso, verificare gli orari e capire gli accessi.',
+    cards: [
+      { title: 'Telefono', value: '+33 0 00 00 00 00', href: commonContact.phoneHref },
+      { title: 'WhatsApp', value: 'Messaggio diretto', href: commonContact.whatsappHref },
+      { title: 'Email', value: 'bonjour@latable-antibes.fr', href: commonContact.emailHref },
+    ],
+    addressTitle: 'Indirizzo',
+    addressValue: 'Vieil Antibes, indirizzo finale da confermare',
+    hoursTitle: 'Orari',
+    hours: [
+      { day: 'Lunedì', hours: '12:00 - 14:30 / 19:00 - 22:30' },
+      { day: 'Martedì', hours: '12:00 - 14:30 / 19:00 - 22:30' },
+      { day: 'Mercoledì', hours: '12:00 - 14:30 / 19:00 - 22:30' },
+      { day: 'Giovedì', hours: '12:00 - 14:30 / 19:00 - 22:30' },
+      { day: 'Venerdì', hours: '12:00 - 14:30 / 19:00 - 23:00' },
+      { day: 'Sabato', hours: '12:00 - 15:00 / 19:00 - 23:00' },
+      { day: 'Domenica', hours: 'Da confermare' },
+    ],
+    accessTitle: 'Accesso',
+    accessText:
+      'Inserire qui i dettagli pratici più utili: terrazza visibile, punto di riferimento, parcheggio più vicino e link diretto per raggiungere il ristorante.',
+    mapLabel: 'Mappa zona',
+  },
+  legalPage: {
+    eyebrow: 'Note legali',
+    title: 'Una pagina pronta ad accogliere le informazioni amministrative finali.',
+    text:
+      'Il contenuto visualizzato qui è volutamente indicativo. Le informazioni legali, l’hosting, la società e la privacy saranno completati prima della messa online.',
+    sections: [
+      {
+        title: 'Editore del sito',
+        body: 'Nome della società, indirizzo, dati di registrazione, rappresentante legale e contatti.',
+      },
+      {
+        title: 'Hosting',
+        body: 'Nome del provider hosting, indirizzo, dati di contatto e ambiente tecnico scelto.',
+      },
+      {
+        title: 'Dati personali',
+        body: 'Il sito di lancio è previsto senza banner cookie e senza stack analytics pesante, ma le diciture finali dovranno comunque essere completate correttamente.',
+      },
+    ],
+  },
+  footer: {
+    summary:
+      'Prototipo locale pronto per essere sostituito poi con i testi, i visual e le informazioni definitive del ristorante.',
+    copyright: 'Prototipo locale • La Table Antibes',
+  },
+  quickActions: [
+    { label: 'Chiama', href: commonContact.phoneHref },
+    { label: 'WhatsApp', href: commonContact.whatsappHref },
+    { label: 'Itinerario', href: commonContact.directionsHref },
+    { label: 'Menu', slug: 'menu' },
+  ],
+  contactLinks: commonContact,
 };

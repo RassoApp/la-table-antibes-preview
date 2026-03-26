@@ -53,4 +53,31 @@ export const v5HomePlaceholderContent = {
       text: 'Short text with useful landmarks, neighborhood context, parking if relevant, and practical arrival information.',
     },
   },
+  it: {
+    hero: {
+      title: 'Frase principale che riassume il concept del ristorante',
+      text: 'Breve testo di 1 o 2 frasi per presentare il concept, il tipo di cucina e l’atmosfera generale del locale.',
+    },
+    infoStrip: [
+      { label: 'Indirizzo', value: 'Indirizzo esatto del ristorante' },
+      { label: 'Orari', value: 'Orari di apertura' },
+      { label: 'Telefono', value: 'Numero di telefono principale' },
+      { label: 'Atmosfera', value: 'Parole chiave che descrivono il locale' },
+    ],
+    cuisine: {
+      eyebrow: 'La nostra cucina',
+      title: 'Testo che presenta la cucina e i piatti principali',
+      text: 'Breve testo per spiegare le specialità, il forno a legna e ciò che deve far venire voglia di aprire il menu.',
+    },
+    ambiance: {
+      eyebrow: 'Atmosfera',
+      title: 'Testo che descrive l’atmosfera e l’esperienza sul posto',
+      text: 'Breve testo per parlare della sala, della terrazza, del bar e di ciò che il cliente percepisce arrivando sul posto.',
+    },
+    access: {
+      eyebrow: 'Contatti & accesso',
+      title: 'Testo che rassicura sulla posizione e sulla facilità di accesso',
+      text: 'Breve testo con i punti di riferimento utili, il quartiere, il parcheggio se necessario e le informazioni pratiche prima della visita.',
+    },
+  },
 };

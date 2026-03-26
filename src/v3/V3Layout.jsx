@@ -6,6 +6,7 @@ import { buildLocalizedPath } from '../utils/paths';
 const languageFlags = {
   fr: '🇫🇷',
   en: '🇬🇧',
+  it: '🇮🇹',
 };
 
 function V3LanguageSwitcher({ basePath, lang, locale, open, onToggle, onClose }) {

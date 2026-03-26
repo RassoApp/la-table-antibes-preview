@@ -15,6 +15,10 @@ const languageFlags = {
     src: '/v5-assets/flags/uk.svg',
     alt: 'English',
   },
+  it: {
+    src: '/v5-assets/flags/italy.svg',
+    alt: 'Italiano',
+  },
 };
 
 const v6NavKeys = ['home', 'menu'];

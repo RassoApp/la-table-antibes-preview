@@ -12,6 +12,10 @@ const languageFlags = {
     src: '/v5-assets/flags/uk.svg',
     alt: 'English',
   },
+  it: {
+    src: '/v5-assets/flags/italy.svg',
+    alt: 'Italiano',
+  },
 };
 
 function V5LanguageSwitcher({ basePath, lang, locale, open, onToggle, onClose }) {
