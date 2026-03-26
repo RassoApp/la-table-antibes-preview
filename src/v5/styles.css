@@ -1,0 +1,458 @@
+@font-face {
+  font-family: 'Anko';
+  src: url('/v5-assets/fonts/anko/Anko-Trial-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Anko';
+  src: url('/v5-assets/fonts/anko/Anko-Trial-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Anko';
+  src: url('/v5-assets/fonts/anko/Anko-Trial-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Anko';
+  src: url('/v5-assets/fonts/anko/Anko-Trial-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+.v5-shell {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.compare-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.v5-shell h1,
+.v5-shell h2,
+.v5-shell h3,
+.v5-shell .v3-brand strong,
+.v5-shell .v3-quote {
+  font-family: 'Anko', serif;
+  font-weight: 500;
+  letter-spacing: normal;
+  font-kerning: normal;
+}
+
+.v5-shell .v3-main {
+  padding-bottom: 0;
+}
+
+.v5-shell .v3-button {
+  gap: 0.55rem;
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+.v5-shell .v5-icon {
+  width: 1rem;
+  height: 1rem;
+  flex: none;
+  display: inline-block;
+}
+
+.v5-shell .v5-icon--mask {
+  background-color: currentColor;
+  -webkit-mask-image: var(--icon-url);
+  mask-image: var(--icon-url);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+.v5-shell .v3-button > span:not(.v6-reserve__caret) {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  transform: translateY(0.11em);
+}
+
+.v5-shell .v3-button > .v6-reserve__caret {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  transform: translateY(0.03em);
+}
+
+.v5-shell .v5-flag {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.v5-shell .v5-flag--small {
+  width: 1.35rem;
+  height: 1.35rem;
+  flex: none;
+}
+
+.v5-shell .v3-hero__overlay {
+  background:
+    linear-gradient(180deg, rgba(17, 10, 7, 0.12), rgba(17, 10, 7, 0.48)),
+    linear-gradient(90deg, rgba(17, 10, 7, 0.34), transparent 58%);
+}
+
+.v5-shell .v3-hero {
+  min-height: clamp(26rem, 58svh, 34rem);
+}
+
+.v5-shell .v3-hero__content {
+  padding-top: clamp(4.35rem, 7vh, 5.6rem);
+  padding-bottom: 1.2rem;
+}
+
+.v5-shell .v3-hero__content h1 {
+  font-size: clamp(2.7rem, 5.4vw, 4.85rem);
+  line-height: 0.92;
+}
+
+.v5-shell .v3-practical-band {
+  margin-top: -0.55rem;
+}
+
+.v5-shell .v5-page .v3-page-hero {
+  padding-bottom: 2.3rem;
+}
+
+.v5-shell .v5-section--tight-top {
+  padding-top: 1.8rem;
+}
+
+.v5-shell .v5-section--compact {
+  padding-top: 3rem;
+}
+
+.v5-shell .v5-cuisine,
+.v5-shell .v5-ambiance {
+  display: grid;
+  grid-template-columns: 0.82fr 1.18fr;
+  gap: clamp(2.8rem, 4vw, 4.2rem);
+  align-items: start;
+}
+
+.v5-shell .v5-cuisine__intro h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(2.2rem, 4.8vw, 4.7rem);
+  line-height: 0.96;
+}
+
+.v5-shell .v5-cuisine__intro p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+.v5-shell .v5-cuisine__grid,
+.v5-shell .v5-ambiance__media {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.v5-shell .v5-showcase-card,
+.v5-shell .v5-contact-figure,
+.v5-shell .v3-feature-image {
+  margin: 0;
+  overflow: hidden;
+}
+
+.v5-shell .v5-showcase-card {
+  background: rgba(255, 255, 255, 0.44);
+}
+
+.v5-shell .v5-showcase-card img,
+.v5-shell .v5-contact-figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.v5-shell .v5-showcase-card img {
+  aspect-ratio: 1 / 1;
+  filter: saturate(0.93) contrast(0.97);
+}
+
+.v5-shell .v5-contact-figure img {
+  aspect-ratio: 1 / 1;
+  filter: brightness(1.05) saturate(0.92);
+}
+
+.v5-shell .v5-ambiance__card img {
+  aspect-ratio: 1 / 1;
+  filter: none;
+}
+
+.v5-shell .v3-grid--contact,
+.v5-shell .v3-grid--contact-page,
+.v5-shell .v3-grid--about-top,
+.v5-shell .v3-page-hero__grid {
+  gap: clamp(2.8rem, 4vw, 4rem);
+}
+
+.v5-shell .v3-menu-panel {
+  scroll-margin-top: 6.9rem;
+}
+
+.v5-shell .v3-note {
+  margin-bottom: 1.35rem;
+}
+
+.v5-shell .v5-button--outlined {
+  min-height: 3rem;
+  padding: 0.9rem 1.2rem;
+  background: transparent;
+  border: 1px solid rgba(153, 65, 39, 0.4);
+  color: var(--primary);
+}
+
+.v5-shell .v5-button--outlined:hover {
+  background: rgba(153, 65, 39, 0.06);
+}
+
+.v5-shell .v3-footer {
+  margin-top: 0;
+  padding-top: 3rem;
+}
+
+.v5-shell .v3-footer::before {
+  display: none;
+}
+
+.v5-shell .v5-whatsapp-button {
+  background: #25d366;
+  border-color: #25d366;
+  color: #101010;
+}
+
+.v5-shell .v5-whatsapp-button:hover {
+  background: #1fbe59;
+  border-color: #1fbe59;
+}
+
+.v5-shell .v5-about-promise {
+  display: grid;
+  grid-template-columns: 1.18fr 0.91fr 0.91fr;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.v5-shell .v5-about-promise__card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.9rem;
+  background: linear-gradient(180deg, var(--primary), var(--primary-soft));
+  color: #fff;
+}
+
+.v5-shell .v5-about-promise__card .v3-kicker,
+.v5-shell .v5-about-promise__card p {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.v5-shell .v5-about-promise__card h2 {
+  margin: 0;
+  line-height: 1;
+}
+
+.v5-shell .v5-about-promise__card p {
+  margin: 0;
+}
+
+.v5-shell .v5-about-promise__image {
+  min-height: 100%;
+}
+
+.v5-shell .v5-about-highlights {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin-top: 0.2rem;
+}
+
+.v5-shell .v5-about-highlights article {
+  min-height: 4.4rem;
+  padding: 0.95rem 1rem;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.v5-shell .v5-about-promise__actions {
+  margin-top: auto;
+  justify-content: center;
+}
+
+.v5-shell .v5-contact-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.v5-shell .v5-contact-action {
+  min-height: 8.6rem;
+  padding: 1.35rem;
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+  border: 1px solid rgba(220, 193, 186, 0.36);
+  background: rgba(255, 255, 255, 0.62);
+  color: var(--muted);
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.v5-shell .v5-contact-action:hover {
+  transform: translateY(-1px);
+}
+
+.v5-shell .v5-contact-action small {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.v5-shell .v5-contact-action strong {
+  display: block;
+  font-size: 1.1rem;
+  line-height: 1.35;
+}
+
+.v5-shell .v5-contact-action.is-primary {
+  background: linear-gradient(180deg, var(--primary), var(--primary-soft));
+  border-color: transparent;
+  color: #fff;
+}
+
+.v5-shell .v5-contact-action.is-primary small {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.v5-shell .v5-contact-action.is-whatsapp {
+  background: #25d366;
+  border-color: #25d366;
+  color: #101010;
+}
+
+.v5-shell .v5-contact-action.is-whatsapp small {
+  color: rgba(16, 16, 16, 0.66);
+}
+
+.v5-shell .v5-contact-action.is-outline {
+  background: transparent;
+  border-color: rgba(153, 65, 39, 0.28);
+}
+
+.v5-shell .v5-contact-media {
+  gap: 0;
+}
+
+.v5-shell .v5-contact-media .v3-feature-image {
+  min-height: 100%;
+}
+
+.v5-shell .v3-contact-copy .v5-button--outlined {
+  margin-top: 0.35rem;
+}
+
+@media (min-width: 960px) {
+  .v5-shell .v3-hero__content {
+    padding-top: clamp(4.55rem, 6.5vh, 5.8rem);
+    padding-bottom: 1.15rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .v5-shell .v3-main {
+    padding-bottom: 5rem;
+  }
+
+  .v5-shell .v5-cuisine,
+  .v5-shell .v5-ambiance,
+  .v5-shell .v5-about-promise {
+    grid-template-columns: 1fr;
+  }
+
+  .v5-shell .v5-cuisine__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .v5-shell .v5-ambiance__media {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .v5-shell .v5-contact-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .v5-shell .v3-container,
+  .v5-shell .v3-header__inner,
+  .v5-shell .v3-footer__inner {
+    width: min(calc(100% - 2.6rem), 1200px);
+  }
+
+  .v5-shell .v3-hero__content {
+    width: min(calc(100% - 2.6rem), 1200px);
+    padding-top: 4.9rem;
+    padding-bottom: 1.9rem;
+  }
+
+  .v5-shell .v5-page .v3-page-hero {
+    padding-bottom: 1.8rem;
+  }
+
+  .v5-shell .v5-section--tight-top {
+    padding-top: 1.25rem;
+  }
+
+  .v5-shell .v3-hero__content h1,
+  .v5-shell .v3-copy h2,
+  .v5-shell .v3-section-head h2,
+  .v5-shell .v3-page-hero h1,
+  .v5-shell .v3-contact-copy h2,
+  .v5-shell .v5-cuisine__intro h2 {
+    line-height: 1.08;
+  }
+
+  .v5-shell .v3-hero__content h1 {
+    max-width: 10.2ch;
+    font-size: clamp(2rem, 8.2vw, 2.65rem);
+    line-height: 1.02;
+  }
+
+  .v5-shell .v5-cuisine__grid,
+  .v5-shell .v5-ambiance__media {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  .v5-shell .v5-showcase-card img,
+  .v5-shell .v5-ambiance__card img,
+  .v5-shell .v5-contact-figure img {
+    aspect-ratio: 5 / 4;
+  }
+
+  .v5-shell .v5-about-highlights {
+    grid-template-columns: 1fr;
+  }
+}

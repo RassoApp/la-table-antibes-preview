@@ -1,0 +1,4 @@
+node_modules/
+dist/
+review_shots/
+.DS_Store

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed": "#d6e7d6",
+              "secondary-container": "#f4dfcb",
+              "on-tertiary": "#ffffff",
+              "on-error-container": "#93000a",
+              "on-primary": "#ffffff",
+              "on-surface": "#1a1c1a",
+              "on-secondary": "#ffffff",
+              "inverse-surface": "#2f312f",
+              "on-tertiary-fixed-variant": "#3b4a3e",
+              "on-secondary-fixed": "#241a0e",
+              "surface-container-lowest": "#ffffff",
+              "error": "#ba1a1a",
+              "error-container": "#ffdad6",
+              "tertiary": "#506052",
+              "on-surface-variant": "#56423d",
+              "surface-bright": "#faf9f6",
+              "primary": "#994127",
+              "surface-container-high": "#e9e8e5",
+              "surface-tint": "#9c4329",
+              "surface-variant": "#e3e2e0",
+              "inverse-primary": "#ffb5a0",
+              "primary-fixed": "#ffdbd1",
+              "on-primary-container": "#fffbff",
+              "secondary-fixed": "#f4dfcb",
+              "on-tertiary-fixed": "#101f14",
+              "on-secondary-container": "#716252",
+              "surface": "#faf9f6",
+              "secondary": "#6b5c4c",
+              "on-tertiary-container": "#f6fff4",
+              "primary-container": "#b8583d",
+              "inverse-on-surface": "#f2f1ee",
+              "on-primary-fixed": "#3b0900",
+              "surface-dim": "#dbdad7",
+              "tertiary-container": "#68796a",
+              "background": "#faf9f6",
+              "surface-container-highest": "#e3e2e0",
+              "on-secondary-fixed-variant": "#524436",
+              "on-error": "#ffffff",
+              "tertiary-fixed-dim": "#bacbba",
+              "secondary-fixed-dim": "#d7c3b0",
+              "outline-variant": "#dcc1ba",
+              "outline": "#89726c",
+              "on-primary-fixed-variant": "#7d2c14",
+              "surface-container-low": "#f4f3f1",
+              "surface-container": "#efeeeb",
+              "primary-fixed-dim": "#ffb5a0",
+              "on-background": "#1a1c1a"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3 {
+            font-family: 'Noto Serif', serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface-variant selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 border-b border-[#dcc1ba]/15 bg-[#faf9f6]/80 backdrop-blur-md dark:bg-stone-900/80 flex justify-between items-center px-6 h-20">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#56423d] dark:text-stone-400 cursor-pointer" data-icon="menu">menu</span>
+<span class="font-['Noto_Serif'] font-bold text-xl tracking-tight text-[#56423d] dark:text-[#faf9f6]">La Table d’Antibes</span>
+</div>
+<button class="font-['Plus_Jakarta_Sans'] uppercase tracking-[0.1rem] text-xs font-bold text-[#994127] dark:text-[#b8583d] transition-all active:opacity-80 active:scale-[0.99]">RÉSERVER</button>
+</header>
+<main class="pt-24 pb-32 max-w-screen-md mx-auto px-6">
+<!-- Header Section -->
+<section class="mb-16">
+<p class="font-['Plus_Jakarta_Sans'] uppercase tracking-[0.2rem] text-[10px] text-primary mb-4">Cuisine de Terroir</p>
+<h1 class="text-4xl md:text-5xl font-bold text-on-surface leading-tight">La Carte de Saison</h1>
+<div class="mt-8 h-px w-16 bg-primary"></div>
+</section>
+<!-- Entrées Section -->
+<section class="mb-20">
+<h2 class="text-2xl font-bold text-primary mb-8 border-l-4 border-primary pl-4">Entrées</h2>
+<div class="space-y-10">
+<article class="flex justify-between items-start group">
+<div class="max-w-[80%]">
+<h3 class="text-xl font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">Salade Niçoise au feu de bois</h3>
+<p class="text-sm text-on-surface-variant font-body">Thon frais snacké, œufs de caille, olives de Nice, poivrons verts et artichauts poivrade.</p>
+</div>
+<span class="font-headline font-bold text-secondary text-lg">18</span>
+</article>
+<article class="flex justify-between items-start group">
+<div class="max-w-[80%]">
+<h3 class="text-xl font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">Burrata crémeuse et tomates anciennes</h3>
+<p class="text-sm text-on-surface-variant font-body">Cœur crémeux, huile de basilic maison, pignons de pin torréfiés et fleur de sel.</p>
+</div>
+<span class="font-headline font-bold text-secondary text-lg">16</span>
+</article>
+<article class="flex justify-between items-start group">
+<div class="max-w-[80%]">
+<h3 class="text-xl font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">Pissaladière traditionnelle</h3>
+<p class="text-sm text-on-surface-variant font-body">Oignons confits pendant 4 heures, anchois et olives cailletiers sur pâte fine.</p>
+</div>
+<span class="font-headline font-bold text-secondary text-lg">14</span>
+</article>
+</div>
+</section>
+<!-- Plats Section -->
+<section class="mb-20 p-8 bg-surface-container-low border-l-8 border-primary">
+<h2 class="text-2xl font-bold text-primary mb-8">Plats de Résistance</h2>
+<div class="space-y-12">
+<article class="flex justify-between items-start group">
+<div class="max-w-[80%]">
+<h3 class="text-xl font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">Entrecôte de bœuf (300g)</h3>
+<p class="text-sm text-on-surface-variant font-body">Frites maison coupées au couteau, sauce au poivre vert de Madagascar ou beurre maître d’hôtel.</p>
+</div>
+<span class="font-headline font-bold text-secondary text-lg">32</span>
+</article>
+<article class="flex justify-between items-start group">
+<div class="max-w-[80%]">
+<h3 class="text-xl font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">Daube provençale traditionnelle</h3>
+<p class="text-sm text-on-surface-variant font-body">Mijotée au vin rouge du Var, petits légumes de pays et gnocchis frais maison.</p>
+</div>
+<span class="font-headline font-bold text-secondary text-lg">26</span>
+</article>
+<article class="flex justify-between items-start group">
+<div class="max-w-[80%]">
+<h3 class="text-xl font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">Filet de Loup de Méditerranée</h3>
+<p class="text-sm text-on-surface-variant font-body">Rôti sur la peau, émulsion citronnelle et risotto crémeux aux herbes de Provence.</p>
+</div>
+<span class="font-headline font-bold text-secondary text-lg">29</span>
+</article>
+</div>
+</section>
+<!-- Pizzas Section -->
+<section class="mb-20">
+<div class="flex items-center gap-4 mb-8">
+<h2 class="text-2xl font-bold text-primary">Pizzas au Feu de Bois</h2>
+<div class="flex-grow h-px bg-outline-variant opacity-20"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+<article class="group">
+<div class="flex justify-between items-baseline mb-2">
+<h3 class="text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Margarita</h3>
+<span class="font-headline text-secondary">13</span>
+</div>
+<p class="text-xs text-on-surface-variant font-body uppercase tracking-wider">Tomate, Mozzarella fior di latte, Basilic frais, Huile d'olive.</p>
+</article>
+<article class="group">
+<div class="flex justify-between items-baseline mb-2">
+<h3 class="text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Regina</h3>
+<span class="font-headline text-secondary">15</span>
+</div>
+<p class="text-xs text-on-surface-variant font-body uppercase tracking-wider">Tomate, Mozzarella, Jambon blanc supérieur, Champignons frais.</p>
+</article>
+<article class="group">
+<div class="flex justify-between items-baseline mb-2">
+<h3 class="text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Pizza Antiboise</h3>
+<span class="font-headline text-secondary">17</span>
+</div>
+<p class="text-xs text-on-surface-variant font-body uppercase tracking-wider">Crème de truffe, Mozzarella, Roquette, Jambon de Parme 24 mois.</p>
+</article>
+<article class="group">
+<div class="flex justify-between items-baseline mb-2">
+<h3 class="text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Napolitaine</h3>
+<span class="font-headline text-secondary">15</span>
+</div>
+<p class="text-xs text-on-surface-variant font-body uppercase tracking-wider">Tomate, Anchois de Collioure, Câpres, Olives, Origan.</p>
+</article>
+</div>
+</section>
+<!-- Desserts Section -->
+<section class="mb-20">
+<h2 class="text-2xl font-bold text-primary mb-8 border-b-2 border-primary/10 pb-4">Desserts</h2>
+<div class="space-y-8">
+<article class="flex justify-between items-center group">
+<div>
+<h3 class="text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Crème brûlée à la lavande</h3>
+<p class="text-sm text-on-surface-variant font-body italic">Infusée aux fleurs de lavande du plateau de Valensole.</p>
+</div>
+<span class="font-headline font-bold text-secondary">10</span>
+</article>
+<article class="flex justify-between items-center group">
+<div>
+<h3 class="text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Mousse au chocolat maison</h3>
+<p class="text-sm text-on-surface-variant font-body italic">Chocolat noir 70%, fleur de sel de Camargue.</p>
+</div>
+<span class="font-headline font-bold text-secondary">9</span>
+</article>
+<article class="flex justify-between items-center group">
+<div>
+<h3 class="text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Tarte Fine aux Pommes</h3>
+<p class="text-sm text-on-surface-variant font-body italic">Servie chaude avec sa boule de glace vanille Bourbon.</p>
+</div>
+<span class="font-headline font-bold text-secondary">11</span>
+</article>
+</div>
+</section>
+<!-- Vins Section -->
+<section class="mb-12 bg-surface-container-highest p-8">
+<div class="text-center mb-8">
+<span class="material-symbols-outlined text-primary mb-2" data-icon="wine_bar">wine_bar</span>
+<h2 class="text-2xl font-bold text-primary">Vins &amp; Boissons</h2>
+</div>
+<div class="space-y-6">
+<div class="flex justify-between border-b border-outline-variant/30 pb-2">
+<span class="font-medium">Rosé de Provence (AOC)</span>
+<span class="text-secondary font-headline">6 / 28</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/30 pb-2">
+<span class="font-medium">Rouge Côte de Provence</span>
+<span class="text-secondary font-headline">7 / 32</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/30 pb-2">
+<span class="font-medium">Eau Minérale / Gazeuse (75cl)</span>
+<span class="text-secondary font-headline">6</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/30 pb-2">
+<span class="font-medium">Café Richard Espresso</span>
+<span class="text-secondary font-headline">2.5</span>
+</div>
+</div>
+</section>
+<footer class="text-center py-12 border-t border-outline-variant/15 opacity-60">
+<p class="font-label text-[10px] uppercase tracking-[0.2rem]">Tous nos produits sont frais et cuisinés sur place.</p>
+<p class="font-label text-[10px] uppercase tracking-[0.2rem] mt-2">Antibes, France • Est. 1984</p>
+</footer>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-[#faf9f6]/80 backdrop-blur-md dark:bg-stone-900/80 border-t border-[#dcc1ba]/15 h-16 pb-safe flex justify-around items-center">
+<a class="flex flex-col items-center justify-center text-[#56423d] dark:text-stone-400 hover:text-[#994127] transition-colors active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+<span class="font-['Plus_Jakarta_Sans'] font-medium text-[10px] uppercase tracking-wider mt-1">Appeler</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#56423d] dark:text-stone-400 hover:text-[#994127] transition-colors active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+<span class="font-['Plus_Jakarta_Sans'] font-medium text-[10px] uppercase tracking-wider mt-1">WhatsApp</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#56423d] dark:text-stone-400 hover:text-[#994127] transition-colors active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="directions_reverses">directions_off</span>
+<span class="font-['Plus_Jakarta_Sans'] font-medium text-[10px] uppercase tracking-wider mt-1">Itinéraire</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#994127] dark:text-[#b8583d] font-bold active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+<span class="font-['Plus_Jakarta_Sans'] font-medium text-[10px] uppercase tracking-wider mt-1">Menu</span>
+</a>
+</nav>
+</body></html>

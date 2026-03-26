@@ -1,0 +1,16 @@
+export const v5Media = {
+  heroTerrace: '/v5-assets/hero-painted.jpg',
+  pizzaPainted: '/v5-assets/pizza-painted.jpg',
+  cuisineTopRight: '/v5-assets/cuisine-top-right.jpg',
+  cuisineBottomLeft: '/v5-assets/cuisine-bottom-left.jpg',
+  cuisineBottomRight: '/v5-assets/cuisine-bottom-right.jpg',
+  pizzaPhoto: '/v3-stitch/pizza.jpg',
+  platedDish: '/v3-stitch/gallery-dish.jpg',
+  ovenFire: '/v3-stitch/gallery-oven.jpg',
+  barInterior: '/v3-stitch/bar-interior.jpg',
+  interiorSunlit: '/v3-stitch/interior-sunlit.jpg',
+  homeAccess: '/v5-assets/home-access.jpg',
+  galleryRoom: '/v3-stitch/gallery-room.jpg',
+  galleryCutlery: '/v3-stitch/gallery-cutlery.jpg',
+  map: '/v3-stitch/map.jpg',
+};

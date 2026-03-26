@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Galerie - La Table d’Antibes</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed": "#d6e7d6",
+              "secondary-container": "#f4dfcb",
+              "on-tertiary": "#ffffff",
+              "on-error-container": "#93000a",
+              "on-primary": "#ffffff",
+              "on-surface": "#1a1c1a",
+              "on-secondary": "#ffffff",
+              "inverse-surface": "#2f312f",
+              "on-tertiary-fixed-variant": "#3b4a3e",
+              "on-secondary-fixed": "#241a0e",
+              "surface-container-lowest": "#ffffff",
+              "error": "#ba1a1a",
+              "error-container": "#ffdad6",
+              "tertiary": "#506052",
+              "on-surface-variant": "#56423d",
+              "surface-bright": "#faf9f6",
+              "primary": "#994127",
+              "surface-container-high": "#e9e8e5",
+              "surface-tint": "#9c4329",
+              "surface-variant": "#e3e2e0",
+              "inverse-primary": "#ffb5a0",
+              "primary-fixed": "#ffdbd1",
+              "on-primary-container": "#fffbff",
+              "secondary-fixed": "#f4dfcb",
+              "on-tertiary-fixed": "#101f14",
+              "on-secondary-container": "#716252",
+              "surface": "#faf9f6",
+              "secondary": "#6b5c4c",
+              "on-tertiary-container": "#f6fff4",
+              "primary-container": "#b8583d",
+              "inverse-on-surface": "#f2f1ee",
+              "on-primary-fixed": "#3b0900",
+              "surface-dim": "#dbdad7",
+              "tertiary-container": "#68796a",
+              "background": "#faf9f6",
+              "surface-container-highest": "#e3e2e0",
+              "on-secondary-fixed-variant": "#524436",
+              "on-error": "#ffffff",
+              "tertiary-fixed-dim": "#bacbba",
+              "secondary-fixed-dim": "#d7c3b0",
+              "outline-variant": "#dcc1ba",
+              "outline": "#89726c",
+              "on-primary-fixed-variant": "#7d2c14",
+              "surface-container-low": "#f4f3f1",
+              "surface-container": "#efeeeb",
+              "primary-fixed-dim": "#ffb5a0",
+              "on-background": "#1a1c1a"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #faf9f6; }
+        .noto-serif { font-family: 'Noto Serif', serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-surface selection:bg-primary/20">
+<!-- TopAppBar -->
+<header class="bg-[#faf9f6]/80 backdrop-blur-md dark:bg-stone-900/80 fixed top-0 w-full z-50 border-b border-[#dcc1ba]/15 flex justify-between items-center px-6 h-20 w-full">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-[#56423d] hover:bg-[#f4f3f1] p-2 transition-colors duration-300">menu</button>
+<span class="font-['Noto_Serif'] font-bold text-xl tracking-tight text-[#56423d] dark:text-[#faf9f6]">La Table d’Antibes</span>
+</div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="font-['Plus_Jakarta_Sans'] uppercase tracking-[0.1rem] text-xs text-[#56423d] dark:text-stone-400 hover:text-[#994127] transition-colors" href="#">Accueil</a>
+<a class="font-['Plus_Jakarta_Sans'] uppercase tracking-[0.1rem] text-xs text-[#994127] border-b-2 border-[#994127]" href="#">Galerie</a>
+<a class="font-['Plus_Jakarta_Sans'] uppercase tracking-[0.1rem] text-xs text-[#56423d] dark:text-stone-400 hover:text-[#994127] transition-colors" href="#">Carte</a>
+</nav>
+<button class="font-['Plus_Jakarta_Sans'] uppercase tracking-[0.1rem] text-xs bg-primary text-white px-6 py-3 hover:bg-primary-container transition-all active:scale-[0.99]">RÉSERVER</button>
+</header>
+<main class="pt-32 pb-24 px-6 max-w-7xl mx-auto">
+<!-- Editorial Header -->
+<div class="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div class="max-w-2xl">
+<span class="font-['Plus_Jakarta_Sans'] uppercase tracking-[0.2rem] text-xs text-primary font-bold block mb-4">L'IMMERSION</span>
+<h1 class="font-['Noto_Serif'] font-bold text-5xl md:text-7xl text-[#56423d] leading-tight">
+                    L'Atmosphère <br/><span class="italic font-normal">de la Méditerranée</span>
+</h1>
+</div>
+<p class="font-['Plus_Jakarta_Sans'] text-on-surface-variant max-w-xs leading-relaxed">
+                Une exploration visuelle des textures, des lumières et des saveurs qui définissent notre maison au cœur du Vieil Antibes.
+            </p>
+</div>
+<!-- Gallery Grid: Bento Style with Sharp Edges -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-4">
+<!-- Hero Piece: La Terrasse -->
+<div class="md:col-span-8 group relative overflow-hidden bg-surface-container-low">
+<div class="aspect-[16/9] w-full overflow-hidden">
+<img class="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="sunny outdoor restaurant terrace in Antibes with warm stone walls, terracotta tiles, and soft mediterranean sunlight filtering through vines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCO3a9d9QH2vsBWig9pWH8ayTgOXNr5RjcnGB7m99fsWF90hzWaEBS5yUOqNWtswlvF3E2JDNZyGt8n6CP1YF4ilOcc0KJkiX49tf7JAEm_af68Snm0YqdrhOw7tk15Os3l2MYOd8jRkxxl2Zz7vs_DT96RQCvig6d_eS4r9NiR6stZg4kjSX_VfwUviMhdB0sPW8iY3gZM-m2SnUAYp6gSn8bez_UPQ6LabCHonFMtm42B0vU0ej4ctLbmwMkd93DtDMcbQAo1S0l_"/>
+</div>
+<div class="p-6 md:absolute md:bottom-0 md:left-0 md:bg-white/90 md:backdrop-blur-sm md:m-8">
+<h3 class="font-['Noto_Serif'] text-2xl text-[#56423d]">La Terrasse</h3>
+<p class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest text-primary mt-2">Sous le soleil de Provence</p>
+</div>
+</div>
+<!-- Vertical Piece: La Salle -->
+<div class="md:col-span-4 group relative overflow-hidden bg-surface-container-low">
+<div class="aspect-[3/4] w-full overflow-hidden">
+<img class="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="elegant interior restaurant dining room with dark wood accents, crisp white linens, and warm amber architectural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJT3mJCU1AhjhK1CA5z7PmNkDWvy9BFUGn1KjbYYfIqKKN3ZcKh-zPrqe6GELqb8jK95hkL1p30TjMoKz9jEWh3vH3ZoHL1lIGsdNWeK4TCgVU-nL8G3dfreOlwA6OzOYtVtkRR1UuKgzClHYFwMrfyB578Xg_MtOcXtQlS6kJ7AlQrIwto-OpBGDxggc0mfXnvybR0PlEnl5SuQ8uBn8_hFfiiqdqOlv5hLFzgMVgP9APBpHabVK6bhML48G6XSz9MEiaZ08ZVL5V"/>
+</div>
+<div class="p-6">
+<h3 class="font-['Noto_Serif'] text-xl text-[#56423d]">La Salle</h3>
+<p class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest text-primary mt-2">Élégance intemporelle</p>
+</div>
+</div>
+<!-- Detail: Le Four à Bois -->
+<div class="md:col-span-4 group relative overflow-hidden bg-surface-container-low">
+<div class="aspect-square w-full overflow-hidden">
+<img class="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="extreme close up of a traditional wood fired oven with glowing orange embers and flickering firelight against dark stone" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtdBjxuCa1PyTGWqvmGUme1srFv5gNYefHxI6o8SKt7hV07irX-ss37gM0jqJMvzIglKmGBo4yCRdVAdQMCI9oo7m0dM6t-xG53Aupre7dPg1Oh1-klkMxCq9bI_7qOX6dHmIjL-Vqtu4v1n_7zhxM-piCeR1gLIbGknkPXeCd5krqJOLrPje2logXKCR6GEkqlGUG2nnZMXk3w-13wl-fYWsuDw6XlWmU_RxHRkgrNW9opHyvQFrAcJsx1H5hv3PFG7QA2ALkaSuM"/>
+</div>
+<div class="p-6">
+<h3 class="font-['Noto_Serif'] text-xl text-[#56423d]">Le Four à Bois</h3>
+<p class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest text-primary mt-2">Le cœur battant</p>
+</div>
+</div>
+<!-- Wide Detail: Nos Plats -->
+<div class="md:col-span-8 group relative overflow-hidden bg-surface-container-low">
+<div class="aspect-[21/9] w-full overflow-hidden">
+<img class="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="minimalist gourmet seafood dish presented on a textured ceramic plate with vibrant herbs and olive oil drizzle, soft side lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPlWAGgkZato1WWj3jMmrw7QLw2NhYVphFGZ7F8zSMz432q2QiW1TlpQLUBQo9r47FPCZSOFzBXC7MgIQMK09zEU7zxcjjk5TpO_r3WarIQVuPIjtblI7FdsPPgTv_Dq1EtxuN0Qqs82RWiFRznEHZuFnm5n3Yvk_dgMrW9q7IHFtb7ztvdgIGDjLWqclNhQHyEzY-Bk3xk_In8W5M56SUY_n_mAFuP_0pKDKa4j3ZeU8TuxJlnnFi-fTHpHYLW4hYvH-l12EUxBHm"/>
+</div>
+<div class="p-6 md:absolute md:top-0 md:right-0 md:bg-[#994127] md:text-white md:m-8">
+<h3 class="font-['Noto_Serif'] text-2xl">Nos Plats</h3>
+<p class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest text-white/80 mt-2">L'art culinaire</p>
+</div>
+</div>
+<!-- Featured Detail: L'Art de la Table -->
+<div class="md:col-span-12 group relative overflow-hidden bg-surface-container-low mt-8">
+<div class="grid md:grid-cols-2 gap-0 items-center">
+<div class="aspect-square md:aspect-video overflow-hidden">
+<img class="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="close-up of polished silver cutlery and a wine glass reflecting golden evening light on a white linen tablecloth" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIm22O4OkOiZAIRoEp1p0xyEVuQ4GjwfiXAbP98-tHk9kZg7-0gBuHYJ7ALESVONjVwJfDoXRb7qKxjPQtghLVF4QQAR98MAKiQFRIUDfEQAWqT3uWmQ3mtukAxmuR-TMtWxFdpT6XzOyzMrWSM9bO0M8vE5OPsoCFbTmF115llgFigM4qY40xWeWmv00g8Vcu-9vQAWAxvn2tNstgYrMrsOVjlgourQ2cCu80gJvItC9KyQO0q7N1Q2Di81vuD0VI4CsmsUTwlVSn"/>
+</div>
+<div class="p-12 md:p-24 flex flex-col justify-center bg-surface-container-high h-full">
+<span class="font-['Plus_Jakarta_Sans'] uppercase tracking-[0.2rem] text-xs text-primary font-bold mb-6">DÉTAILS</span>
+<h3 class="font-['Noto_Serif'] text-4xl text-[#56423d] mb-6 leading-tight">L'Art de la Table</h3>
+<p class="font-['Plus_Jakarta_Sans'] text-on-surface-variant leading-relaxed mb-8">
+                            Chaque détail, du choix du lin à la courbure de l'argenterie, est pensé pour magnifier l'expérience sensorielle de votre repas.
+                        </p>
+<div class="w-16 h-px bg-primary"></div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- NavigationDrawer (Mobile Hidden by default, usually triggered by Menu icon) -->
+<!-- Not visible in initial layout but defined for completeness -->
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center h-16 pb-safe bg-[#faf9f6]/80 backdrop-blur-md z-50 border-t border-[#dcc1ba]/15">
+<button class="flex flex-col items-center justify-center text-[#56423d] hover:text-[#994127] transition-colors">
+<span class="material-symbols-outlined">call</span>
+<span class="font-['Plus_Jakarta_Sans'] font-medium text-[10px] uppercase tracking-wider mt-1">Appeler</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#56423d] hover:text-[#994127] transition-colors">
+<span class="material-symbols-outlined">chat</span>
+<span class="font-['Plus_Jakarta_Sans'] font-medium text-[10px] uppercase tracking-wider mt-1">WhatsApp</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#56423d] hover:text-[#994127] transition-colors">
+<span class="material-symbols-outlined">directions_off</span>
+<span class="font-['Plus_Jakarta_Sans'] font-medium text-[10px] uppercase tracking-wider mt-1">Itinéraire</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#994127] font-bold scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+<span class="font-['Plus_Jakarta_Sans'] font-medium text-[10px] uppercase tracking-wider mt-1">Menu</span>
+</button>
+</nav>
+</body></html>

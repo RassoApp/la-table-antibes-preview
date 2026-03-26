@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact - La Table d’Antibes</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed": "#d6e7d6",
+              "secondary-container": "#f4dfcb",
+              "on-tertiary": "#ffffff",
+              "on-error-container": "#93000a",
+              "on-primary": "#ffffff",
+              "on-surface": "#1a1c1a",
+              "on-secondary": "#ffffff",
+              "inverse-surface": "#2f312f",
+              "on-tertiary-fixed-variant": "#3b4a3e",
+              "on-secondary-fixed": "#241a0e",
+              "surface-container-lowest": "#ffffff",
+              "error": "#ba1a1a",
+              "error-container": "#ffdad6",
+              "tertiary": "#506052",
+              "on-surface-variant": "#56423d",
+              "surface-bright": "#faf9f6",
+              "primary": "#994127",
+              "surface-container-high": "#e9e8e5",
+              "surface-tint": "#9c4329",
+              "surface-variant": "#e3e2e0",
+              "inverse-primary": "#ffb5a0",
+              "primary-fixed": "#ffdbd1",
+              "on-primary-container": "#fffbff",
+              "secondary-fixed": "#f4dfcb",
+              "on-tertiary-fixed": "#101f14",
+              "on-secondary-container": "#716252",
+              "surface": "#faf9f6",
+              "secondary": "#6b5c4c",
+              "on-tertiary-container": "#f6fff4",
+              "primary-container": "#b8583d",
+              "inverse-on-surface": "#f2f1ee",
+              "on-primary-fixed": "#3b0900",
+              "surface-dim": "#dbdad7",
+              "tertiary-container": "#68796a",
+              "background": "#faf9f6",
+              "surface-container-highest": "#e3e2e0",
+              "on-secondary-fixed-variant": "#524436",
+              "on-error": "#ffffff",
+              "tertiary-fixed-dim": "#bacbba",
+              "secondary-fixed-dim": "#d7c3b0",
+              "outline-variant": "#dcc1ba",
+              "outline": "#89726c",
+              "on-primary-fixed-variant": "#7d2c14",
+              "surface-container-low": "#f4f3f1",
+              "surface-container": "#efeeeb",
+              "primary-fixed-dim": "#ffb5a0",
+              "on-background": "#1a1c1a"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+      }
+      h1, h2, h3 {
+        font-family: 'Noto Serif', serif;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="bg-[#faf9f6]/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-[#dcc1ba]/15 flex justify-between items-center px-6 h-20 w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer" data-icon="menu">menu</span>
+<span class="font-['Noto_Serif'] font-bold text-xl tracking-tight text-[#56423d]">La Table d’Antibes</span>
+</div>
+<button class="font-['Plus_Jakarta_Sans'] uppercase tracking-[0.1rem] text-xs font-bold text-[#994127] border border-[#994127] px-6 py-2 hover:bg-[#994127] hover:text-white transition-all active:scale-[0.99]">
+            RÉSERVER
+        </button>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-32 pb-24 px-6 max-w-7xl mx-auto w-full">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+<!-- Left Editorial Section -->
+<div class="lg:col-span-7 flex flex-col gap-12">
+<section>
+<span class="font-['Plus_Jakarta_Sans'] uppercase tracking-[0.2rem] text-xs text-primary font-bold mb-4 block">NOUS CONTACTER</span>
+<h1 class="text-5xl md:text-7xl font-bold leading-tight text-on-surface-variant max-w-xl">
+                        Contact &amp; Réservations
+                    </h1>
+</section>
+<!-- Action Blocks: Bento Style -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<a class="bg-primary p-8 flex flex-col justify-between aspect-square group transition-all duration-300 hover:bg-primary-container" href="tel:+33493000000">
+<span class="material-symbols-outlined text-white text-4xl" data-icon="call">call</span>
+<div>
+<p class="text-white/70 text-sm font-label uppercase tracking-widest mb-2">Appeler l'établissement</p>
+<p class="text-white text-2xl font-bold font-body">+33 4 93 XX XX XX</p>
+</div>
+</a>
+<a class="bg-surface-container-low p-8 flex flex-col justify-between aspect-square border border-outline-variant/15 transition-all duration-300 hover:bg-surface-container-high" href="https://wa.me/33493000000">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="chat">chat</span>
+<div>
+<p class="text-on-surface-variant/70 text-sm font-label uppercase tracking-widest mb-2">Chat WhatsApp</p>
+<p class="text-on-surface-variant text-2xl font-bold font-body">Discuter avec nous</p>
+</div>
+</a>
+</div>
+<!-- Info Details -->
+<div class="space-y-12 py-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="space-y-4">
+<h3 class="text-xl font-bold border-b border-outline-variant/30 pb-2">Notre Emplacement</h3>
+<p class="text-on-surface-variant font-body leading-relaxed">
+                                Rue du Bas-Castel,<br/>
+                                06600 Antibes, France<br/>
+<span class="text-sm italic opacity-70">À deux pas du Marché Provençal.</span>
+</p>
+</div>
+<div class="space-y-4">
+<h3 class="text-xl font-bold border-b border-outline-variant/30 pb-2">Horaires d'Ouverture</h3>
+<p class="text-on-surface-variant font-body leading-relaxed">
+                                Ouvert tous les jours<br/>
+                                12h — 14h30<br/>
+                                19h — 22h30
+                            </p>
+</div>
+</div>
+<div class="space-y-4">
+<h3 class="text-xl font-bold border-b border-outline-variant/30 pb-2">Par Email</h3>
+<a class="text-primary text-2xl font-body hover:underline transition-all" href="mailto:contact@latable-antibes.fr">
+                            contact@latable-antibes.fr
+                        </a>
+</div>
+</div>
+</div>
+<!-- Right Visual Section: Map & Editorial Image -->
+<div class="lg:col-span-5 lg:pl-12 flex flex-col gap-4 mt-12 lg:mt-0">
+<!-- Map Placeholder as stylized block -->
+<div class="relative w-full aspect-[4/5] bg-surface-container overflow-hidden border border-outline-variant/10">
+<img class="w-full h-full object-cover grayscale brightness-75 contrast-125" data-alt="detailed monochromatic map illustration of old town Antibes streets near the coastline with elegant minimalist markers" data-location="Antibes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDkvYGclChVhFK4tFt22kJeHtOG2i3p909tN60VSlUNZt7ceaioc_fm2JC4E62H10rTJVKMlkiJvaIVDrodmLPuPKEyXTzV6ZjaDac9CR80gYHcuENouF9a2uh-5jkFjFdjckNjjv9NcrXI7BFSQq3VmaNAOFua5lJg-lbXejstRmDPAQIUpOzFpR64YMo1cbxo7FG1b-qi16TFJITMWWNE7G5gjINAx9oWS_SKPSNLS3Z33fl1fKili_RuYTPM9kNCKXO3gJGx4rv"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+<div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/60 to-transparent">
+<div class="flex items-center gap-3 text-white">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+<span class="font-label uppercase tracking-widest text-xs">Vieil Antibes, France</span>
+</div>
+</div>
+</div>
+<!-- Supporting Photo -->
+<div class="bg-surface-container-low p-1 border border-outline-variant/5">
+<img class="w-full aspect-video object-cover" data-alt="warm sunlit interior of a luxury french restaurant with white linen tables and terracota colored walls and soft golden hour light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYYNScUenUuE14xfDdMC6GPHYhxGuW8r4swNO3jlOeo1Fp8l7DBqtGndqZ6RVjkUA9NJv9yu6vm3-ck2xFpUsCDNc3C6GV6C4z2A-MSdsXRaQNwoZKmPfvA-Mjyv0W4dzfP2T19wZdFu1TIlhvRKrJ5tluvdfYiKtwvGeRS-c-QTYdBozSAhdN9vgEq3nsLWz8WbTWMccvPIhZj_0Vehs5UurJY7T5Qd_fRpy5UP5fO7lsxDW7NVZh3rv28dR_wVYg45ZtMepvPwzY"/>
+<p class="p-4 text-[10px] uppercase tracking-[0.2rem] text-on-surface-variant/50 font-medium">L'ESPRIT DE LA PROVENCE — ANTIBES</p>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center h-16 pb-safe bg-[#faf9f6]/80 backdrop-blur-md border-t border-[#dcc1ba]/15 z-50">
+<a class="flex flex-col items-center justify-center text-[#56423d] hover:text-[#994127] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+<span class="font-['Plus_Jakarta_Sans'] font-medium text-[10px] uppercase tracking-wider">Appeler</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#56423d] hover:text-[#994127] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+<span class="font-['Plus_Jakarta_Sans'] font-medium text-[10px] uppercase tracking-wider">WhatsApp</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#56423d] hover:text-[#994127] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="directions_reverses">directions_off</span>
+<span class="font-['Plus_Jakarta_Sans'] font-medium text-[10px] uppercase tracking-wider">Itinéraire</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#994127] font-bold scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+<span class="font-['Plus_Jakarta_Sans'] font-medium text-[10px] uppercase tracking-wider">Menu</span>
+</a>
+</nav>
+<!-- Floating Navigation Drawer (Hidden by default, used for interaction logic) -->
+<div class="hidden h-full w-80 fixed left-0 top-0 border-r border-[#dcc1ba]/15 bg-[#faf9f6] z-[60] flex flex-col p-8 space-y-8 shadow-[0_20px_40px_rgba(153,65,39,0.06)]" id="drawer">
+<div class="text-[#994127] font-['Noto_Serif'] text-2xl border-b border-[#dcc1ba]/15 pb-4">LA TABLE D’ANTIBES</div>
+<nav class="flex flex-col space-y-4">
+<a class="text-[#56423d] flex items-center gap-4 p-2 hover:bg-[#f4f3f1] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-body font-medium">Accueil</span>
+</a>
+<a class="text-[#56423d] flex items-center gap-4 p-2 hover:bg-[#f4f3f1] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="restaurant_menu">restaurant_menu</span>
+<span class="font-body font-medium">Carte</span>
+</a>
+<a class="text-[#56423d] flex items-center gap-4 p-2 hover:bg-[#f4f3f1] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="photo_library">photo_library</span>
+<span class="font-body font-medium">Galerie</span>
+</a>
+<a class="text-[#994127] font-bold bg-[#f4f3f1] translate-x-1 flex items-center gap-4 p-2" href="#">
+<span class="material-symbols-outlined" data-icon="contact_page">contact_page</span>
+<span class="font-body">Contact</span>
+</a>
+</nav>
+</div>
+</body></html>

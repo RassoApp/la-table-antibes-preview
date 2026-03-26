@@ -1,0 +1,16 @@
+export const v3Media = {
+  heroTerrace: '/v3-stitch/hero-terrace.jpg',
+  terraceTable: '/v3-stitch/terrace-table.jpg',
+  pizza: '/v3-stitch/pizza.jpg',
+  barInterior: '/v3-stitch/bar-interior.jpg',
+  map: '/v3-stitch/map.jpg',
+  interiorSunlit: '/v3-stitch/interior-sunlit.jpg',
+  galleryTerrace: '/v3-stitch/gallery-terrace.jpg',
+  galleryRoom: '/v3-stitch/gallery-room.jpg',
+  galleryOven: '/v3-stitch/gallery-oven.jpg',
+  galleryDish: '/v3-stitch/gallery-dish.jpg',
+  galleryCutlery: '/v3-stitch/gallery-cutlery.jpg',
+  aboutRoom: '/v3-stitch/about-room.jpg',
+  aboutTerrace: '/v3-stitch/about-terrace.jpg',
+  aboutOven: '/v3-stitch/about-oven.jpg',
+};
