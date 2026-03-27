@@ -71,11 +71,14 @@ export function useLocale() {
 }
 
 export default function App() {
+  const isPublishedPreview = import.meta.env.BASE_URL !== '/';
+
   return (
     <>
       <ScrollToTop />
       <Routes>
-        <Route path="/" element={<CompareHomePage />} />
+        <Route path="/" element={isPublishedPreview ? <Navigate to="/v6/fr" replace /> : <CompareHomePage />} />
+        <Route path="/compare" element={<CompareHomePage />} />
         <Route path="/v1" element={<Navigate to="/v1/fr" replace />} />
         <Route path="/v1/:lang" element={<LocaleLayout version="v1" LayoutComponent={SiteLayout} />}>
           <Route index element={<HomePage />} />

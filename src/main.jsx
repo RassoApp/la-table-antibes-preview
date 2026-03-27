@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, HashRouter } from 'react-router-dom';
 import '@fontsource/cormorant-garamond/400.css';
 import '@fontsource/cormorant-garamond/500.css';
 import '@fontsource/cormorant-garamond/600.css';
@@ -25,8 +25,14 @@ import './v6/styles.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    {import.meta.env.BASE_URL === '/' ? (
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    ) : (
+      <HashRouter>
+        <App />
+      </HashRouter>
+    )}
   </React.StrictMode>,
 );
