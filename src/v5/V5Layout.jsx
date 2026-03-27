@@ -1,19 +1,20 @@
 import { useEffect, useMemo, useState } from 'react';
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import { navItems, supportedLanguages } from '../content/siteContent';
+import { assetPath } from '../utils/assets';
 import { buildLocalizedPath } from '../utils/paths';
 
 const languageFlags = {
   fr: {
-    src: '/v5-assets/flags/france.svg',
+    src: assetPath('/v5-assets/flags/france.svg'),
     alt: 'Français',
   },
   en: {
-    src: '/v5-assets/flags/uk.svg',
+    src: assetPath('/v5-assets/flags/uk.svg'),
     alt: 'English',
   },
   it: {
-    src: '/v5-assets/flags/italy.svg',
+    src: assetPath('/v5-assets/flags/italy.svg'),
     alt: 'Italiano',
   },
 };

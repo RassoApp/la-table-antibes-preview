@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import { supportedLanguages } from '../content/siteContent';
+import { assetPath } from '../utils/assets';
 import { buildLocalizedPath } from '../utils/paths';
 import { CutleryIcon, FacebookIcon, InstagramIcon, PinIcon } from '../v5/V5Icons';
 import { V6ReserveDropdown } from './ReserveDropdown';
@@ -8,15 +9,15 @@ import { V6SocialDropdown } from './SocialDropdown';
 
 const languageFlags = {
   fr: {
-    src: '/v5-assets/flags/france.svg',
+    src: assetPath('/v5-assets/flags/france.svg'),
     alt: 'Français',
   },
   en: {
-    src: '/v5-assets/flags/uk.svg',
+    src: assetPath('/v5-assets/flags/uk.svg'),
     alt: 'English',
   },
   it: {
-    src: '/v5-assets/flags/italy.svg',
+    src: assetPath('/v5-assets/flags/italy.svg'),
     alt: 'Italiano',
   },
 };
