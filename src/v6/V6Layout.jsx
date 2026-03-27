@@ -77,7 +77,7 @@ export function V6Layout({ lang, locale, basePath }) {
   }));
 
   return (
-    <div className="v3-shell v4-shell v5-shell v6-shell">
+    <div className="v3-shell v5-shell v6-shell">
       <header className="v3-header">
         <div className="v3-header__inner">
           <button

@@ -9,7 +9,7 @@ import { V6ReserveDropdown } from '../ReserveDropdown';
 function ShowcaseCard({ src, alt }) {
   return (
     <figure className="v5-showcase-card">
-      <img src={src} alt={alt} />
+      <img src={src} alt={alt} loading="lazy" decoding="async" />
     </figure>
   );
 }
@@ -23,7 +23,13 @@ export function V6HomePage() {
   return (
     <>
       <section className="v3-hero">
-        <img className="v3-hero__image" src={v5Media.heroTerrace} alt="Grande terrasse peinte dans le Vieil Antibes" />
+        <img
+          className="v3-hero__image"
+          src={v5Media.heroTerrace}
+          alt="Grande terrasse peinte dans le Vieil Antibes"
+          fetchPriority="high"
+          decoding="async"
+        />
         <div className="v3-hero__overlay" />
 
         <div className="v3-hero__content">
@@ -84,16 +90,16 @@ export function V6HomePage() {
 
           <div className="v5-cuisine__grid v5-ambiance__media">
             <figure className="v5-showcase-card v5-ambiance__card">
-              <img src={v5Media.barInterior} alt="Bar et salle" />
+              <img src={v5Media.barInterior} alt="Bar et salle" loading="lazy" decoding="async" />
             </figure>
             <figure className="v5-showcase-card v5-ambiance__card">
-              <img src={v5Media.interiorSunlit} alt="Salle lumineuse" />
+              <img src={v5Media.interiorSunlit} alt="Salle lumineuse" loading="lazy" decoding="async" />
             </figure>
             <figure className="v5-showcase-card v5-ambiance__card">
-              <img src={v5Media.galleryRoom} alt="Grande salle bistrot" />
+              <img src={v5Media.galleryRoom} alt="Grande salle bistrot" loading="lazy" decoding="async" />
             </figure>
             <figure className="v5-showcase-card v5-ambiance__card">
-              <img src={v5Media.galleryCutlery} alt="Table dressée" />
+              <img src={v5Media.galleryCutlery} alt="Table dressée" loading="lazy" decoding="async" />
             </figure>
           </div>
         </div>
@@ -135,7 +141,12 @@ export function V6HomePage() {
           </div>
 
           <figure className="v3-feature-image v6-events__image">
-            <img src={v5Media.galleryCutlery} alt={lang === 'fr' ? 'Table dressée pour recevoir un groupe' : 'Set table prepared for a group event'} />
+            <img
+              src={v5Media.galleryCutlery}
+              alt={lang === 'fr' ? 'Table dressée pour recevoir un groupe' : 'Set table prepared for a group event'}
+              loading="lazy"
+              decoding="async"
+            />
           </figure>
         </div>
       </section>
@@ -177,7 +188,7 @@ export function V6HomePage() {
 
             <div className="v3-contact-media v5-contact-media">
               <figure className="v3-feature-image">
-                <img src={v5Media.homeAccess} alt="Carte statique du quartier" />
+                <img src={v5Media.homeAccess} alt="Carte statique du quartier" loading="lazy" decoding="async" />
               </figure>
             </div>
           </div>
