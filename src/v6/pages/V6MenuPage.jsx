@@ -4,15 +4,26 @@ export function V6MenuPage() {
   const { locale } = useLocale();
   const tagLabels = locale.menuPage.tagLabels ?? {};
 
+  function scrollToCategory(categoryId) {
+    const target = document.getElementById(categoryId);
+
+    if (!target) return;
+
+    target.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  }
+
   return (
     <div className="v3-page v5-page v5-page--menu v6-page--menu">
       <section className="v3-section v6-menu-section">
         <div className="v3-container">
           <div className="v3-chip-row v6-menu-chip-row">
             {locale.menuPage.categories.map((category) => (
-              <a key={category.id} href={`#${category.id}`}>
+              <button key={category.id} type="button" onClick={() => scrollToCategory(category.id)}>
                 {category.title}
-              </a>
+              </button>
             ))}
           </div>
 
