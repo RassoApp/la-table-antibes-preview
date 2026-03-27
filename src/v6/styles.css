@@ -722,7 +722,8 @@
   }
 
   .v6-shell .v3-footer {
-    padding-bottom: calc(var(--v6-mobile-bar-height) + env(safe-area-inset-bottom, 0px) + 1rem);
+    padding-bottom: 1rem;
+    margin-bottom: calc(var(--v6-mobile-bar-height) + env(safe-area-inset-bottom, 0px) + 1.1rem);
   }
 
   .v6-shell .v6-footer__legal,
