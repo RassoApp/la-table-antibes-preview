@@ -1,11 +1,17 @@
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
   min-width: 320px;
   background: #faf9f6;
+  overflow-x: hidden;
+}
+
+#root {
+  overflow-x: hidden;
 }
 
 a {
@@ -41,6 +47,7 @@ img {
   background: var(--bg);
   color: var(--text);
   font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
 }
 
 .v3-shell h1,
