@@ -826,6 +826,12 @@
 }
 
 @media (max-width: 959px) {
+  html,
+  body,
+  #root {
+    background: #994127;
+  }
+
   .v6-shell {
     --v6-mobile-bar-height: 4.15rem;
   }
