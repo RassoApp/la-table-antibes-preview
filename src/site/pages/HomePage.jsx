@@ -65,7 +65,7 @@ export function HomePage() {
             <h2>{home.cuisine.title}</h2>
             <p>{home.cuisine.text}</p>
             <div>
-              <Link className="v3-button v3-button--primary" to={buildLocalizedPath('menu')}>
+              <Link className="v3-button v6-cuisine-menu-button" to={buildLocalizedPath('menu')}>
                 <CutleryIcon />
                 {locale.actions.menu}
               </Link>
@@ -87,6 +87,9 @@ export function HomePage() {
             <span className="v3-kicker">{home.ambiance.eyebrow}</span>
             <h2>{home.ambiance.title}</h2>
             <p>{home.ambiance.text}</p>
+            <div>
+              <ReserveDropdown locale={locale} />
+            </div>
           </div>
 
           <div className="v5-cuisine__grid v5-ambiance__media">

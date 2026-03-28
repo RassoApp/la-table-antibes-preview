@@ -123,6 +123,20 @@
   align-items: start;
 }
 
+@media (min-width: 901px) {
+  .v5-shell .v5-ambiance {
+    grid-template-columns: 1.18fr 0.82fr;
+  }
+
+  .v5-shell .v5-ambiance__media {
+    order: 1;
+  }
+
+  .v5-shell .v5-ambiance .v3-copy {
+    order: 2;
+  }
+}
+
 .v5-shell .v5-cuisine__intro h2 {
   margin: 0 0 1rem;
   font-size: clamp(2.2rem, 4.8vw, 4.7rem);

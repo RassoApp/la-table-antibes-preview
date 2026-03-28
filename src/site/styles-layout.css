@@ -89,6 +89,16 @@
   background: rgba(153, 65, 39, 0.08);
 }
 
+.v6-shell .v6-cuisine-menu-button {
+  background: var(--surface);
+  border: 1px solid rgba(153, 65, 39, 0.46);
+  color: var(--primary);
+}
+
+.v6-shell .v6-cuisine-menu-button::before {
+  background: rgba(153, 65, 39, 0.08);
+}
+
 .v6-shell .v6-hero-directions-button {
   display: none;
 }
@@ -841,6 +851,10 @@
     gap: 0.75rem;
   }
 
+  .v6-shell .v3-section--soft {
+    background: var(--bg);
+  }
+
   .v6-shell .v3-language__menu {
     top: calc(100% + 1.28rem);
   }
@@ -852,6 +866,10 @@
 
   .v6-shell .v6-header-socials {
     display: none;
+  }
+
+  .v6-shell .v3-section {
+    padding-bottom: 0;
   }
 
   .v6-shell .v3-header {
