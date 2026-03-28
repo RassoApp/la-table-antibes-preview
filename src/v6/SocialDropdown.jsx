@@ -5,6 +5,7 @@ export function V6SocialDropdown({
   locale,
   buttonClassName = 'v6-mobile-action v6-mobile-action--link',
   className = '',
+  buttonLabel,
 }) {
   const [open, setOpen] = useState(false);
   const rootRef = useRef(null);
@@ -42,7 +43,7 @@ export function V6SocialDropdown({
         onClick={() => setOpen((value) => !value)}
       >
         <InstagramIcon className="v6-mobile-action__icon" />
-        <span>{locale.actions.social}</span>
+        <span>{buttonLabel ?? locale.actions.social}</span>
       </button>
 
       <div className="v6-social__menu" role="menu" aria-label={locale.uiLabels.socialMenuLabel}>

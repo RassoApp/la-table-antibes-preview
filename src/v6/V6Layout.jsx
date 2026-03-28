@@ -56,6 +56,28 @@ const languageFlags = {
 
 const v6NavKeys = ['home', 'menu'];
 
+const mobileActionLabelOverrides = {
+  it: {
+    reserve: 'Prenota',
+    directions: 'Percorso',
+  },
+  de: {
+    reserve: 'Buchen',
+  },
+  nl: {
+    reserve: 'Boeken',
+  },
+  es: {
+    directions: 'Ruta',
+  },
+  ru: {
+    reserve: 'Бронь',
+  },
+  uk: {
+    reserve: 'Бронь',
+  },
+};
+
 function V6LanguageSwitcher({ basePath, lang, locale, open, onToggle, onClose }) {
   const location = useLocation();
   const baseSegmentCount = basePath.split('/').filter(Boolean).length;
@@ -95,6 +117,12 @@ export function V6Layout({ lang, locale, basePath }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [languageOpen, setLanguageOpen] = useState(false);
   const buildPath = (slug = '') => buildLocalizedPath(basePath, lang, slug);
+  const mobileLabels = {
+    reserve: mobileActionLabelOverrides[lang]?.reserve ?? locale.actions.reserve,
+    directions: mobileActionLabelOverrides[lang]?.directions ?? locale.actions.directions,
+    menu: mobileActionLabelOverrides[lang]?.menu ?? locale.navLabels.menu,
+    social: mobileActionLabelOverrides[lang]?.social ?? locale.actions.social,
+  };
 
   useEffect(() => {
     setMenuOpen(false);
@@ -216,16 +244,17 @@ export function V6Layout({ lang, locale, basePath }) {
           direction="up"
           className="v6-mobile-bar__reserve"
           buttonClassName="v6-mobile-action v6-mobile-action--reserve"
+          buttonLabel={mobileLabels.reserve}
         />
         <a className="v6-mobile-action v6-mobile-action--link" href={locale.contactLinks.directionsHref} target="_blank" rel="noreferrer">
           <PinIcon className="v6-mobile-action__icon" />
-          <span>{locale.actions.directions}</span>
+          <span>{mobileLabels.directions}</span>
         </a>
         <NavLink className={({ isActive }) => `v6-mobile-action v6-mobile-action--link ${isActive ? 'is-active' : ''}`} to={buildPath('menu')}>
           <CutleryIcon className="v6-mobile-action__icon" />
-          <span>{locale.navLabels.menu}</span>
+          <span>{mobileLabels.menu}</span>
         </NavLink>
-        <V6SocialDropdown locale={locale} className="v6-mobile-bar__social" />
+        <V6SocialDropdown locale={locale} className="v6-mobile-bar__social" buttonLabel={mobileLabels.social} />
       </nav>
     </div>
   );

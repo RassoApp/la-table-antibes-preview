@@ -7,6 +7,7 @@ export function V6ReserveDropdown({
   direction = 'down',
   buttonClassName = 'v3-button v3-button--primary',
   className = '',
+  buttonLabel,
 }) {
   const [open, setOpen] = useState(false);
   const rootRef = useRef(null);
@@ -64,7 +65,7 @@ export function V6ReserveDropdown({
         onClick={() => setOpen((value) => !value)}
       >
         <CalendarIcon />
-        <span>{locale.actions.reserve}</span>
+        <span>{buttonLabel ?? locale.actions.reserve}</span>
         <span className="v6-reserve__caret" aria-hidden="true">
           ▾
         </span>
