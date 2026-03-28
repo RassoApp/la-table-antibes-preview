@@ -1,6 +1,6 @@
 import { useLocale } from '../../App';
 
-export function V6MenuPage() {
+export function MenuPage() {
   const { locale } = useLocale();
   const tagLabels = locale.menuPage.tagLabels ?? {};
 
@@ -39,7 +39,7 @@ export function V6MenuPage() {
                         <div className="v6-menu-item__title-row">
                           <h3>{item.name}</h3>
                           {item.tags?.length ? (
-                            <div className="v6-menu-item__tags" aria-label="Dish tags">
+                            <div className="v6-menu-item__tags">
                               {item.tags.map((tag) => (
                                 <span key={`${item.name}-${tag}`} className={`v6-menu-tag is-${tag}`}>
                                   {tagLabels[tag] ?? tag}

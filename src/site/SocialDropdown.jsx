@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
-import { FacebookIcon, InstagramIcon } from '../v5/V5Icons';
+import { FacebookIcon, InstagramIcon } from './icons';
 
-export function V6SocialDropdown({
+export function SocialDropdown({
   locale,
   buttonClassName = 'v6-mobile-action v6-mobile-action--link',
   className = '',

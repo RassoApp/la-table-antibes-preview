@@ -6,9 +6,7 @@ import '@fontsource/plus-jakarta-sans/500.css';
 import '@fontsource/plus-jakarta-sans/600.css';
 import '@fontsource/plus-jakarta-sans/700.css';
 import App from './App';
-import './v3/styles.css';
-import './v5/styles.css';
-import './v6/styles.css';
+import './site/styles.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

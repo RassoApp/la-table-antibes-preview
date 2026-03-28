@@ -1050,7 +1050,7 @@
     bottom: 100%;
     top: auto;
     border: 0;
-    background: linear-gradient(180deg, var(--primary), var(--primary-soft));
+    background: var(--primary);
     box-shadow: 0 20px 36px rgba(153, 65, 39, 0.18);
   }
 
@@ -1062,7 +1062,7 @@
     bottom: 100%;
     top: auto;
     border: 0;
-    background: linear-gradient(180deg, var(--primary), var(--primary-soft));
+    background: var(--primary);
     box-shadow: 0 20px 36px rgba(153, 65, 39, 0.18);
   }
 
@@ -1107,7 +1107,7 @@
   }
 
   .v6-shell .v3-hero__content h1 {
-    max-width: 11.7ch;
+    max-width: 23.4ch;
   }
 
   .v6-shell .v3-hero__content p {

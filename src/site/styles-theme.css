@@ -353,6 +353,11 @@
 }
 
 @media (min-width: 960px) {
+  .v5-shell .v3-hero {
+    min-height: 0;
+    height: clamp(36rem, 80vh, 44rem);
+  }
+
   .v5-shell .v3-hero__content {
     padding-top: clamp(4.55rem, 6.5vh, 5.8rem);
     padding-bottom: 1.15rem;
@@ -414,7 +419,7 @@
   }
 
   .v5-shell .v3-hero__content h1 {
-    max-width: 10.2ch;
+    max-width: 20.4ch;
     font-size: clamp(2rem, 8.2vw, 2.65rem);
     line-height: 1.02;
   }

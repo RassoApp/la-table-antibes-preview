@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
-import { CalendarIcon, MailIcon, PhoneIcon, WhatsAppIcon } from '../v5/V5Icons';
+import { CalendarIcon, MailIcon, PhoneIcon, WhatsAppIcon } from './icons';
 
-export function V6ReserveDropdown({
+export function ReserveDropdown({
   locale,
   align = 'left',
   direction = 'down',

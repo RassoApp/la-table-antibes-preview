@@ -3,9 +3,9 @@ import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import { nativeLanguageLabels, supportedLanguages } from '../content/siteContent';
 import { assetPath } from '../utils/assets';
 import { buildLocalizedPath } from '../utils/paths';
-import { CutleryIcon, FacebookIcon, InstagramIcon, PinIcon } from '../v5/V5Icons';
-import { V6ReserveDropdown } from './ReserveDropdown';
-import { V6SocialDropdown } from './SocialDropdown';
+import { CutleryIcon, FacebookIcon, InstagramIcon, PinIcon } from './icons';
+import { ReserveDropdown } from './ReserveDropdown';
+import { SocialDropdown } from './SocialDropdown';
 
 const languageFlags = {
   fr: {
@@ -54,7 +54,7 @@ const languageFlags = {
   },
 };
 
-const v6NavKeys = ['home', 'menu'];
+const primaryNavKeys = ['home', 'menu'];
 
 const mobileActionLabelOverrides = {
   it: {
@@ -78,7 +78,7 @@ const mobileActionLabelOverrides = {
   },
 };
 
-function V6LanguageSwitcher({ basePath, lang, locale, open, onToggle, onClose }) {
+function LanguageSwitcher({ basePath, lang, locale, open, onToggle, onClose }) {
   const location = useLocation();
   const baseSegmentCount = basePath.split('/').filter(Boolean).length;
 
@@ -112,7 +112,7 @@ function V6LanguageSwitcher({ basePath, lang, locale, open, onToggle, onClose })
   );
 }
 
-export function V6Layout({ lang, locale, basePath }) {
+export function SiteLayout({ lang, locale, basePath }) {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [languageOpen, setLanguageOpen] = useState(false);
@@ -129,7 +129,7 @@ export function V6Layout({ lang, locale, basePath }) {
     setLanguageOpen(false);
   }, [location.pathname]);
 
-  const nav = v6NavKeys.map((key) => ({
+  const nav = primaryNavKeys.map((key) => ({
     key,
     slug: key === 'home' ? '' : 'menu',
     label: locale.navLabels[key],
@@ -193,7 +193,7 @@ export function V6Layout({ lang, locale, basePath }) {
                 <FacebookIcon />
               </a>
             </div>
-            <V6LanguageSwitcher
+            <LanguageSwitcher
               basePath={basePath}
               lang={lang}
               locale={locale}
@@ -204,7 +204,7 @@ export function V6Layout({ lang, locale, basePath }) {
               }}
               onClose={() => setLanguageOpen(false)}
             />
-            <V6ReserveDropdown locale={locale} align="right" />
+            <ReserveDropdown locale={locale} align="right" />
           </div>
         </div>
 
@@ -239,7 +239,7 @@ export function V6Layout({ lang, locale, basePath }) {
       </footer>
 
       <nav className="v3-mobile-bar v6-mobile-bar">
-        <V6ReserveDropdown
+        <ReserveDropdown
           locale={locale}
           direction="up"
           className="v6-mobile-bar__reserve"
@@ -254,7 +254,7 @@ export function V6Layout({ lang, locale, basePath }) {
           <CutleryIcon className="v6-mobile-action__icon" />
           <span>{mobileLabels.menu}</span>
         </NavLink>
-        <V6SocialDropdown locale={locale} className="v6-mobile-bar__social" buttonLabel={mobileLabels.social} />
+        <SocialDropdown locale={locale} className="v6-mobile-bar__social" buttonLabel={mobileLabels.social} />
       </nav>
     </div>
   );

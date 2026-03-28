@@ -1,4 +1,4 @@
-export const v5HomePlaceholderContent = {
+export const homePageContent = {
   fr: {
     hero: {
       title: 'Phrase principale qui résume le concept du restaurant',
@@ -295,5 +295,107 @@ export const v5HomePlaceholderContent = {
       title: '위치와 접근성이 좋다는 점을 안심시켜 주는 텍스트',
       text: '유용한 랜드마크, 주변 분위기, 필요 시 주차 정보, 방문 전 알아두면 좋은 실용 정보를 담는 짧은 텍스트.',
     },
+  },
+};
+
+export const homeEventContent = {
+  fr: {
+    eyebrow: 'Événements & groupes',
+    title: 'Privatisez pour vos événements !',
+    text:
+      'La Table Antibes peut accueillir vos groupes en salle ou en terrasse pour un événement privé ou professionnel dans le Vieil Antibes, dans un cadre pensé pour les moments à partager.',
+    tags: ['Mariages', 'Anniversaires', 'Repas de groupe'],
+    aria: "Types d'événements",
+    imageAlt: 'Table dressée pour recevoir un groupe',
+  },
+  en: {
+    eyebrow: 'Events & groups',
+    title: 'Host your events with us',
+    text:
+      'La Table Antibes can host private or professional groups indoors or on its terrace in the heart of Vieil Antibes, in a setting designed for shared moments.',
+    tags: ['Weddings', 'Birthdays', 'Group meals'],
+    aria: 'Event types',
+    imageAlt: 'Set table prepared for a group event',
+  },
+  it: {
+    eyebrow: 'Eventi e gruppi',
+    title: 'Organizza i tuoi eventi da noi',
+    text:
+      'La Table Antibes può accogliere i tuoi gruppi in sala o in terrazza per un evento privato o professionale nel cuore del Vieil Antibes, in un contesto pensato per i momenti da condividere.',
+    tags: ['Matrimoni', 'Compleanni', 'Pasti di gruppo'],
+    aria: 'Tipi di eventi',
+    imageAlt: 'Tavola apparecchiata per ricevere un gruppo',
+  },
+  de: {
+    eyebrow: 'Veranstaltungen und Gruppen',
+    title: 'Feiern Sie Ihre Veranstaltungen bei uns',
+    text:
+      'La Table Antibes empfängt Gruppen im Gastraum oder auf der Terrasse für private und berufliche Anlässe im Herzen von Vieil Antibes, in einem Rahmen für gemeinsame Momente.',
+    tags: ['Hochzeiten', 'Geburtstage', 'Gruppenessen'],
+    aria: 'Eventarten',
+    imageAlt: 'Gedeckter Tisch für eine Gruppe',
+  },
+  nl: {
+    eyebrow: 'Evenementen en groepen',
+    title: 'Organiseer uw evenementen bij ons',
+    text:
+      'La Table Antibes ontvangt uw gezelschappen in de zaal of op het terras voor privé- of zakelijke momenten in het hart van Vieil Antibes, in een sfeer die gemaakt is om samen te genieten.',
+    tags: ['Bruiloften', 'Verjaardagen', 'Groepsmaaltijden'],
+    aria: 'Soorten evenementen',
+    imageAlt: 'Gedekte tafel om een groep te ontvangen',
+  },
+  es: {
+    eyebrow: 'Eventos y grupos',
+    title: 'Celebre sus eventos con nosotros',
+    text:
+      'La Table Antibes puede recibir a sus grupos en sala o en terraza para un evento privado o profesional en el corazón del Vieil Antibes, en un entorno pensado para compartir momentos.',
+    tags: ['Bodas', 'Cumpleaños', 'Comidas de grupo'],
+    aria: 'Tipos de eventos',
+    imageAlt: 'Mesa preparada para recibir a un grupo',
+  },
+  ru: {
+    eyebrow: 'Мероприятия и группы',
+    title: 'Проводите свои мероприятия у нас',
+    text:
+      'La Table Antibes принимает группы в зале и на террасе для частных и деловых мероприятий в самом сердце Vieil Antibes, в атмосфере, созданной для приятных встреч.',
+    tags: ['Свадьбы', 'Дни рождения', 'Групповые ужины'],
+    aria: 'Типы мероприятий',
+    imageAlt: 'Сервированный стол для группы',
+  },
+  uk: {
+    eyebrow: 'Події та групи',
+    title: 'Проводьте свої події у нас',
+    text:
+      'La Table Antibes приймає групи в залі та на терасі для приватних і ділових подій у самому серці Vieil Antibes, у просторі, створеному для приємних спільних моментів.',
+    tags: ['Весілля', 'Дні народження', 'Групові вечері'],
+    aria: 'Типи подій',
+    imageAlt: 'Сервірований стіл для групи',
+  },
+  zh: {
+    eyebrow: '活动与团体',
+    title: '在这里举办您的活动',
+    text:
+      'La Table Antibes 可在室内或露台接待私人活动和团体聚会，位置就在 Vieil Antibes 核心区域，环境轻松而适合分享重要时刻。',
+    tags: ['婚礼', '生日', '团体聚餐'],
+    aria: '活动类型',
+    imageAlt: '为团体活动准备好的餐桌',
+  },
+  ja: {
+    eyebrow: 'イベント・団体利用',
+    title: 'イベント利用のご相談も承ります',
+    text:
+      'La Table Antibes では、Vieil Antibes の中心で、店内またはテラスにてプライベートやビジネスの集まりに対応できます。',
+    tags: ['ウェディング', '誕生日', '団体のお食事'],
+    aria: 'イベントの種類',
+    imageAlt: '団体利用のために整えられたテーブル',
+  },
+  ko: {
+    eyebrow: '이벤트 및 단체 이용',
+    title: '이벤트 대관도 가능합니다',
+    text:
+      'La Table Antibes 는 Vieil Antibes 중심에서 실내와 테라스 모두 개인 모임이나 비즈니스 모임을 위한 단체 이용에 대응할 수 있습니다.',
+    tags: ['웨딩', '생일', '단체 식사'],
+    aria: '이벤트 종류',
+    imageAlt: '단체 이용을 위해 준비된 테이블',
   },
 };

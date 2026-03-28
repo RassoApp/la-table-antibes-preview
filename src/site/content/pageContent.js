@@ -1,4 +1,4 @@
-export const v5PagePlaceholderContent = {
+export const pageContent = {
   fr: {
     menu: {
       eyebrow: 'Le menu',

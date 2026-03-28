@@ -14,14 +14,6 @@ export const nativeLanguageLabels = {
   ko: '한국어',
 };
 
-export const navItems = [
-  { slug: '', key: 'home' },
-  { slug: 'menu', key: 'menu' },
-  { slug: 'gallery', key: 'gallery' },
-  { slug: 'about', key: 'about' },
-  { slug: 'contact', key: 'contact' },
-];
-
 const commonContact = {
   phoneHref: 'tel:+33000000000',
   whatsappHref: 'https://wa.me/33000000000',

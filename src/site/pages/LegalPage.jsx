@@ -1,9 +1,9 @@
 import { useLocale } from '../../App';
-import { v5PagePlaceholderContent } from '../pagePlaceholderContent';
+import { pageContent } from '../content/pageContent';
 
-export function V5LegalPage() {
+export function LegalPage() {
   const { lang } = useLocale();
-  const placeholders = v5PagePlaceholderContent[lang] ?? v5PagePlaceholderContent.fr;
+  const placeholders = pageContent[lang] ?? pageContent.fr;
   const page = placeholders.legal;
 
   return (
