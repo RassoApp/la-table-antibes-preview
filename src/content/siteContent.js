@@ -1,4 +1,4 @@
-export const supportedLanguages = ['fr', 'en', 'it', 'de', 'nl', 'es', 'ru', 'uk', 'zh', 'ja'];
+export const supportedLanguages = ['fr', 'en', 'it', 'de', 'nl', 'es', 'ru', 'uk', 'zh', 'ja', 'ko'];
 
 export const nativeLanguageLabels = {
   fr: 'Français',
@@ -11,6 +11,7 @@ export const nativeLanguageLabels = {
   uk: 'Українська',
   zh: '中文',
   ja: '日本語',
+  ko: '한국어',
 };
 
 export const navItems = [
@@ -2608,6 +2609,257 @@ siteContent.ja = {
     { label: 'WhatsApp', href: commonContact.whatsappHref },
     { label: '道順', href: commonContact.directionsHref },
     { label: 'メニュー', slug: 'menu' },
+  ],
+  contactLinks: commonContact,
+};
+
+siteContent.ko = {
+  ...siteContent.en,
+  localeName: '한국어',
+  shortCode: 'KR',
+  alternateLanguages: {
+    fr: 'Français',
+    en: 'English',
+    it: 'Italiano',
+    de: 'Deutsch',
+    nl: 'Nederlands',
+    es: 'Español',
+    ru: 'Русский',
+    uk: 'Українська',
+    zh: '中文',
+    ja: '日本語',
+    ko: '한국어',
+  },
+  navLabels: {
+    home: '홈',
+    menu: '메뉴',
+    gallery: '갤러리',
+    about: '레스토랑 소개',
+    contact: '오시는 길',
+  },
+  uiLabels: {
+    ...siteContent.en.uiLabels,
+    languageSwitcher: '언어 선택',
+    toggleMenu: '메뉴 열기',
+    toggleReserveMenu: '예약 옵션 열기',
+    reserveMenuLabel: '예약 옵션',
+    toggleSocialMenu: '소셜 링크 열기',
+    socialMenuLabel: '소셜',
+    reserveMenuPhone: '전화',
+    reserveMenuWhatsapp: 'WhatsApp',
+    aboutDetailsEyebrow: '세부 정보',
+    aboutDetailsTitle: '최종 콘텐츠에서 이어서 살릴 소재감과 공간감에 대한 메모.',
+  },
+  actions: {
+    ...siteContent.en.actions,
+    contact: '문의하기',
+    reserve: '예약',
+    menu: '메뉴 보기',
+    directions: '길찾기',
+    social: '소셜',
+    call: '전화',
+    whatsapp: 'WhatsApp',
+    email: '이메일',
+    gallery: '갤러리 보기',
+    about: '공간 보기',
+    legal: '법적 정보',
+    jumpToCategory: '카테고리로 이동',
+  },
+  hero: {
+    eyebrow: 'Vieil Antibes 중심의 햇살 가득한 비스트로',
+    title: '테라스와 소재감, 그리고 넉넉한 요리를 즐길 수 있는 한 곳.',
+    text:
+      '점심부터 저녁, 그리고 테라스에서 길게 이어지는 한 잔까지를 위해 설계된 활기찬 대형 레스토랑의 프로토타입입니다.',
+    primaryLabel: '레스토랑에 문의하기',
+    secondaryLabel: '메뉴 보기',
+    imageLabel: '테라스 메인 비주얼',
+  },
+  infoStrip: [
+    { label: '주소', value: '최종 주소 확인 필요' },
+    { label: '영업시간', value: '점심 및 저녁 서비스' },
+    { label: '전화', value: '+33 0 00 00 00 00' },
+    { label: '분위기', value: '테라스, 바, 장작 오븐' },
+  ],
+  home: {
+    intro: {
+      eyebrow: '공간의 분위기',
+      title: '첫인상만으로도 설득력이 있고, 머물고 싶게 만드는 레스토랑.',
+      text:
+        '이 구조는 넓은 테라스, 클래식한 프랑스 요리, 장작 오븐 피자, 그리고 모바일 방문자가 바로 필요로 하는 실용 정보를 처음부터 전면에 보여줍니다.',
+    },
+    terrace: {
+      eyebrow: '테라스',
+      title: '첫 몇 초 안에 이 테라스의 매력을 분명히 보여줍니다.',
+      text:
+        '이 영역에는 공간을 가장 잘 설명하는 핵심 이미지가 들어갑니다. 빛, 여유, 편안함을 전달하면서도 페이지 전체를 무겁게 만들지 않아야 합니다.',
+      imageLabel: '큰 테라스',
+    },
+    cuisine: {
+      eyebrow: '요리와 장작 오븐',
+      title: '비스트로 요리와 든든한 클래식, 그리고 장작 오븐 피자.',
+      text:
+        '최종 텍스트에서 제안을 더 구체화하겠지만, 현재 구조만으로도 클래식 요리, 샐러드, 스튜, 그리고 보이는 장작 오븐을 자연스럽게 소개할 수 있습니다.',
+      ctaLabel: '메뉴 보기',
+      imageLabel: '보이는 장작 오븐',
+    },
+    gallery: {
+      eyebrow: '분위기',
+      title: '첫 방문 전에도 공간의 느낌이 전해지도록 합니다.',
+      text:
+        '이곳에는 나중에 실제 사진이 들어가 다이닝룸, 바, 소재감, 레스토랑의 리듬을 보여주게 됩니다. 그전까지는 블록이 명확한 자리표시 역할을 합니다.',
+      ctaLabel: '갤러리 보기',
+      images: ['넓은 다이닝룸', '브라스 바', '세팅된 테이블'],
+    },
+    story: {
+      eyebrow: '톤 앤 무드',
+      title: '소재는 진짜답고, 완성도는 깔끔하며, 매일 편안하게 머물 수 있는 곳.',
+      text:
+        '이 섹션은 길게 설명하지 않고도 레스토랑의 성격을 전달하기 위한 공간입니다. 목표는 믿을 수 있고 즉시 이해되는 인상을 만드는 것입니다.',
+      ctaLabel: '페이지 보기',
+      stats: [
+        { value: '넓음', label: '강조할 테라스' },
+        { value: '점심부터 저녁까지', label: '하루 전체를 아우르는 리듬' },
+        { value: '장작 오븐', label: '공간을 상징하는 보이는 요소' },
+      ],
+    },
+    access: {
+      eyebrow: '연락처와 오시는 길',
+      title: '망설이지 않고 바로 움직일 수 있도록 필요한 정보를 한곳에.',
+      text:
+        '연락처, 영업시간, 길찾기, 빠른 액션을 한곳에 모아 모바일과 데스크톱 모두에서 전환이 쉽도록 구성했습니다.',
+      imageLabel: '오시는 길 지도',
+    },
+  },
+  menuPage: {
+    eyebrow: '메뉴',
+    title: '읽기 쉽고, 나중에 깔끔하게 업데이트하기 쉬운 모바일용 메뉴 페이지.',
+    text:
+      '최종 메뉴는 이 예시 콘텐츠를 대체하게 됩니다. 현재 구조는 명확한 카테고리, 눈에 잘 띄는 가격, 모바일에서의 편한 읽기를 전제로 구성되어 있습니다.',
+    note:
+      '아래 이름들은 구조 예시입니다. 이후 고객이 최종 메뉴명을 전달하기 쉽도록 하기 위한 기반입니다.',
+    tagLabels: {
+      vegetarian: '베지테리언',
+      vegan: '비건',
+      fish: '생선',
+      pork: '돼지고기',
+      spicy: '매운맛',
+    },
+    categories: [
+      {
+        id: 'starters',
+        title: '스타터',
+        items: [
+          { name: '오늘의 전채', description: '제철 전채, 내용은 추후 확정', price: '00 €' },
+          { name: '구운 채소', description: '최종 버전은 추후 조정', price: '00 €', tags: ['vegan'] },
+          { name: '작은 부라타', description: '여름에 잘 어울리는 산뜻한 한 접시', price: '00 €', tags: ['vegetarian'] },
+        ],
+      },
+      {
+        id: 'salads',
+        title: '샐러드',
+        items: [
+          { name: '하우스 샐러드', description: '런치용 큰 샐러드, 내용은 추후 확정', price: '00 €', tags: ['vegetarian'] },
+          { name: '크리스피 치킨', description: '레시피와 가니시는 확인 필요', price: '00 €' },
+          { name: '니수아즈 샐러드', description: '최종 구성은 추후 조정', price: '00 €', tags: ['fish'] },
+        ],
+      },
+      {
+        id: 'mains',
+        title: '메인 요리',
+        items: [
+          { name: '시그니처 앙트르코트', description: '고기, 소스, 가니시는 확인 필요', price: '00 €' },
+          { name: '스튜 요리', description: '하우스 레시피는 추후 입력', price: '00 €', tags: ['pork'] },
+          { name: '오늘의 생선', description: '입고와 조리 방식은 추후 결정', price: '00 €', tags: ['fish'] },
+        ],
+      },
+      {
+        id: 'pizzas',
+        title: '장작 오븐 피자',
+        items: [
+          { name: '장작 오븐 마르게리타', description: '오븐 베이스는 추후 조정', price: '00 €', tags: ['vegetarian'] },
+          { name: '하우스 피자', description: '하우스 레시피는 추후 입력', price: '00 €', tags: ['pork', 'spicy'] },
+          { name: '화이트 피자', description: '최종 버전은 확인 필요', price: '00 €', tags: ['pork'] },
+        ],
+      },
+      {
+        id: 'desserts',
+        title: '디저트',
+        items: [
+          { name: '오늘의 디저트', description: '실제 메뉴에 맞춰 추후 조정', price: '00 €' },
+          { name: '클래식 디저트', description: '비스트로 스타일로 추후 조정', price: '00 €' },
+          { name: '아이스크림', description: '여름에 어울리는 가벼운 선택지', price: '00 €' },
+        ],
+      },
+      {
+        id: 'drinks',
+        title: '음료',
+        items: [
+          { name: '하우스 칵테일', description: '테라스용 대표 칵테일은 추후 결정', price: '00 €' },
+          { name: '글라스 와인', description: '셀렉션은 추후 확정', price: '00 €' },
+          { name: '차가운 음료', description: '최종 구성은 추후 보완', price: '00 €' },
+        ],
+      },
+    ],
+  },
+  contactPage: {
+    ...siteContent.en.contactPage,
+    eyebrow: '오시는 길',
+    title: '실용적인 정보를 한 페이지에 모은, 간결하고 효율적인 구성입니다.',
+    text:
+      '이 페이지는 레스토랑 연락 방법, 찾아오는 길, 영업시간 확인, 접근성 파악 같은 실질적인 질문에 빠르게 답하기 위해 만들어졌습니다.',
+    cards: [
+      { title: '전화', value: '+33 0 00 00 00 00', href: commonContact.phoneHref },
+      { title: 'WhatsApp', value: '바로 메시지 보내기', href: commonContact.whatsappHref },
+      { title: '이메일', value: 'bonjour@latable-antibes.fr', href: commonContact.emailHref },
+    ],
+    addressTitle: '주소',
+    addressValue: 'Vieil Antibes, 최종 주소 확인 필요',
+    hoursTitle: '영업시간',
+    hours: [
+      { day: '월요일', hours: '12:00 - 14:30 / 19:00 - 22:30' },
+      { day: '화요일', hours: '12:00 - 14:30 / 19:00 - 22:30' },
+      { day: '수요일', hours: '12:00 - 14:30 / 19:00 - 22:30' },
+      { day: '목요일', hours: '12:00 - 14:30 / 19:00 - 22:30' },
+      { day: '금요일', hours: '12:00 - 14:30 / 19:00 - 23:00' },
+      { day: '토요일', hours: '12:00 - 15:00 / 19:00 - 23:00' },
+      { day: '일요일', hours: '확인 필요' },
+    ],
+    accessTitle: '길찾기',
+    accessText:
+      '눈에 띄는 테라스, 랜드마크, 가장 가까운 주차장, 그리고 방문객이 바로 사용할 수 있는 길찾기 링크 같은 정보를 여기에 넣으면 좋습니다.',
+    mapLabel: '지도',
+  },
+  legalPage: {
+    ...siteContent.en.legalPage,
+    eyebrow: '법적 정보',
+    title: '최종 행정 및 법적 정보를 담기 위한 페이지입니다.',
+    text:
+      '현재 표시되는 내용은 예시입니다. 법적 정보, 호스팅 정보, 회사 정보, 개인정보 관련 문구는 공개 전에 정리됩니다.',
+    sections: [
+      {
+        title: '사이트 운영자',
+        body: '회사명, 주소, 등록 정보, 법적 대표자, 연락처를 여기에 기재합니다.',
+      },
+      {
+        title: '호스팅',
+        body: '호스팅 업체명, 주소, 연락처, 사용한 기술 환경을 기재합니다.',
+      },
+      {
+        title: '개인정보',
+        body: '공개 버전은 쿠키 배너와 무거운 분석 도구 없이 운영할 예정이지만, 최종 개인정보 관련 문구는 공개 전에 정확히 보완해야 합니다.',
+      },
+    ],
+  },
+  footer: {
+    summary:
+      '이 로컬 프로토타입은 이후 레스토랑의 최종 텍스트, 이미지, 정보로 교체될 예정입니다.',
+    copyright: '로컬 프로토타입 • La Table Antibes',
+  },
+  quickActions: [
+    { label: '전화', href: commonContact.phoneHref },
+    { label: 'WhatsApp', href: commonContact.whatsappHref },
+    { label: '길찾기', href: commonContact.directionsHref },
+    { label: '메뉴', slug: 'menu' },
   ],
   contactLinks: commonContact,
 };

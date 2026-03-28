@@ -48,6 +48,10 @@ const languageFlags = {
     src: assetPath('/v5-assets/flags/japan.svg'),
     alt: '日本語',
   },
+  ko: {
+    src: assetPath('/v5-assets/flags/south-korea.svg'),
+    alt: '한국어',
+  },
 };
 
 const v6NavKeys = ['home', 'menu'];

@@ -97,6 +97,15 @@ const homeEventContent = {
     aria: 'イベントの種類',
     imageAlt: '団体利用のために整えられたテーブル',
   },
+  ko: {
+    eyebrow: '이벤트 및 단체 이용',
+    title: '이벤트 대관도 가능합니다',
+    text:
+      'La Table Antibes 는 Vieil Antibes 중심에서 실내와 테라스 모두 개인 모임이나 비즈니스 모임을 위한 단체 이용에 대응할 수 있습니다.',
+    tags: ['웨딩', '생일', '단체 식사'],
+    aria: '이벤트 종류',
+    imageAlt: '단체 이용을 위해 준비된 테이블',
+  },
 };
 
 function ShowcaseCard({ src, alt }) {
