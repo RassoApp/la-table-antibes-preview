@@ -1,7 +1,7 @@
 export const homePageContent = {
   fr: {
     hero: {
-      title: 'Phrase principale qui résume le concept du restaurant',
+      title: 'La Table est un lieu, la cuisine est un art. Nous réunissons les deux.',
       text: "Court texte de 1 à 2 phrases pour présenter le concept, le type de cuisine et l'ambiance générale du lieu.",
     },
     infoStrip: [
@@ -28,7 +28,7 @@ export const homePageContent = {
   },
   en: {
     hero: {
-      title: 'Main sentence that sums up the restaurant',
+      title: 'La Table is a place, cuisine is an art. We bring the two together.',
       text: 'Short 1 to 2 sentence text introducing the concept, the cuisine, and the overall atmosphere of the place.',
     },
     infoStrip: [
@@ -55,7 +55,7 @@ export const homePageContent = {
   },
   it: {
     hero: {
-      title: 'Frase principale che riassume il concept del ristorante',
+      title: 'La Table è un luogo, la cucina è un’arte. Noi uniamo le due cose.',
       text: 'Breve testo di 1 o 2 frasi per presentare il concept, il tipo di cucina e l’atmosfera generale del locale.',
     },
     infoStrip: [
@@ -82,7 +82,7 @@ export const homePageContent = {
   },
   de: {
     hero: {
-      title: 'Hauptsatz, der das Restaurantkonzept zusammenfasst',
+      title: 'La Table ist ein Ort, die Küche ist eine Kunst. Wir vereinen beides.',
       text: 'Kurzer Text von 1 bis 2 Sätzen, der das Konzept, die Küche und die allgemeine Atmosphäre des Ortes vorstellt.',
     },
     infoStrip: [
@@ -109,7 +109,7 @@ export const homePageContent = {
   },
   nl: {
     hero: {
-      title: 'Hoofdzin die het concept van het restaurant samenvat',
+      title: 'La Table is een plek, koken is een kunst. Wij brengen die twee samen.',
       text: 'Korte tekst van 1 à 2 zinnen om het concept, het type keuken en de algemene sfeer van de plek voor te stellen.',
     },
     infoStrip: [
@@ -136,7 +136,7 @@ export const homePageContent = {
   },
   es: {
     hero: {
-      title: 'Frase principal que resume el concepto del restaurante',
+      title: 'La Table es un lugar, la cocina es un arte. Reunimos las dos cosas.',
       text: 'Texto corto de 1 a 2 frases para presentar el concepto, el tipo de cocina y la atmósfera general del lugar.',
     },
     infoStrip: [
@@ -163,7 +163,7 @@ export const homePageContent = {
   },
   ru: {
     hero: {
-      title: 'Главная фраза, которая кратко передаёт концепцию ресторана',
+      title: 'La Table — это место, а кухня — искусство. Мы соединяем и то и другое.',
       text: 'Короткий текст из 1–2 предложений, представляющий концепцию, тип кухни и общую атмосферу места.',
     },
     infoStrip: [
@@ -190,7 +190,7 @@ export const homePageContent = {
   },
   uk: {
     hero: {
-      title: 'Головна фраза, що коротко передає концепцію ресторану',
+      title: 'La Table — це місце, а кухня — мистецтво. Ми поєднуємо і те, і інше.',
       text: 'Короткий текст із 1–2 речень, який представляє концепцію, тип кухні та загальну атмосферу місця.',
     },
     infoStrip: [
@@ -217,7 +217,7 @@ export const homePageContent = {
   },
   zh: {
     hero: {
-      title: '概括餐厅概念的主句',
+      title: 'La Table 是一个地方，料理是一门艺术。我们将两者结合在一起。',
       text: '用 1 到 2 句话简要介绍餐厅概念、菜系类型以及整体氛围。',
     },
     infoStrip: [
@@ -244,7 +244,7 @@ export const homePageContent = {
   },
   ja: {
     hero: {
-      title: 'レストランのコンセプトを一言で伝えるメインフレーズ',
+      title: 'La Table はひとつの場所であり、料理はひとつの芸術です。私たちはその二つを結びつけます。',
       text: 'コンセプト、料理の方向性、店全体の雰囲気を 1〜2 文で説明する短い文章。',
     },
     infoStrip: [
@@ -271,7 +271,7 @@ export const homePageContent = {
   },
   ko: {
     hero: {
-      title: '레스토랑 콘셉트를 한 문장으로 요약하는 메인 문구',
+      title: 'La Table은 하나의 장소이고, 요리는 하나의 예술입니다. 우리는 그 둘을 하나로 잇습니다.',
       text: '콘셉트, 요리 스타일, 전체적인 분위기를 1~2문장으로 소개하는 짧은 텍스트.',
     },
     infoStrip: [
