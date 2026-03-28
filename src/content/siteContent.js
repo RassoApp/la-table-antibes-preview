@@ -1,4 +1,4 @@
-export const supportedLanguages = ['fr', 'en', 'it', 'de', 'nl', 'es', 'ru', 'uk', 'zh'];
+export const supportedLanguages = ['fr', 'en', 'it', 'de', 'nl', 'es', 'ru', 'uk', 'zh', 'ja'];
 
 export const nativeLanguageLabels = {
   fr: 'Français',
@@ -10,6 +10,7 @@ export const nativeLanguageLabels = {
   ru: 'Русский',
   uk: 'Українська',
   zh: '中文',
+  ja: '日本語',
 };
 
 export const navItems = [
@@ -2359,4 +2360,254 @@ siteContent.zh = {
       },
     ],
   },
+};
+
+siteContent.ja = {
+  ...siteContent.en,
+  localeName: '日本語',
+  shortCode: 'JP',
+  alternateLanguages: {
+    fr: 'Français',
+    en: 'English',
+    it: 'Italiano',
+    de: 'Deutsch',
+    nl: 'Nederlands',
+    es: 'Español',
+    ru: 'Русский',
+    uk: 'Українська',
+    zh: '中文',
+    ja: '日本語',
+  },
+  navLabels: {
+    home: 'ホーム',
+    menu: 'メニュー',
+    gallery: 'ギャラリー',
+    about: '店舗について',
+    contact: 'アクセス',
+  },
+  uiLabels: {
+    ...siteContent.en.uiLabels,
+    languageSwitcher: '言語切替',
+    toggleMenu: 'メニューを開く',
+    toggleReserveMenu: '予約方法を開く',
+    reserveMenuLabel: '予約方法',
+    toggleSocialMenu: 'SNSリンクを開く',
+    socialMenuLabel: 'SNS',
+    reserveMenuPhone: '電話',
+    reserveMenuWhatsapp: 'WhatsApp',
+    aboutDetailsEyebrow: '詳細',
+    aboutDetailsTitle: '最終テキストで広げていくための素材感と空間のメモ。',
+  },
+  actions: {
+    ...siteContent.en.actions,
+    contact: '連絡する',
+    reserve: '予約',
+    menu: 'メニューを見る',
+    directions: '道順',
+    social: 'SNS',
+    call: '電話',
+    whatsapp: 'WhatsApp',
+    email: 'メール',
+    gallery: 'ギャラリーを見る',
+    about: '店舗を見る',
+    legal: '法的情報',
+    jumpToCategory: 'カテゴリへ',
+  },
+  hero: {
+    eyebrow: 'Vieil Antibesの中心にある陽だまりビストロ',
+    title: 'テラスと素材感、そして気前のいい料理を楽しめる一軒。',
+    text:
+      'ランチからディナー、テラスでゆっくり過ごす一杯までを想定した、活気ある大型レストランのプロトタイプです。',
+    primaryLabel: 'レストランに連絡する',
+    secondaryLabel: 'メニューを見る',
+    imageLabel: 'テラスのメインビジュアル',
+  },
+  infoStrip: [
+    { label: '住所', value: '最終住所は要確認' },
+    { label: '営業時間', value: 'ランチとディナー営業' },
+    { label: '電話', value: '+33 0 00 00 00 00' },
+    { label: '雰囲気', value: 'テラス、バー、薪窯' },
+  ],
+  home: {
+    intro: {
+      eyebrow: 'この店らしさ',
+      title: 'すぐ魅力が伝わり、そのまま滞在したくなるレストラン。',
+      text:
+        'この構成では、大きなテラス、クラシックなフランス料理、薪窯ピザ、そしてモバイル訪問者がすぐ必要とする実用情報を最初から前面に出しています。',
+    },
+    terrace: {
+      eyebrow: 'テラス',
+      title: '最初の数秒で、このテラスの魅力をしっかり伝える。',
+      text:
+        'ここには店の印象を決める最も強い写真が入ります。光、広がり、心地よさを伝えつつ、ページ全体を重く見せない役割です。',
+      imageLabel: '大きなテラス',
+    },
+    cuisine: {
+      eyebrow: '料理と薪窯',
+      title: 'ビストロ料理と心地よい定番、そして薪窯ピザ。',
+      text:
+        '最終テキストで内容は詰めていきますが、定番料理、サラダ、煮込み料理、そして見える薪窯を見せるための階層はすでに整っています。',
+      ctaLabel: 'メニューを見る',
+      imageLabel: '見える薪窯',
+    },
+    gallery: {
+      eyebrow: '雰囲気',
+      title: '初来店の前から、この店の空気感が伝わるようにする。',
+      text:
+        '今後ここに実際の写真が入り、ダイニング、バー、素材感、店のリズムを見せます。それまではブロックが明確なプレースホルダーとして機能します。',
+      ctaLabel: 'ギャラリーを見る',
+      images: ['広いダイニング', '真鍮のバー', 'テーブルセッティング'],
+    },
+    story: {
+      eyebrow: 'トーン',
+      title: '素材は本物、仕上がりはすっきり、毎日気持ちよく使える場所。',
+      text:
+        'このセクションでは長々と語りすぎずに、レストランの個性を伝えます。目指すのは、すぐ理解できて信頼できる印象です。',
+      ctaLabel: 'ページを見る',
+      stats: [
+        { value: '大きい', label: 'テラスをしっかり見せる' },
+        { value: '昼から夜まで', label: '一日を通して使える流れ' },
+        { value: '薪窯', label: '店を象徴する見える設備' },
+      ],
+    },
+    access: {
+      eyebrow: '連絡先とアクセス',
+      title: '迷わず行動に移れるよう、必要な情報をひとまとめに。',
+      text:
+        '連絡先、営業時間、行き方、クイックアクションをここにまとめ、モバイルでもデスクトップでも行動しやすくしています。',
+      imageLabel: 'アクセスマップ',
+    },
+  },
+  menuPage: {
+    eyebrow: 'メニュー',
+    title: '読みやすく、あとで更新しやすいモバイル向けのメニューページ。',
+    text:
+      '最終メニューはこれらの例示コンテンツに置き換わります。現在の構成は、明確なカテゴリ、見やすい価格表示、スマホでの読みやすさを前提に組まれています。',
+    note:
+      '以下の名称は構成例です。あとでお客様が最終的な料理名を渡しやすいようにするための土台です。',
+    tagLabels: {
+      vegetarian: 'ベジタリアン',
+      vegan: 'ヴィーガン',
+      fish: '魚',
+      pork: '豚肉',
+      spicy: '辛い',
+    },
+    categories: [
+      {
+        id: 'starters',
+        title: '前菜',
+        items: [
+          { name: '本日の前菜', description: '季節の前菜、内容は後で確定', price: '00 €' },
+          { name: 'グリル野菜', description: '最終バージョンは要調整', price: '00 €', tags: ['vegan'] },
+          { name: '小さめのブッラータ', description: '夏らしい軽やかな一皿', price: '00 €', tags: ['vegetarian'] },
+        ],
+      },
+      {
+        id: 'salads',
+        title: 'サラダ',
+        items: [
+          { name: 'ハウスサラダ', description: 'ランチ向けの大きなサラダ、内容は後で確定', price: '00 €', tags: ['vegetarian'] },
+          { name: 'クリスピーチキン', description: 'レシピと付け合わせは要確認', price: '00 €' },
+          { name: 'ニース風サラダ', description: '最終的な仕立ては後で調整', price: '00 €', tags: ['fish'] },
+        ],
+      },
+      {
+        id: 'mains',
+        title: 'メイン',
+        items: [
+          { name: '看板のアントルコート', description: '肉、ソース、付け合わせは要確認', price: '00 €' },
+          { name: '煮込み料理', description: '店のレシピは後で記入', price: '00 €', tags: ['pork'] },
+          { name: '本日の魚', description: '入荷と火入れは後で決定', price: '00 €', tags: ['fish'] },
+        ],
+      },
+      {
+        id: 'pizzas',
+        title: '薪窯ピザ',
+        items: [
+          { name: '薪窯マルゲリータ', description: '薪窯らしいベースは後で調整', price: '00 €', tags: ['vegetarian'] },
+          { name: '店の定番ピザ', description: '店のレシピは後で記入', price: '00 €', tags: ['pork', 'spicy'] },
+          { name: 'ビアンカ', description: '最終バージョンは要確認', price: '00 €', tags: ['pork'] },
+        ],
+      },
+      {
+        id: 'desserts',
+        title: 'デザート',
+        items: [
+          { name: '本日のデザート', description: '実際のメニューに合わせて後で調整', price: '00 €' },
+          { name: '定番デザート', description: 'ビストロらしい仕立ては後で調整', price: '00 €' },
+          { name: 'アイスクリーム', description: '夏向けのさっぱりした選択肢', price: '00 €' },
+        ],
+      },
+      {
+        id: 'drinks',
+        title: 'ドリンク',
+        items: [
+          { name: '店のシグネチャーカクテル', description: 'テラス向けの看板カクテルは後で決定', price: '00 €' },
+          { name: 'グラスワイン', description: 'セレクションは後で確定', price: '00 €' },
+          { name: '冷たいドリンク', description: '最終ラインナップは後で補完', price: '00 €' },
+        ],
+      },
+    ],
+  },
+  contactPage: {
+    ...siteContent.en.contactPage,
+    eyebrow: 'アクセス',
+    title: '必要な実用情報を一ページにまとめた、わかりやすい構成です。',
+    text:
+      'このページは、レストランへの連絡方法、行き方、営業時間の確認、アクセスの把握といった実用的な疑問にすばやく答えるためのものです。',
+    cards: [
+      { title: '電話', value: '+33 0 00 00 00 00', href: commonContact.phoneHref },
+      { title: 'WhatsApp', value: '直接メッセージ', href: commonContact.whatsappHref },
+      { title: 'メール', value: 'bonjour@latable-antibes.fr', href: commonContact.emailHref },
+    ],
+    addressTitle: '住所',
+    addressValue: 'Vieil Antibes、最終住所は要確認',
+    hoursTitle: '営業時間',
+    hours: [
+      { day: '月曜', hours: '12:00 - 14:30 / 19:00 - 22:30' },
+      { day: '火曜', hours: '12:00 - 14:30 / 19:00 - 22:30' },
+      { day: '水曜', hours: '12:00 - 14:30 / 19:00 - 22:30' },
+      { day: '木曜', hours: '12:00 - 14:30 / 19:00 - 22:30' },
+      { day: '金曜', hours: '12:00 - 14:30 / 19:00 - 23:00' },
+      { day: '土曜', hours: '12:00 - 15:00 / 19:00 - 23:00' },
+      { day: '日曜', hours: '要確認' },
+    ],
+    accessTitle: '行き方',
+    accessText:
+      'ここには、目立つテラス、目印、最寄りの駐車場、そして旅行者がすぐ使えるルートリンクなど、役立つ情報を入れます。',
+    mapLabel: '地図',
+  },
+  legalPage: {
+    ...siteContent.en.legalPage,
+    eyebrow: '法的情報',
+    title: '最終的な管理情報と法的情報を受け入れるためのページです。',
+    text:
+      'ここに表示されている内容は現時点では例示です。法的情報、ホスティング情報、会社情報、プライバシー情報は公開前に整えます。',
+    sections: [
+      {
+        title: 'サイト運営者',
+        body: '会社名、住所、登録情報、法定代表者、連絡先をここに記載します。',
+      },
+      {
+        title: 'ホスティング',
+        body: 'ホスティング会社名、住所、連絡先、採用した技術環境を記載します。',
+      },
+      {
+        title: '個人情報',
+        body: '公開版では cookie バナーや重い解析は使わない想定ですが、最終的なプライバシー文言は公開前にきちんと補完します。',
+      },
+    ],
+  },
+  footer: {
+    summary:
+      'レストランの最終的なテキスト、画像、情報に後から置き換えられるローカルプロトタイプです。',
+    copyright: 'ローカルプロトタイプ • La Table Antibes',
+  },
+  quickActions: [
+    { label: '電話', href: commonContact.phoneHref },
+    { label: 'WhatsApp', href: commonContact.whatsappHref },
+    { label: '道順', href: commonContact.directionsHref },
+    { label: 'メニュー', slug: 'menu' },
+  ],
+  contactLinks: commonContact,
 };

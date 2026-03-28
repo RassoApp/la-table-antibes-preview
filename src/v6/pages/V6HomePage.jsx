@@ -88,6 +88,15 @@ const homeEventContent = {
     aria: '活动类型',
     imageAlt: '为团体活动准备好的餐桌',
   },
+  ja: {
+    eyebrow: 'イベント・団体利用',
+    title: 'イベント利用のご相談も承ります',
+    text:
+      'La Table Antibes では、Vieil Antibes の中心で、店内またはテラスにてプライベートやビジネスの集まりに対応できます。',
+    tags: ['ウェディング', '誕生日', '団体のお食事'],
+    aria: 'イベントの種類',
+    imageAlt: '団体利用のために整えられたテーブル',
+  },
 };
 
 function ShowcaseCard({ src, alt }) {

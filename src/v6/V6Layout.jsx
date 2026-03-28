@@ -44,6 +44,10 @@ const languageFlags = {
     src: assetPath('/v5-assets/flags/china.svg'),
     alt: '中文',
   },
+  ja: {
+    src: assetPath('/v5-assets/flags/japan.svg'),
+    alt: '日本語',
+  },
 };
 
 const v6NavKeys = ['home', 'menu'];

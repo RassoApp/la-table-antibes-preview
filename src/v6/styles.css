@@ -147,8 +147,9 @@
 
 .v6-shell .v6-reserve__menu {
   position: absolute;
-  width: 100%;
+  width: max-content;
   min-width: 100%;
+  max-width: calc(100vw - 2rem);
   padding: 0;
   display: grid;
   opacity: 0;
@@ -1043,8 +1044,9 @@
   .v6-shell .v6-mobile-bar__reserve .v6-reserve__menu {
     left: 0;
     right: auto;
-    width: max(100%, 11rem);
-    min-width: 11rem;
+    width: max-content;
+    min-width: 100%;
+    max-width: calc(100vw - 1.5rem);
     bottom: 100%;
     top: auto;
     border: 0;
