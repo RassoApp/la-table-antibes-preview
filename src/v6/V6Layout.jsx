@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
-import { supportedLanguages } from '../content/siteContent';
+import { nativeLanguageLabels, supportedLanguages } from '../content/siteContent';
 import { assetPath } from '../utils/assets';
 import { buildLocalizedPath } from '../utils/paths';
 import { CutleryIcon, FacebookIcon, InstagramIcon, PinIcon } from '../v5/V5Icons';
@@ -19,6 +19,30 @@ const languageFlags = {
   it: {
     src: assetPath('/v5-assets/flags/italy.svg'),
     alt: 'Italiano',
+  },
+  de: {
+    src: assetPath('/v5-assets/flags/germany.svg'),
+    alt: 'Deutsch',
+  },
+  nl: {
+    src: assetPath('/v5-assets/flags/netherland.svg'),
+    alt: 'Nederlands',
+  },
+  es: {
+    src: assetPath('/v5-assets/flags/spain.svg'),
+    alt: 'Español',
+  },
+  ru: {
+    src: assetPath('/v5-assets/flags/russia.svg'),
+    alt: 'Русский',
+  },
+  uk: {
+    src: assetPath('/v5-assets/flags/ukraine-flag.svg'),
+    alt: 'Українська',
+  },
+  zh: {
+    src: assetPath('/v5-assets/flags/china.svg'),
+    alt: '中文',
   },
 };
 
@@ -50,7 +74,7 @@ function V6LanguageSwitcher({ basePath, lang, locale, open, onToggle, onClose })
             onClick={onClose}
           >
             <img className="v5-flag v5-flag--small" src={languageFlags[code].src} alt={languageFlags[code].alt} />
-            <span>{locale.alternateLanguages[code]}</span>
+            <span>{nativeLanguageLabels[code]}</span>
           </NavLink>
         ))}
       </div>
