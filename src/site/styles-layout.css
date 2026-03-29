@@ -983,24 +983,8 @@
     z-index: 60;
   }
 
-  .v6-shell .v3-language:hover .v3-language__menu {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    transform: translateY(0);
-    transition-delay: 0s;
-  }
-
   .v6-shell .v6-reserve.is-down:hover {
     z-index: 60;
-  }
-
-  .v6-shell .v6-reserve.is-down:hover .v6-reserve__menu {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    transform: translateY(0);
-    transition-delay: 0s;
   }
 }
 
@@ -1161,6 +1145,7 @@
 
   .v6-shell .v6-mobile-action,
   .v6-shell .v6-mobile-bar__reserve .v6-reserve__button,
+  .v6-shell .v6-mobile-bar__directions .v6-directions__button,
   .v6-shell .v6-mobile-bar__social .v6-social__button {
     width: 100%;
     min-height: var(--v6-mobile-bar-height);
@@ -1183,6 +1168,7 @@
 
   .v6-shell .v6-mobile-action__icon,
   .v6-shell .v6-mobile-bar__reserve .v5-icon,
+  .v6-shell .v6-mobile-bar__directions .v5-icon,
   .v6-shell .v6-mobile-bar__social .v5-icon {
     width: 1.1rem;
     height: 1.1rem;
@@ -1190,6 +1176,7 @@
 
   .v6-shell .v6-mobile-action > span,
   .v6-shell .v6-mobile-bar__reserve .v6-reserve__button > span:not(.v6-reserve__caret),
+  .v6-shell .v6-mobile-bar__directions .v6-directions__button > span:not(.v6-directions__caret),
   .v6-shell .v6-mobile-bar__social .v6-social__button > span {
     display: block;
     transform: none;
@@ -1274,8 +1261,9 @@
   .v6-shell .v6-mobile-bar__social .v6-social__menu {
     right: 0;
     left: auto;
-    width: max(100%, 11rem);
-    min-width: 11rem;
+    width: max-content;
+    min-width: 100%;
+    max-width: calc(100vw - 1.5rem);
     bottom: 100%;
     top: auto;
     border: 0;
@@ -1303,6 +1291,35 @@
   .v6-shell .v6-mobile-bar__social .v6-social__menu a {
     min-height: 3rem;
     padding: 0.9rem 1rem;
+  }
+
+  .v6-shell .v3-mobile-bar .v6-reserve__menu a,
+  .v6-shell .v3-mobile-bar .v6-directions__menu a,
+  .v6-shell .v3-mobile-bar .v6-directions__menu button,
+  .v6-shell .v3-mobile-bar .v6-social__menu a {
+    justify-content: flex-start;
+    width: 100%;
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    line-height: 1.1;
+    text-align: left;
+  }
+
+  .v6-shell .v3-mobile-bar .v6-reserve__menu a > span,
+  .v6-shell .v3-mobile-bar .v6-directions__menu a > span,
+  .v6-shell .v3-mobile-bar .v6-directions__menu button > span,
+  .v6-shell .v3-mobile-bar .v6-social__menu a > span {
+    transform: none;
+  }
+
+  .v6-shell .v3-mobile-bar .v6-reserve__menu .v5-icon,
+  .v6-shell .v3-mobile-bar .v6-directions__menu .v5-icon,
+  .v6-shell .v3-mobile-bar .v6-social__menu .v5-icon {
+    width: 1rem;
+    height: 1rem;
+    flex: 0 0 1rem;
   }
 
   .v6-shell .v6-mobile-action.is-active,

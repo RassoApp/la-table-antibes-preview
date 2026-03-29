@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useId, useRef } from 'react';
+import { useDropdowns } from './DropdownContext';
 import { FacebookIcon, InstagramIcon } from './icons';
 
 export function SocialDropdown({
@@ -7,30 +8,25 @@ export function SocialDropdown({
   className = '',
   buttonLabel,
 }) {
-  const [open, setOpen] = useState(false);
+  const generatedId = useId();
+  const resolvedId = `social-${generatedId}`;
   const rootRef = useRef(null);
+  const { activeId, closeDropdown, toggleDropdown } = useDropdowns();
+  const open = activeId === resolvedId;
 
   useEffect(() => {
     function handlePointerDown(event) {
       if (!rootRef.current?.contains(event.target)) {
-        setOpen(false);
-      }
-    }
-
-    function handleEscape(event) {
-      if (event.key === 'Escape') {
-        setOpen(false);
+        closeDropdown(resolvedId);
       }
     }
 
     document.addEventListener('pointerdown', handlePointerDown);
-    document.addEventListener('keydown', handleEscape);
 
     return () => {
       document.removeEventListener('pointerdown', handlePointerDown);
-      document.removeEventListener('keydown', handleEscape);
     };
-  }, []);
+  }, [closeDropdown, resolvedId]);
 
   return (
     <div ref={rootRef} className={`v6-social ${open ? 'is-open' : ''} ${className}`.trim()}>
@@ -40,7 +36,7 @@ export function SocialDropdown({
         aria-expanded={open}
         aria-haspopup="menu"
         aria-label={locale.uiLabels.toggleSocialMenu}
-        onClick={() => setOpen((value) => !value)}
+        onClick={() => toggleDropdown(resolvedId)}
       >
         <InstagramIcon className="v6-mobile-action__icon" />
         <span>{buttonLabel ?? locale.actions.social}</span>
@@ -52,7 +48,7 @@ export function SocialDropdown({
           target="_blank"
           rel="noreferrer"
           role="menuitem"
-          onClick={() => setOpen(false)}
+          onClick={() => closeDropdown(resolvedId)}
         >
           <InstagramIcon />
           <span>Instagram</span>
@@ -62,7 +58,7 @@ export function SocialDropdown({
           target="_blank"
           rel="noreferrer"
           role="menuitem"
-          onClick={() => setOpen(false)}
+          onClick={() => closeDropdown(resolvedId)}
         >
           <FacebookIcon />
           <span>Facebook</span>

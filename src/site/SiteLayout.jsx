@@ -1,8 +1,9 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import { nativeLanguageLabels, supportedLanguages } from '../content/siteContent';
 import { assetPath } from '../utils/assets';
 import { buildLocalizedPath } from '../utils/paths';
+import { DropdownProvider, useDropdowns } from './DropdownContext';
 import { CutleryIcon, FacebookIcon, InstagramIcon } from './icons';
 import { DirectionsDropdown } from './DirectionsDropdown';
 import { ReserveDropdown } from './ReserveDropdown';
@@ -56,6 +57,8 @@ const languageFlags = {
 };
 
 const primaryNavKeys = ['home', 'menu'];
+const MOBILE_MENU_DROPDOWN_ID = 'mobile-menu';
+const LANGUAGE_DROPDOWN_ID = 'language-switcher';
 
 const mobileActionLabelOverrides = {
   it: {
@@ -79,8 +82,12 @@ const mobileActionLabelOverrides = {
   },
 };
 
-function LanguageSwitcher({ basePath, lang, locale, open, onToggle, onClose }) {
+function LanguageSwitcher({ basePath, lang, locale }) {
   const location = useLocation();
+  const { activeId, closeDropdown, openDropdown, toggleDropdown } = useDropdowns();
+  const open = activeId === LANGUAGE_DROPDOWN_ID;
+  const rootRef = useRef(null);
+  const supportsHoverRef = useRef(false);
   const baseSegmentCount = basePath.split('/').filter(Boolean).length;
 
   const restOfPath = useMemo(() => {
@@ -88,9 +95,45 @@ function LanguageSwitcher({ basePath, lang, locale, open, onToggle, onClose }) {
     return segments.slice(baseSegmentCount + 1).join('/');
   }, [baseSegmentCount, location.pathname]);
 
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      supportsHoverRef.current = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    }
+
+    function handlePointerDown(event) {
+      if (open && !rootRef.current?.contains(event.target)) {
+        closeDropdown(LANGUAGE_DROPDOWN_ID);
+      }
+    }
+
+    document.addEventListener('pointerdown', handlePointerDown);
+
+    return () => {
+      document.removeEventListener('pointerdown', handlePointerDown);
+    };
+  }, [closeDropdown, open]);
+
   return (
-    <div className={`v3-language ${open ? 'is-open' : ''}`}>
-      <button className="v3-language__button" type="button" aria-expanded={open} onClick={onToggle}>
+    <div
+      ref={rootRef}
+      className={`v3-language ${open ? 'is-open' : ''}`}
+      onMouseEnter={() => {
+        if (supportsHoverRef.current) {
+          openDropdown(LANGUAGE_DROPDOWN_ID);
+        }
+      }}
+      onMouseLeave={() => {
+        if (supportsHoverRef.current) {
+          closeDropdown(LANGUAGE_DROPDOWN_ID);
+        }
+      }}
+    >
+      <button
+        className="v3-language__button"
+        type="button"
+        aria-expanded={open}
+        onClick={() => toggleDropdown(LANGUAGE_DROPDOWN_ID)}
+      >
         <img className="v5-flag" src={languageFlags[lang].src} alt={languageFlags[lang].alt} />
       </button>
 
@@ -102,7 +145,7 @@ function LanguageSwitcher({ basePath, lang, locale, open, onToggle, onClose }) {
               `v3-language__item ${isActive && code === lang ? 'is-active' : ''}`
             }
             to={buildLocalizedPath(basePath, code, restOfPath)}
-            onClick={onClose}
+            onClick={() => closeDropdown(LANGUAGE_DROPDOWN_ID)}
           >
             <img className="v5-flag v5-flag--small" src={languageFlags[code].src} alt={languageFlags[code].alt} />
             <span>{nativeLanguageLabels[code]}</span>
@@ -113,10 +156,12 @@ function LanguageSwitcher({ basePath, lang, locale, open, onToggle, onClose }) {
   );
 }
 
-export function SiteLayout({ lang, locale, basePath }) {
+function SiteLayoutInner({ lang, locale, basePath }) {
   const location = useLocation();
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [languageOpen, setLanguageOpen] = useState(false);
+  const menuButtonRef = useRef(null);
+  const menuPanelRef = useRef(null);
+  const { activeId, closeAll, closeDropdown, toggleDropdown } = useDropdowns();
+  const menuOpen = activeId === MOBILE_MENU_DROPDOWN_ID;
   const buildPath = (slug = '') => buildLocalizedPath(basePath, lang, slug);
   const mobileLabels = {
     reserve: mobileActionLabelOverrides[lang]?.reserve ?? locale.actions.reserve,
@@ -126,9 +171,26 @@ export function SiteLayout({ lang, locale, basePath }) {
   };
 
   useEffect(() => {
-    setMenuOpen(false);
-    setLanguageOpen(false);
-  }, [location.pathname]);
+    closeAll();
+  }, [closeAll, location.pathname]);
+
+  useEffect(() => {
+    function handlePointerDown(event) {
+      if (
+        menuOpen &&
+        !menuButtonRef.current?.contains(event.target) &&
+        !menuPanelRef.current?.contains(event.target)
+      ) {
+        closeDropdown(MOBILE_MENU_DROPDOWN_ID);
+      }
+    }
+
+    document.addEventListener('pointerdown', handlePointerDown);
+
+    return () => {
+      document.removeEventListener('pointerdown', handlePointerDown);
+    };
+  }, [closeDropdown, menuOpen]);
 
   const nav = primaryNavKeys.map((key) => ({
     key,
@@ -142,14 +204,12 @@ export function SiteLayout({ lang, locale, basePath }) {
       <header className="v3-header">
         <div className="v3-header__inner">
           <button
+            ref={menuButtonRef}
             className={`v3-header__menu ${menuOpen ? 'is-open' : ''}`}
             type="button"
             aria-expanded={menuOpen}
             aria-label={locale.uiLabels.toggleMenu}
-            onClick={() => {
-              setLanguageOpen(false);
-              setMenuOpen((value) => !value);
-            }}
+            onClick={() => toggleDropdown(MOBILE_MENU_DROPDOWN_ID)}
           >
             <span />
             <span />
@@ -198,18 +258,12 @@ export function SiteLayout({ lang, locale, basePath }) {
               basePath={basePath}
               lang={lang}
               locale={locale}
-              open={languageOpen}
-              onToggle={() => {
-                setMenuOpen(false);
-                setLanguageOpen((value) => !value);
-              }}
-              onClose={() => setLanguageOpen(false)}
             />
-            <ReserveDropdown locale={locale} align="right" />
+            <ReserveDropdown locale={locale} align="right" dropdownId="header-reserve" />
           </div>
         </div>
 
-        <div className={`v6-mobile-nav ${menuOpen ? 'is-open' : ''}`}>
+        <div ref={menuPanelRef} className={`v6-mobile-nav ${menuOpen ? 'is-open' : ''}`}>
           <nav className="v6-mobile-nav__panel" aria-label="Mobile">
             {nav.map((item) => (
               <NavLink
@@ -217,7 +271,7 @@ export function SiteLayout({ lang, locale, basePath }) {
                 className={({ isActive }) => `v6-mobile-nav__link ${isActive ? 'is-active' : ''}`}
                 to={item.to}
                 end={item.slug === ''}
-                onClick={() => setMenuOpen(false)}
+                onClick={() => closeDropdown(MOBILE_MENU_DROPDOWN_ID)}
               >
                 {item.label}
               </NavLink>
@@ -243,6 +297,8 @@ export function SiteLayout({ lang, locale, basePath }) {
         <ReserveDropdown
           locale={locale}
           direction="up"
+          dropdownId="mobile-reserve"
+          enableHover={false}
           className="v6-mobile-bar__reserve"
           buttonClassName="v6-mobile-action v6-mobile-action--reserve"
           buttonLabel={mobileLabels.reserve}
@@ -251,6 +307,8 @@ export function SiteLayout({ lang, locale, basePath }) {
           lang={lang}
           locale={locale}
           direction="up"
+          dropdownId="mobile-directions"
+          enableHover={false}
           className="v6-mobile-bar__directions"
           buttonClassName="v6-mobile-action v6-mobile-action--link"
           buttonLabel={mobileLabels.directions}
@@ -263,5 +321,13 @@ export function SiteLayout({ lang, locale, basePath }) {
         <SocialDropdown locale={locale} className="v6-mobile-bar__social" buttonLabel={mobileLabels.social} />
       </nav>
     </div>
+  );
+}
+
+export function SiteLayout(props) {
+  return (
+    <DropdownProvider>
+      <SiteLayoutInner {...props} />
+    </DropdownProvider>
   );
 }

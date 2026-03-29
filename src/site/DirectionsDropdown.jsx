@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useId, useRef, useState } from 'react';
+import { useDropdowns } from './DropdownContext';
 import { AppleMapsIcon, CopyIcon, GoogleMapsIcon, PinIcon, WazeIcon } from './icons';
 
 const directionMenuLabels = {
@@ -101,54 +102,52 @@ export function DirectionsDropdown({
   className = '',
   buttonLabel,
   showCaret = true,
+  dropdownId,
+  enableHover = true,
 }) {
-  const [open, setOpen] = useState(false);
   const [copied, setCopied] = useState(false);
+  const generatedId = useId();
+  const resolvedId = dropdownId ?? `directions-${generatedId}`;
   const rootRef = useRef(null);
   const supportsHoverRef = useRef(false);
   const copyTimerRef = useRef(null);
+  const { activeId, closeDropdown, openDropdown, toggleDropdown } = useDropdowns();
+  const open = activeId === resolvedId;
   const labels = directionMenuLabels[lang] ?? directionMenuLabels.en;
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      supportsHoverRef.current = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+      supportsHoverRef.current =
+        enableHover && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
     }
 
     function handlePointerDown(event) {
       if (!rootRef.current?.contains(event.target)) {
-        setOpen(false);
-      }
-    }
-
-    function handleEscape(event) {
-      if (event.key === 'Escape') {
-        setOpen(false);
+        closeDropdown(resolvedId);
       }
     }
 
     document.addEventListener('pointerdown', handlePointerDown);
-    document.addEventListener('keydown', handleEscape);
 
     return () => {
       document.removeEventListener('pointerdown', handlePointerDown);
-      document.removeEventListener('keydown', handleEscape);
       if (copyTimerRef.current) {
         window.clearTimeout(copyTimerRef.current);
       }
     };
-  }, []);
+  }, [closeDropdown, enableHover, resolvedId]);
 
   async function handleCopyAddress() {
     try {
       await navigator.clipboard.writeText(locale.contactLinks.addressText);
       setCopied(true);
-      setOpen(true);
+      openDropdown(resolvedId);
       if (copyTimerRef.current) {
         window.clearTimeout(copyTimerRef.current);
       }
       copyTimerRef.current = window.setTimeout(() => {
         setCopied(false);
-        setOpen(false);
+        closeDropdown(resolvedId);
       }, 1200);
     } catch {
       setCopied(false);
@@ -163,12 +162,12 @@ export function DirectionsDropdown({
       } ${open ? 'is-open' : ''} ${className}`.trim()}
       onMouseEnter={() => {
         if (supportsHoverRef.current) {
-          setOpen(true);
+          openDropdown(resolvedId);
         }
       }}
       onMouseLeave={() => {
         if (supportsHoverRef.current) {
-          setOpen(false);
+          closeDropdown(resolvedId);
         }
       }}
     >
@@ -178,7 +177,7 @@ export function DirectionsDropdown({
         aria-expanded={open}
         aria-haspopup="menu"
         aria-label={labels.menu}
-        onClick={() => setOpen((value) => !value)}
+        onClick={() => toggleDropdown(resolvedId)}
       >
         <PinIcon />
         <span>{buttonLabel ?? locale.actions.directions}</span>
@@ -195,7 +194,7 @@ export function DirectionsDropdown({
           target="_blank"
           rel="noreferrer"
           role="menuitem"
-          onClick={() => setOpen(false)}
+          onClick={() => closeDropdown(resolvedId)}
         >
           <GoogleMapsIcon />
           <span>{labels.google}</span>
@@ -205,7 +204,7 @@ export function DirectionsDropdown({
           target="_blank"
           rel="noreferrer"
           role="menuitem"
-          onClick={() => setOpen(false)}
+          onClick={() => closeDropdown(resolvedId)}
         >
           <AppleMapsIcon />
           <span>{labels.apple}</span>
@@ -215,7 +214,7 @@ export function DirectionsDropdown({
           target="_blank"
           rel="noreferrer"
           role="menuitem"
-          onClick={() => setOpen(false)}
+          onClick={() => closeDropdown(resolvedId)}
         >
           <WazeIcon />
           <span>{labels.waze}</span>

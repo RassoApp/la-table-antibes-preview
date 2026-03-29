@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useId, useRef } from 'react';
+import { useDropdowns } from './DropdownContext';
 import { CalendarIcon, MailIcon, PhoneIcon, WhatsAppIcon } from './icons';
 
 export function ReserveDropdown({
@@ -8,36 +9,34 @@ export function ReserveDropdown({
   buttonClassName = 'v3-button v3-button--primary',
   className = '',
   buttonLabel,
+  dropdownId,
+  enableHover = true,
 }) {
-  const [open, setOpen] = useState(false);
+  const generatedId = useId();
+  const resolvedId = dropdownId ?? `reserve-${generatedId}`;
   const rootRef = useRef(null);
   const supportsHoverRef = useRef(false);
+  const { activeId, closeDropdown, openDropdown, toggleDropdown } = useDropdowns();
+  const open = activeId === resolvedId;
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      supportsHoverRef.current = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+      supportsHoverRef.current =
+        enableHover && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
     }
 
     function handlePointerDown(event) {
       if (!rootRef.current?.contains(event.target)) {
-        setOpen(false);
-      }
-    }
-
-    function handleEscape(event) {
-      if (event.key === 'Escape') {
-        setOpen(false);
+        closeDropdown(resolvedId);
       }
     }
 
     document.addEventListener('pointerdown', handlePointerDown);
-    document.addEventListener('keydown', handleEscape);
 
     return () => {
       document.removeEventListener('pointerdown', handlePointerDown);
-      document.removeEventListener('keydown', handleEscape);
     };
-  }, []);
+  }, [closeDropdown, enableHover, resolvedId]);
 
   return (
     <div
@@ -47,12 +46,12 @@ export function ReserveDropdown({
       } ${open ? 'is-open' : ''} ${className}`.trim()}
       onMouseEnter={() => {
         if (supportsHoverRef.current) {
-          setOpen(true);
+          openDropdown(resolvedId);
         }
       }}
       onMouseLeave={() => {
         if (supportsHoverRef.current) {
-          setOpen(false);
+          closeDropdown(resolvedId);
         }
       }}
     >
@@ -62,7 +61,7 @@ export function ReserveDropdown({
         aria-expanded={open}
         aria-haspopup="menu"
         aria-label={locale.uiLabels.toggleReserveMenu}
-        onClick={() => setOpen((value) => !value)}
+        onClick={() => toggleDropdown(resolvedId)}
       >
         <CalendarIcon />
         <span>{buttonLabel ?? locale.actions.reserve}</span>
@@ -72,7 +71,7 @@ export function ReserveDropdown({
       </button>
 
       <div className="v6-reserve__menu" role="menu" aria-label={locale.uiLabels.reserveMenuLabel}>
-        <a href={locale.contactLinks.phoneHref} role="menuitem" onClick={() => setOpen(false)}>
+        <a href={locale.contactLinks.phoneHref} role="menuitem" onClick={() => closeDropdown(resolvedId)}>
           <PhoneIcon />
           <span>{locale.uiLabels.reserveMenuPhone}</span>
         </a>
@@ -81,12 +80,12 @@ export function ReserveDropdown({
           target="_blank"
           rel="noreferrer"
           role="menuitem"
-          onClick={() => setOpen(false)}
+          onClick={() => closeDropdown(resolvedId)}
         >
           <WhatsAppIcon />
           <span>{locale.uiLabels.reserveMenuWhatsapp}</span>
         </a>
-        <a href={locale.contactLinks.emailHref} role="menuitem" onClick={() => setOpen(false)}>
+        <a href={locale.contactLinks.emailHref} role="menuitem" onClick={() => closeDropdown(resolvedId)}>
           <MailIcon />
           <span>{locale.actions.email}</span>
         </a>
