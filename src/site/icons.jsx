@@ -35,3 +35,19 @@ export function InstagramIcon({ className = 'v5-icon' }) {
 export function FacebookIcon({ className = 'v5-icon' }) {
   return <MaskIcon className={className} src={assetPath('/v5-assets/icons/facebook3.svg')} />;
 }
+
+export function GoogleMapsIcon({ className = 'v5-icon' }) {
+  return <MaskIcon className={className} src={assetPath('/v5-assets/icons/google-maps.svg')} />;
+}
+
+export function AppleMapsIcon({ className = 'v5-icon' }) {
+  return <MaskIcon className={className} src={assetPath('/v5-assets/icons/apple-maps.svg')} />;
+}
+
+export function WazeIcon({ className = 'v5-icon' }) {
+  return <MaskIcon className={className} src={assetPath('/v5-assets/icons/waze.svg')} />;
+}
+
+export function CopyIcon({ className = 'v5-icon' }) {
+  return <MaskIcon className={className} src={assetPath('/v5-assets/icons/copy.svg')} />;
+}

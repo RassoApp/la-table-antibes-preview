@@ -101,14 +101,17 @@
 
 .v6-shell .v6-hero-directions-button {
   display: none;
+  border: 1px solid rgba(255, 247, 240, 0.72);
 }
 
-.v6-shell .v6-reserve {
+.v6-shell .v6-reserve,
+.v6-shell .v6-directions {
   position: relative;
   display: inline-flex;
 }
 
-.v6-shell .v6-reserve.is-open {
+.v6-shell .v6-reserve.is-open,
+.v6-shell .v6-directions.is-open {
   z-index: 60;
 }
 
@@ -128,8 +131,20 @@
   cursor: pointer;
 }
 
+.v6-shell .v6-directions__button {
+  appearance: none;
+  border: 0;
+  box-shadow: none;
+  cursor: pointer;
+}
+
 .v6-shell .v6-reserve__button.v3-button > .v5-icon,
 .v6-shell .v6-reserve__button.v6-access-button > .v5-icon {
+  transform: translateY(-0.04em);
+}
+
+.v6-shell .v6-directions__button.v3-button > .v5-icon,
+.v6-shell .v6-directions__button.v6-access-link > .v5-icon {
   transform: translateY(-0.04em);
 }
 
@@ -138,8 +153,18 @@
   transform: translateY(0.04em);
 }
 
+.v6-shell .v6-directions__button.v3-button > span:not(.v6-directions__caret),
+.v6-shell .v6-directions__button.v6-access-link > span:not(.v6-directions__caret) {
+  transform: translateY(0.04em);
+}
+
 .v6-shell .v6-reserve__button.v3-button > .v6-reserve__caret,
 .v6-shell .v6-reserve__button.v6-access-button > .v6-reserve__caret {
+  transform: translateY(-0.01em);
+}
+
+.v6-shell .v6-directions__button.v3-button > .v6-directions__caret,
+.v6-shell .v6-directions__button.v6-access-link > .v6-directions__caret {
   transform: translateY(-0.01em);
 }
 
@@ -151,6 +176,11 @@
 }
 
 .v6-shell .v6-reserve__caret {
+  font-size: 0.75rem;
+  line-height: 1;
+}
+
+.v6-shell .v6-directions__caret {
   font-size: 0.75rem;
   line-height: 1;
 }
@@ -176,7 +206,29 @@
     visibility 0s linear 220ms;
 }
 
+.v6-shell .v6-directions__menu {
+  position: absolute;
+  width: max-content;
+  min-width: 100%;
+  max-width: calc(100vw - 2rem);
+  padding: 0;
+  display: grid;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(var(--directions-menu-offset, 0.4rem));
+  background: linear-gradient(180deg, var(--primary), var(--primary-soft));
+  border: 0;
+  box-shadow: 0 20px 40px rgba(153, 65, 39, 0.18);
+  z-index: 25;
+  transition:
+    opacity 200ms ease,
+    transform 220ms ease,
+    visibility 0s linear 220ms;
+}
+
 .v6-shell .v6-reserve__menu::before,
+.v6-shell .v6-directions__menu::before,
 .v6-shell .v3-language__menu::before {
   content: '';
   position: absolute;
@@ -224,6 +276,14 @@
   transition-delay: 0s;
 }
 
+.v6-shell .v6-directions.is-open .v6-directions__menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+  transition-delay: 0s;
+}
+
 .v6-shell .v6-social.is-open .v6-social__menu {
   opacity: 1;
   visibility: visible;
@@ -237,12 +297,27 @@
   --reserve-menu-offset: 0.22rem;
 }
 
+.v6-shell .v6-directions.is-down .v6-directions__menu {
+  top: 100%;
+  --directions-menu-offset: 0.22rem;
+}
+
 .v6-shell .v6-reserve.is-up .v6-reserve__menu {
   bottom: 100%;
   --reserve-menu-offset: -0.22rem;
 }
 
+.v6-shell .v6-directions.is-up .v6-directions__menu {
+  bottom: 100%;
+  --directions-menu-offset: -0.22rem;
+}
+
 .v6-shell .v6-reserve.is-down .v6-reserve__menu::before {
+  top: -0.3rem;
+  height: 0.3rem;
+}
+
+.v6-shell .v6-directions.is-down .v6-directions__menu::before {
   top: -0.3rem;
   height: 0.3rem;
 }
@@ -251,7 +326,15 @@
   left: 0;
 }
 
+.v6-shell .v6-directions.is-left .v6-directions__menu {
+  left: 0;
+}
+
 .v6-shell .v6-reserve.is-right .v6-reserve__menu {
+  right: 0;
+}
+
+.v6-shell .v6-directions.is-right .v6-directions__menu {
   right: 0;
 }
 
@@ -265,6 +348,24 @@
   color: rgba(255, 247, 240, 0.96);
   background: transparent;
   white-space: nowrap;
+}
+
+.v6-shell .v6-directions__menu a,
+.v6-shell .v6-directions__menu button {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-height: 3rem;
+  padding: 0.85rem 0.95rem;
+  line-height: 1;
+  color: rgba(255, 247, 240, 0.96);
+  background: transparent;
+  white-space: nowrap;
+  border: 0;
+  appearance: none;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
 }
 
 .v6-shell .v6-social__menu a {
@@ -283,11 +384,23 @@
   background: rgba(255, 255, 255, 0.1);
 }
 
+.v6-shell .v6-directions__menu a:hover,
+.v6-shell .v6-directions__menu button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
 .v6-shell .v6-social__menu a:hover {
   background: rgba(255, 255, 255, 0.1);
 }
 
 .v6-shell .v6-reserve__menu a + a {
+  border-top: 1px solid rgba(255, 247, 240, 0.16);
+}
+
+.v6-shell .v6-directions__menu a + a,
+.v6-shell .v6-directions__menu a + button,
+.v6-shell .v6-directions__menu button + a,
+.v6-shell .v6-directions__menu button + button {
   border-top: 1px solid rgba(255, 247, 240, 0.16);
 }
 
@@ -408,6 +521,17 @@
   margin-bottom: 1rem;
 }
 
+.v6-shell .v5-cuisine__intro > p,
+.v6-shell .v5-ambiance .v3-copy > p,
+.v6-shell .v6-events__copy > p,
+.v6-shell .v3-contact-copy > div > p {
+  margin: 0;
+}
+
+.v6-shell .v6-copy-followup {
+  margin-top: 2rem;
+}
+
 .v6-shell .v6-home-story {
   display: grid;
   gap: 0;
@@ -446,7 +570,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  margin-top: 1.35rem;
+  margin-top: 2rem;
 }
 
 .v6-shell .v6-events__tags span {
@@ -600,7 +724,7 @@
 }
 
 .v6-shell .v6-access-actions {
-  margin-top: 1.6rem;
+  margin-top: 2rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
@@ -707,7 +831,9 @@
 
 .v6-shell .v6-access-button > span,
 .v6-shell .v6-access-link > span,
-.v6-shell .v6-reserve__menu a > span {
+.v6-shell .v6-reserve__menu a > span,
+.v6-shell .v6-directions__menu a > span,
+.v6-shell .v6-directions__menu button > span {
   display: inline-flex;
   align-items: center;
   line-height: 1;
@@ -715,6 +841,11 @@
 }
 
 .v6-shell .v6-reserve__menu a {
+  box-sizing: border-box;
+}
+
+.v6-shell .v6-directions__menu a,
+.v6-shell .v6-directions__menu button {
   box-sizing: border-box;
 }
 
@@ -734,6 +865,22 @@
   box-shadow: none;
 }
 
+.v6-shell .v6-directions__button.v3-button,
+.v6-shell .v6-directions__button.v6-access-link,
+.v6-shell .v6-directions__button.v3-button:hover,
+.v6-shell .v6-directions__button.v6-access-link:hover,
+.v6-shell .v6-directions__button.v3-button:focus-visible,
+.v6-shell .v6-directions__button.v6-access-link:focus-visible,
+.v6-shell .v6-directions__button.v3-button:active,
+.v6-shell .v6-directions__button.v6-access-link:active,
+.v6-shell .v6-directions.is-open .v6-directions__button.v3-button,
+.v6-shell .v6-directions.is-open .v6-directions__button.v6-access-link,
+.v6-shell .v6-directions:hover .v6-directions__button.v3-button,
+.v6-shell .v6-directions:hover .v6-directions__button.v6-access-link {
+  transform: none;
+  box-shadow: none;
+}
+
 .v6-shell .v6-reserve__button.v3-button::before,
 .v6-shell .v6-reserve__button.v6-access-button::before,
 .v6-shell .v6-reserve__button.v3-button:hover::before,
@@ -749,7 +896,27 @@
   opacity: 0;
 }
 
+.v6-shell .v6-directions__button.v3-button::before,
+.v6-shell .v6-directions__button.v6-access-link::before,
+.v6-shell .v6-directions__button.v3-button:hover::before,
+.v6-shell .v6-directions__button.v6-access-link:hover::before,
+.v6-shell .v6-directions__button.v3-button:focus-visible::before,
+.v6-shell .v6-directions__button.v6-access-link:focus-visible::before,
+.v6-shell .v6-directions__button.v3-button:active::before,
+.v6-shell .v6-directions__button.v6-access-link:active::before,
+.v6-shell .v6-directions.is-open .v6-directions__button.v3-button::before,
+.v6-shell .v6-directions.is-open .v6-directions__button.v6-access-link::before,
+.v6-shell .v6-directions:hover .v6-directions__button.v3-button::before,
+.v6-shell .v6-directions:hover .v6-directions__button.v6-access-link::before {
+  opacity: 0;
+}
+
 .v6-shell .v6-reserve__menu a > span {
+  transform: translateY(0.08em);
+}
+
+.v6-shell .v6-directions__menu a > span,
+.v6-shell .v6-directions__menu button > span {
   transform: translateY(0.08em);
 }
 
@@ -779,6 +946,7 @@
 @media (min-width: 960px) {
   .v6-shell .v6-hero-directions-button {
     display: inline-flex;
+    border: 1px solid rgba(255, 247, 240, 0.9);
   }
 
   .v6-shell .v6-menu-chip-row button:hover,
@@ -1032,6 +1200,11 @@
     width: 100%;
   }
 
+  .v6-shell .v6-mobile-bar__directions {
+    display: flex;
+    width: 100%;
+  }
+
   .v6-shell .v6-mobile-bar__social {
     display: flex;
     width: 100%;
@@ -1047,11 +1220,24 @@
     transform: none;
   }
 
+  .v6-shell .v6-mobile-bar__directions .v6-directions__button {
+    appearance: none;
+    transform: none;
+  }
+
   .v6-shell .v6-mobile-bar__reserve .v6-reserve__caret {
     display: none;
   }
 
+  .v6-shell .v6-mobile-bar__directions .v6-directions__caret {
+    display: none;
+  }
+
   .v6-shell .v6-mobile-bar__reserve.is-open {
+    z-index: 61;
+  }
+
+  .v6-shell .v6-mobile-bar__directions.is-open {
     z-index: 61;
   }
 
@@ -1060,6 +1246,19 @@
   }
 
   .v6-shell .v6-mobile-bar__reserve .v6-reserve__menu {
+    left: 0;
+    right: auto;
+    width: max-content;
+    min-width: 100%;
+    max-width: calc(100vw - 1.5rem);
+    bottom: 100%;
+    top: auto;
+    border: 0;
+    background: var(--primary);
+    box-shadow: 0 20px 36px rgba(153, 65, 39, 0.18);
+  }
+
+  .v6-shell .v6-mobile-bar__directions .v6-directions__menu {
     left: 0;
     right: auto;
     width: max-content;
@@ -1085,11 +1284,18 @@
   }
 
   .v6-shell .v6-mobile-bar__reserve .v6-reserve__menu::after,
+  .v6-shell .v6-mobile-bar__directions .v6-directions__menu::after,
   .v6-shell .v6-mobile-bar__social .v6-social__menu::after {
     bottom: -0.22rem;
   }
 
   .v6-shell .v6-mobile-bar__reserve .v6-reserve__menu a {
+    min-height: 3rem;
+    padding: 0.9rem 1rem;
+  }
+
+  .v6-shell .v6-mobile-bar__directions .v6-directions__menu a,
+  .v6-shell .v6-mobile-bar__directions .v6-directions__menu button {
     min-height: 3rem;
     padding: 0.9rem 1rem;
   }

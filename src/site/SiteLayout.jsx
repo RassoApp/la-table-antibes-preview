@@ -3,7 +3,8 @@ import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import { nativeLanguageLabels, supportedLanguages } from '../content/siteContent';
 import { assetPath } from '../utils/assets';
 import { buildLocalizedPath } from '../utils/paths';
-import { CutleryIcon, FacebookIcon, InstagramIcon, PinIcon } from './icons';
+import { CutleryIcon, FacebookIcon, InstagramIcon } from './icons';
+import { DirectionsDropdown } from './DirectionsDropdown';
 import { ReserveDropdown } from './ReserveDropdown';
 import { SocialDropdown } from './SocialDropdown';
 
@@ -246,10 +247,15 @@ export function SiteLayout({ lang, locale, basePath }) {
           buttonClassName="v6-mobile-action v6-mobile-action--reserve"
           buttonLabel={mobileLabels.reserve}
         />
-        <a className="v6-mobile-action v6-mobile-action--link" href={locale.contactLinks.directionsHref} target="_blank" rel="noreferrer">
-          <PinIcon className="v6-mobile-action__icon" />
-          <span>{mobileLabels.directions}</span>
-        </a>
+        <DirectionsDropdown
+          lang={lang}
+          locale={locale}
+          direction="up"
+          className="v6-mobile-bar__directions"
+          buttonClassName="v6-mobile-action v6-mobile-action--link"
+          buttonLabel={mobileLabels.directions}
+          showCaret={false}
+        />
         <NavLink className={({ isActive }) => `v6-mobile-action v6-mobile-action--link ${isActive ? 'is-active' : ''}`} to={buildPath('menu')}>
           <CutleryIcon className="v6-mobile-action__icon" />
           <span>{mobileLabels.menu}</span>

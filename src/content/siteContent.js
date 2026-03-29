@@ -15,10 +15,14 @@ export const nativeLanguageLabels = {
 };
 
 const commonContact = {
+  addressText: '25-27 rue Sade, 06600 Antibes',
   phoneHref: 'tel:+33000000000',
   whatsappHref: 'https://wa.me/33000000000',
   emailHref: 'mailto:bonjour@latable-antibes.fr',
-  directionsHref: 'https://maps.google.com/?q=Vieil+Antibes',
+  directionsHref: 'https://www.google.com/maps/search/?api=1&query=25-27%20rue%20Sade%2C%2006600%20Antibes',
+  googleMapsHref: 'https://www.google.com/maps/search/?api=1&query=25-27%20rue%20Sade%2C%2006600%20Antibes',
+  appleMapsHref: 'https://maps.apple.com/?q=25-27%20rue%20Sade%2C%2006600%20Antibes',
+  wazeHref: 'https://waze.com/ul?q=25-27%20rue%20Sade%2C%2006600%20Antibes&navigate=yes',
   instagramHref: '#',
   facebookHref: '#',
 };

@@ -2,7 +2,7 @@ export const homePageContent = {
   fr: {
     hero: {
       title: 'La Table est un lieu, la cuisine est un art. Nous réunissons les deux.',
-      text: "Court texte de 1 à 2 phrases pour présenter le concept, le type de cuisine et l'ambiance générale du lieu.",
+      text: 'La Table propose une cuisine traditionnelle faite avec amour, mais également de délicieuses pizzas au four à bois, dans une ambiance chaleureuse et conviviale.',
     },
     infoStrip: [
       { label: 'Adresse', value: 'Adresse exacte du restaurant' },
@@ -11,14 +11,14 @@ export const homePageContent = {
       { label: 'Ambiance', value: 'Mots-clés qui décrivent le lieu' },
     ],
     cuisine: {
-      eyebrow: 'Notre cuisine',
-      title: 'Texte qui présente la cuisine et les plats phares',
-      text: 'Court texte pour expliquer les spécialités, le four à bois et ce qui donne envie de regarder le menu.',
+      eyebrow: 'L’art dans nos assiettes',
+      title: 'Une cuisine ancrée dans l’art de recevoir',
+      text: 'À La Table, la cuisine est un moment de partage : des recettes traditionnelles revisitées avec générosité, des plats mijotés, des grillades et des spécialités au feu de bois qui sentent bon le Sud et la convivialité.',
     },
     ambiance: {
       eyebrow: 'Ambiance',
-      title: "Texte qui décrit l'atmosphère et l'expérience sur place",
-      text: 'Court texte pour parler de la salle, de la terrasse, du bar et de ce que le client ressent en venant sur place.',
+      title: 'Un lieu de Vie et de Plaisir',
+      text: 'À La Table, on vient autant pour l’ambiance que pour la cuisine. Le lieu invite à la détente, entre chaleur du feu de bois, convivialité et esprit méditerranéen, pour partager un moment simple, vivant et gourmand.',
     },
     access: {
       eyebrow: 'Contact & accès',
@@ -29,7 +29,7 @@ export const homePageContent = {
   en: {
     hero: {
       title: 'La Table is a place, cuisine is an art. We bring the two together.',
-      text: 'Short 1 to 2 sentence text introducing the concept, the cuisine, and the overall atmosphere of the place.',
+      text: 'La Table serves traditional cuisine made with care, alongside delicious wood-fired pizzas, all in a warm and welcoming atmosphere.',
     },
     infoStrip: [
       { label: 'Address', value: 'Exact restaurant address' },
@@ -38,14 +38,14 @@ export const homePageContent = {
       { label: 'Atmosphere', value: 'Keywords that describe the venue' },
     ],
     cuisine: {
-      eyebrow: 'Our cuisine',
-      title: 'Text that introduces the cuisine and standout dishes',
-      text: 'Short text explaining the specialties, the wood oven, and what should make people want to open the menu.',
+      eyebrow: 'The art on our plates',
+      title: 'A cuisine rooted in the art of hospitality',
+      text: 'At La Table, cuisine is all about sharing: generous takes on traditional recipes, slow-cooked dishes, grilled specialties, and wood-fired favorites infused with the warmth of the South and a convivial spirit.',
     },
     ambiance: {
       eyebrow: 'Atmosphere',
-      title: 'Text that describes the atmosphere and on-site experience',
-      text: 'Short text about the dining room, terrace, bar, and the overall feeling guests should expect on site.',
+      title: 'A place to gather and enjoy',
+      text: 'People come to La Table as much for the atmosphere as for the food. The space invites you to unwind, with the warmth of the wood oven, a convivial spirit, and a Mediterranean feel that turns every visit into a simple, lively, and delicious moment.',
     },
     access: {
       eyebrow: 'Contact & access',
@@ -300,19 +300,19 @@ export const homePageContent = {
 
 export const homeEventContent = {
   fr: {
-    eyebrow: 'Événements & groupes',
+    eyebrow: 'Événements & Privatisations à La Table',
     title: 'Privatisez pour vos événements !',
     text:
-      'La Table Antibes peut accueillir vos groupes en salle ou en terrasse pour un événement privé ou professionnel dans le Vieil Antibes, dans un cadre pensé pour les moments à partager.',
+      'La Table vous accompagne dans tous vos moments précieux, qu’il s’agisse de mariages, anniversaires ou repas de groupe. Dans une ambiance chaleureuse et conviviale, nous créons des expériences sur mesure, alliant cuisine généreuse et art de recevoir pour faire de chaque événement un souvenir inoubliable.',
     tags: ['Mariages', 'Anniversaires', 'Repas de groupe'],
     aria: "Types d'événements",
     imageAlt: 'Table dressée pour recevoir un groupe',
   },
   en: {
-    eyebrow: 'Events & groups',
+    eyebrow: 'Events & private hire at La Table',
     title: 'Host your events with us',
     text:
-      'La Table Antibes can host private or professional groups indoors or on its terrace in the heart of Vieil Antibes, in a setting designed for shared moments.',
+      'La Table is here for all your special occasions, from weddings and birthdays to group meals. In a warm and welcoming setting, we create tailored experiences that combine generous cuisine with the art of hosting, turning every event into a memorable one.',
     tags: ['Weddings', 'Birthdays', 'Group meals'],
     aria: 'Event types',
     imageAlt: 'Set table prepared for a group event',

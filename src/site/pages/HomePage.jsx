@@ -2,7 +2,8 @@ import { Link } from 'react-router-dom';
 import { useLocale } from '../../App';
 import { homeEventContent, homePageContent } from '../content/homePageContent';
 import { pageContent } from '../content/pageContent';
-import { CutleryIcon, PinIcon } from '../icons';
+import { CutleryIcon } from '../icons';
+import { DirectionsDropdown } from '../DirectionsDropdown';
 import { siteMedia } from '../media';
 import { ReserveDropdown } from '../ReserveDropdown';
 
@@ -20,6 +21,12 @@ export function HomePage() {
   const pages = pageContent[lang] ?? pageContent.fr;
   const contact = pages.contact;
   const events = homeEventContent[lang] ?? homeEventContent.en;
+  const contactHours =
+    contact.hours ??
+    locale.contactPage.hours.map((slot) => ({
+      day: slot.day,
+      hours: contact.hourValue,
+    }));
 
   return (
     <>
@@ -43,17 +50,12 @@ export function HomePage() {
               <CutleryIcon />
               {locale.actions.menu}
             </Link>
-            <div>
-              <a
-                className="v3-button v3-button--secondary v6-hero-directions-button"
-                href={locale.contactLinks.directionsHref}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <PinIcon />
-                {locale.actions.directions}
-              </a>
-            </div>
+            <DirectionsDropdown
+              lang={lang}
+              locale={locale}
+              className="v6-hero-directions"
+              buttonClassName="v3-button v3-button--secondary v6-hero-directions-button"
+            />
           </div>
         </div>
       </section>
@@ -64,7 +66,7 @@ export function HomePage() {
             <span className="v3-kicker">{home.cuisine.eyebrow}</span>
             <h2>{home.cuisine.title}</h2>
             <p>{home.cuisine.text}</p>
-            <div>
+            <div className="v6-copy-followup">
               <Link className="v3-button v6-cuisine-menu-button" to={buildLocalizedPath('menu')}>
                 <CutleryIcon />
                 {locale.actions.menu}
@@ -87,7 +89,7 @@ export function HomePage() {
             <span className="v3-kicker">{home.ambiance.eyebrow}</span>
             <h2>{home.ambiance.title}</h2>
             <p>{home.ambiance.text}</p>
-            <div>
+            <div className="v6-copy-followup">
               <ReserveDropdown locale={locale} />
             </div>
           </div>
@@ -145,10 +147,10 @@ export function HomePage() {
               <div>
                 <h2>{contact.hoursTitle}</h2>
                 <div className="v3-hours">
-                  {locale.contactPage.hours.map((slot) => (
+                  {contactHours.map((slot) => (
                     <div key={slot.day}>
                       <span>{slot.day}</span>
-                      <strong>{contact.hourValue}</strong>
+                      <strong>{slot.hours}</strong>
                     </div>
                   ))}
                 </div>
@@ -160,10 +162,11 @@ export function HomePage() {
 
                 <div className="v3-button-row v6-access-actions">
                   <ReserveDropdown locale={locale} buttonClassName="v6-access-button v6-access-button--reserve" />
-                  <a className="v6-access-link" href={locale.contactLinks.directionsHref} target="_blank" rel="noreferrer">
-                    <PinIcon />
-                    <span>{locale.actions.directions}</span>
-                  </a>
+                  <DirectionsDropdown
+                    lang={lang}
+                    locale={locale}
+                    buttonClassName="v6-access-link v6-directions-access-button"
+                  />
                 </div>
               </div>
             </div>
