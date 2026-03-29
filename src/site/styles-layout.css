@@ -1323,8 +1323,8 @@
   }
 
   .v6-shell .v6-mobile-action.is-active,
-  .v6-shell .v6-mobile-action:hover,
-  .v6-shell .v6-mobile-bar__social:hover .v6-social__button,
+  .v6-shell .v6-mobile-bar__reserve.is-open .v6-reserve__button,
+  .v6-shell .v6-mobile-bar__directions.is-open .v6-directions__button,
   .v6-shell .v6-mobile-bar__social.is-open .v6-social__button {
     color: #fff;
     background: rgba(255, 255, 255, 0.08);
