@@ -3,7 +3,7 @@ import { useLocale } from '../../App';
 
 const WINE_CATEGORY_IDS = new Set(['french-wines', 'world-wines', 'premium-cellar', 'champagnes']);
 const WINE_PRICE_COLUMN_ORDER = ['glass', '50cl', '75cl'];
-const WINE_PRICE_COLUMN_LABELS = {
+const DEFAULT_WINE_PRICE_COLUMN_LABELS = {
   glass: 'Verre',
   '50cl': '50 cl',
   '75cl': '75 cl',
@@ -116,6 +116,7 @@ function filterSectionItems(items, activeFilters) {
 
 export function MenuPage() {
   const { locale } = useLocale();
+  const winePriceColumnLabels = locale.menuPage.winePriceColumnLabels ?? DEFAULT_WINE_PRICE_COLUMN_LABELS;
   const menuTabs = locale.menuPage.tabs ?? null;
   const menuGroups = locale.menuPage.groups ?? [{ id: 'all', title: null, categories: locale.menuPage.categories ?? [] }];
   const categories = menuGroups.flatMap((group) => group.categories);
@@ -297,7 +298,7 @@ export function MenuPage() {
                         aria-hidden="true"
                       >
                         {priceColumns.map((column) => (
-                          <span key={column}>{WINE_PRICE_COLUMN_LABELS[column]}</span>
+                          <span key={column}>{winePriceColumnLabels[column]}</span>
                         ))}
                       </div>
                     ) : null}

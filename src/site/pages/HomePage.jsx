@@ -21,12 +21,7 @@ export function HomePage() {
   const pages = pageContent[lang] ?? pageContent.fr;
   const contact = pages.contact;
   const events = homeEventContent[lang] ?? homeEventContent.en;
-  const contactHours =
-    contact.hours ??
-    locale.contactPage.hours.map((slot) => ({
-      day: slot.day,
-      hours: contact.hourValue,
-    }));
+  const contactHours = contact.hours ?? [];
 
   return (
     <>
