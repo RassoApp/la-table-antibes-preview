@@ -77,16 +77,58 @@ function splitWineCategoryIntoGroups(items) {
   return groups;
 }
 
+function filterSectionItems(items, activeFilters) {
+  const pending = [];
+  const output = [];
+
+  function matches(item) {
+    const itemFilters = new Set(item.filters ?? []);
+    const hasVegan = itemFilters.has('vegan');
+    const hasVegetarian = itemFilters.has('vegetarian') || hasVegan;
+
+    if (activeFilters.has('vegan') && !hasVegan) return false;
+    if (!activeFilters.has('vegan') && activeFilters.has('vegetarian') && !hasVegetarian) return false;
+    if (activeFilters.has('no-pork') && itemFilters.has('pork')) return false;
+    if (activeFilters.has('no-fish') && itemFilters.has('fish')) return false;
+    if (activeFilters.has('no-seafood') && itemFilters.has('seafood')) return false;
+    return true;
+  }
+
+  items.forEach((item) => {
+    if (item.kind === 'section') {
+      pending.length = 0;
+      pending.push(item);
+      return;
+    }
+
+    if (!matches(item)) return;
+
+    if (pending.length) {
+      output.push(...pending);
+      pending.length = 0;
+    }
+
+    output.push(item);
+  });
+
+  return output;
+}
+
 export function MenuPage() {
   const { locale } = useLocale();
-  const tagLabels = locale.menuPage.tagLabels ?? {};
   const menuTabs = locale.menuPage.tabs ?? null;
   const menuGroups = locale.menuPage.groups ?? [{ id: 'all', title: null, categories: locale.menuPage.categories ?? [] }];
   const categories = menuGroups.flatMap((group) => group.categories);
   const usesTabbedLayout = Boolean(menuTabs?.length);
+  const menuFilters = locale.menuPage.filters ?? null;
   const tabButtonsRef = useRef(new Map());
   const tabsContainerRef = useRef(null);
+  const filtersRef = useRef(null);
+  const hoverMediaQueryRef = useRef(null);
   const [activeTabId, setActiveTabId] = useState(menuTabs?.[0]?.id ?? null);
+  const [isFilterMenuOpen, setIsFilterMenuOpen] = useState(false);
+  const [activeFilters, setActiveFilters] = useState([]);
+  const [supportsHoverMenu, setSupportsHoverMenu] = useState(false);
   const [tabFadeState, setTabFadeState] = useState({
     canScrollLeft: false,
     canScrollRight: false,
@@ -108,6 +150,60 @@ export function MenuPage() {
       block: 'nearest',
     });
   }, [activeTabId]);
+
+  useEffect(() => {
+    setIsFilterMenuOpen(false);
+  }, [activeTabId]);
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || !window.matchMedia) return undefined;
+
+    const mediaQuery = window.matchMedia('(min-width: 901px) and (hover: hover) and (pointer: fine)');
+    hoverMediaQueryRef.current = mediaQuery;
+
+    const update = () => setSupportsHoverMenu(mediaQuery.matches);
+    update();
+
+    if (typeof mediaQuery.addEventListener === 'function') {
+      mediaQuery.addEventListener('change', update);
+      return () => mediaQuery.removeEventListener('change', update);
+    }
+
+    mediaQuery.addListener(update);
+    return () => mediaQuery.removeListener(update);
+  }, []);
+
+  useEffect(() => {
+    if (!isFilterMenuOpen) return undefined;
+
+    function handlePointerDown(event) {
+      if (!filtersRef.current?.contains(event.target)) {
+        setIsFilterMenuOpen(false);
+      }
+    }
+
+    function handleEscape(event) {
+      if (event.key === 'Escape') {
+        setIsFilterMenuOpen(false);
+      }
+    }
+
+    function handleScroll() {
+      if (!supportsHoverMenu) {
+        setIsFilterMenuOpen(false);
+      }
+    }
+
+    document.addEventListener('pointerdown', handlePointerDown);
+    document.addEventListener('keydown', handleEscape);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      document.removeEventListener('pointerdown', handlePointerDown);
+      document.removeEventListener('keydown', handleEscape);
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [isFilterMenuOpen, supportsHoverMenu]);
 
   useEffect(() => {
     const node = tabsContainerRef.current;
@@ -158,15 +254,6 @@ export function MenuPage() {
         <div className="v6-menu-item__copy">
           <div className="v6-menu-item__title-row">
             <h3>{item.name}</h3>
-            {item.tags?.length ? (
-              <div className="v6-menu-item__tags">
-                {item.tags.map((tag) => (
-                  <span key={`${item.name}-${tag}`} className={`v6-menu-tag is-${tag}`}>
-                    {tagLabels[tag] ?? tag}
-                  </span>
-                ))}
-              </div>
-            ) : null}
           </div>
           {item.description ? <p>{item.description}</p> : null}
         </div>
@@ -242,6 +329,28 @@ export function MenuPage() {
     );
   }
 
+  function toggleFilter(filterId) {
+    setActiveFilters((current) =>
+      current.includes(filterId) ? current.filter((value) => value !== filterId) : [...current, filterId],
+    );
+  }
+
+  function clearFilters() {
+    setActiveFilters([]);
+  }
+
+  function openFiltersOnHover() {
+    if (supportsHoverMenu) {
+      setIsFilterMenuOpen(true);
+    }
+  }
+
+  function closeFiltersOnHoverLeave() {
+    if (supportsHoverMenu) {
+      setIsFilterMenuOpen(false);
+    }
+  }
+
   function renderCategory(category) {
     if (WINE_CATEGORY_IDS.has(category.id)) {
       return renderWineCategory(category);
@@ -303,8 +412,33 @@ export function MenuPage() {
     return columns.filter((column) => column.length);
   }
 
+  function getDisplayTab(tab) {
+    if (!tab || !menuFilters?.filterableTabs?.includes(tab.id) || activeFilters.length === 0) {
+      return tab;
+    }
+
+    const activeFilterSet = new Set(activeFilters);
+    const sections = (tab.sections ?? [])
+      .map((section) => ({
+        ...section,
+        items: filterSectionItems(section.items ?? [], activeFilterSet),
+      }))
+      .filter((section) => section.items.some((item) => item.kind !== 'section'));
+
+    return {
+      ...tab,
+      sections,
+    };
+  }
+
   const activeTab = usesTabbedLayout ? menuTabs.find((tab) => tab.id === activeTabId) ?? menuTabs[0] : null;
-  const activeTabColumns = activeTab ? splitSectionsIntoColumns(activeTab) : [];
+  const displayTab = getDisplayTab(activeTab);
+  const activeTabColumns = displayTab ? splitSectionsIntoColumns(displayTab) : [];
+  const shouldShowFilters = Boolean(displayTab && menuFilters?.filterableTabs?.includes(displayTab.id));
+  const selectedFilterCount = activeFilters.length;
+  const filterButtonLabel = selectedFilterCount
+    ? `${menuFilters?.buttonLabel ?? 'Filtres'} (${selectedFilterCount})`
+    : menuFilters?.buttonLabel ?? 'Filtres';
 
   return (
     <div className="v3-page v5-page v5-page--menu v6-page--menu">
@@ -352,18 +486,74 @@ export function MenuPage() {
               </div>
 
               <div
-                id={`menu-panel-${activeTab.id}`}
+                id={`menu-panel-${displayTab.id}`}
                 className="v6-menu-tab-panel"
                 role="tabpanel"
-                aria-labelledby={`menu-tab-${activeTab.id}`}
+                aria-labelledby={`menu-tab-${displayTab.id}`}
               >
-                <div className={`v6-menu-tab-stacks v6-menu-tab-stacks--${activeTab.id}`}>
-                  {activeTabColumns.map((column, columnIndex) => (
-                    <div key={`${activeTab.id}-column-${columnIndex}`} className="v6-menu-tab-stack">
-                      {column.map((section) => renderCategory(section))}
+                {shouldShowFilters ? (
+                  <div className="v6-menu-filters" ref={filtersRef}>
+                    <div
+                      className="v6-menu-filters__anchor"
+                      onMouseEnter={openFiltersOnHover}
+                      onMouseLeave={closeFiltersOnHoverLeave}
+                    >
+                      <button
+                        type="button"
+                        className={`v6-menu-filters__button ${isFilterMenuOpen ? 'is-open' : ''}`}
+                        aria-expanded={isFilterMenuOpen}
+                        aria-haspopup="true"
+                        onClick={() => {
+                          if (!supportsHoverMenu) {
+                            setIsFilterMenuOpen((current) => !current);
+                          }
+                        }}
+                      >
+                        <span>{filterButtonLabel}</span>
+                        <span className="v6-menu-filters__caret" aria-hidden="true">
+                          ▾
+                        </span>
+                      </button>
+
+                      <div className={`v6-menu-filters__menu ${isFilterMenuOpen ? 'is-open' : ''}`}>
+                        <div className="v6-menu-filters__options">
+                          {(menuFilters?.options ?? []).map((option) => {
+                            const checked = activeFilters.includes(option.id);
+
+                            return (
+                              <label key={option.id} className="v6-menu-filters__option">
+                                <input
+                                  type="checkbox"
+                                  checked={checked}
+                                  onChange={() => toggleFilter(option.id)}
+                                />
+                                <span>{option.label}</span>
+                              </label>
+                            );
+                          })}
+                        </div>
+
+                        {selectedFilterCount ? (
+                          <button type="button" className="v6-menu-filters__clear" onClick={clearFilters}>
+                            {menuFilters?.clearLabel ?? 'Réinitialiser'}
+                          </button>
+                        ) : null}
+                      </div>
                     </div>
-                  ))}
-                </div>
+                  </div>
+                ) : null}
+
+                {activeTabColumns.length ? (
+                  <div className={`v6-menu-tab-stacks v6-menu-tab-stacks--${displayTab.id}`}>
+                    {activeTabColumns.map((column, columnIndex) => (
+                      <div key={`${displayTab.id}-column-${columnIndex}`} className="v6-menu-tab-stack">
+                        {column.map((section) => renderCategory(section))}
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="v6-menu-empty">{menuFilters?.emptyLabel ?? 'Aucun plat ne correspond à ces filtres.'}</div>
+                )}
               </div>
             </>
           ) : (

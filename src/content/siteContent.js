@@ -387,13 +387,6 @@ export const siteContent = {
         'The final dishes will replace these indicative entries. The structure is already prepared for clear categories, visible pricing, and comfortable phone browsing.',
       note:
         'The dish names below are placeholders that demonstrate how the final restaurant menu can be organized.',
-      tagLabels: {
-        vegetarian: 'Vegetarian',
-        vegan: 'Vegan',
-        fish: 'Fish',
-        pork: 'Pork',
-        spicy: 'Spicy',
-      },
       categories: [
         {
           id: 'starters',
@@ -692,13 +685,6 @@ siteContent.it = {
       'Il menu finale sostituirà questi contenuti indicativi. La struttura è già pensata per categorie chiare, prezzi visibili e una lettura semplice da telefono.',
     note:
       'Le voci qui sotto sono esempi di struttura. Serviranno come base per permettere al cliente di fornire i piatti definitivi.',
-    tagLabels: {
-      vegetarian: 'Vegetariano',
-      vegan: 'Vegano',
-      fish: 'Pesce',
-      pork: 'Maiale',
-      spicy: 'Piccante',
-    },
     categories: [
       {
         id: 'starters',
@@ -996,13 +982,6 @@ siteContent.de = {
       'Das endgültige Menü ersetzt diese Beispielinhalte. Die Struktur ist bereits auf klare Kategorien, sichtbare Preise und einfaches Lesen am Handy ausgelegt.',
     note:
       'Die Einträge unten sind Strukturbeispiele. Sie dienen als Grundlage, damit der Kunde später die finalen Gerichte liefern kann.',
-    tagLabels: {
-      vegetarian: 'Vegetarisch',
-      vegan: 'Vegan',
-      fish: 'Fisch',
-      pork: 'Schwein',
-      spicy: 'Scharf',
-    },
     categories: [
       {
         id: 'starters',
@@ -1300,13 +1279,6 @@ siteContent.nl = {
       'Het definitieve menu vervangt deze voorbeeldinhoud. De structuur is al klaar voor duidelijke categorieën, zichtbare prijzen en comfortabel lezen op telefoon.',
     note:
       'De onderstaande benamingen zijn structuurvoorbeelden. Ze dienen als basis zodat de klant later de definitieve gerechten kan aanleveren.',
-    tagLabels: {
-      vegetarian: 'Vegetarisch',
-      vegan: 'Vegan',
-      fish: 'Vis',
-      pork: 'Varkensvlees',
-      spicy: 'Pittig',
-    },
     categories: [
       {
         id: 'starters',
@@ -1604,13 +1576,6 @@ siteContent.es = {
       'El menú final sustituirá estos contenidos indicativos. La estructura ya está pensada para categorías claras, precios visibles y una lectura sencilla en teléfono.',
     note:
       'Los títulos de abajo son ejemplos de estructura. Servirán de base para que el cliente entregue más adelante los platos definitivos.',
-    tagLabels: {
-      vegetarian: 'Vegetariano',
-      vegan: 'Vegano',
-      fish: 'Pescado',
-      pork: 'Cerdo',
-      spicy: 'Picante',
-    },
     categories: [
       {
         id: 'starters',
@@ -1838,13 +1803,6 @@ siteContent.ru = {
       'Финальное меню заменит эти примерные записи. Структура уже готова для ясных категорий, видимых цен и удобного чтения с телефона.',
     note:
       'Названия ниже являются примерами структуры. Они служат базой, чтобы клиент позже смог передать финальные блюда.',
-    tagLabels: {
-      vegetarian: 'Вегетарианское',
-      vegan: 'Веганское',
-      fish: 'Рыба',
-      pork: 'Свинина',
-      spicy: 'Острое',
-    },
     categories: [
       {
         id: 'starters',
@@ -2007,13 +1965,6 @@ siteContent.uk = {
       'Фінальне меню замінить ці прикладні записи. Структура вже підготовлена для чітких категорій, видимих цін і зручного читання з телефона.',
     note:
       'Назви нижче є лише прикладами структури. Вони слугуватимуть основою, щоб клієнт згодом передав фінальні страви.',
-    tagLabels: {
-      vegetarian: 'Вегетаріанське',
-      vegan: 'Веганське',
-      fish: 'Риба',
-      pork: 'Свинина',
-      spicy: 'Гостре',
-    },
     categories: [
       {
         id: 'starters',
@@ -2176,13 +2127,6 @@ siteContent.zh = {
       '最终菜单将替换这些示例内容。当前结构已经为清晰分类、明确价格和手机上的舒适阅读做好准备。',
     note:
       '下方名称仅为结构示例，用作之后客户提供最终菜品内容的基础。',
-    tagLabels: {
-      vegetarian: '素食',
-      vegan: '纯素',
-      fish: '鱼类',
-      pork: '猪肉',
-      spicy: '辣',
-    },
     categories: [
       {
         id: 'starters',
@@ -2414,13 +2358,6 @@ siteContent.ja = {
       '最終メニューはこれらの例示コンテンツに置き換わります。現在の構成は、明確なカテゴリ、見やすい価格表示、スマホでの読みやすさを前提に組まれています。',
     note:
       '以下の名称は構成例です。あとでお客様が最終的な料理名を渡しやすいようにするための土台です。',
-    tagLabels: {
-      vegetarian: 'ベジタリアン',
-      vegan: 'ヴィーガン',
-      fish: '魚',
-      pork: '豚肉',
-      spicy: '辛い',
-    },
     categories: [
       {
         id: 'starters',
@@ -2665,13 +2602,6 @@ siteContent.ko = {
       '최종 메뉴는 이 예시 콘텐츠를 대체하게 됩니다. 현재 구조는 명확한 카테고리, 눈에 잘 띄는 가격, 모바일에서의 편한 읽기를 전제로 구성되어 있습니다.',
     note:
       '아래 이름들은 구조 예시입니다. 이후 고객이 최종 메뉴명을 전달하기 쉽도록 하기 위한 기반입니다.',
-    tagLabels: {
-      vegetarian: '베지테리언',
-      vegan: '비건',
-      fish: '생선',
-      pork: '돼지고기',
-      spicy: '매운맛',
-    },
     categories: [
       {
         id: 'starters',

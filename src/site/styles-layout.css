@@ -668,6 +668,137 @@
   min-width: 0;
 }
 
+.v6-shell .v6-menu-filters {
+  display: grid;
+  justify-content: center;
+  margin: 0 0 1.35rem;
+}
+
+.v6-shell .v6-menu-filters__anchor {
+  position: relative;
+  display: inline-grid;
+  justify-items: center;
+}
+
+.v6-shell .v6-menu-filters__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 2.9rem;
+  padding: 0.78rem 1rem;
+  border: 1px solid rgba(153, 65, 39, 0.62);
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--primary);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease,
+    color 180ms ease;
+}
+
+.v6-shell .v6-menu-filters__button.is-open {
+  background: rgba(153, 65, 39, 0.09);
+  border-color: rgba(153, 65, 39, 0.62);
+}
+
+.v6-shell .v6-menu-filters__caret {
+  font-size: 0.78rem;
+  line-height: 1;
+}
+
+.v6-shell .v6-menu-filters__menu {
+  position: absolute;
+  top: calc(100% + 0.42rem);
+  left: 50%;
+  width: max-content;
+  min-width: 13.5rem;
+  max-width: calc(100vw - 2rem);
+  padding: 1rem;
+  display: grid;
+  gap: 0.9rem;
+  background: rgba(244, 243, 241, 0.98);
+  border: 1px solid rgba(153, 65, 39, 0.62);
+  box-shadow: 0 18px 36px rgba(26, 28, 26, 0.08);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate(-50%, 0);
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease,
+    visibility 0s linear 180ms;
+  z-index: 8;
+}
+
+.v6-shell .v6-menu-filters__menu::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -0.42rem;
+  height: 0.42rem;
+  background: transparent;
+}
+
+.v6-shell .v6-menu-filters__menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+  transition-delay: 0s;
+}
+
+.v6-shell .v6-menu-filters__options {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.v6-shell .v6-menu-filters__option {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.93rem;
+  line-height: 1.35;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.v6-shell .v6-menu-filters__option input {
+  width: 1rem;
+  height: 1rem;
+  margin: 0;
+  accent-color: var(--primary);
+}
+
+.v6-shell .v6-menu-filters__clear {
+  justify-self: start;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  color: var(--primary);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.v6-shell .v6-menu-empty {
+  padding: 1.8rem;
+  background: rgba(244, 243, 241, 0.98);
+  color: var(--muted);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
 .v6-shell .v6-menu-master-panel {
   padding: 2rem;
 }
@@ -861,50 +992,6 @@
 .v6-shell .v6-menu-price-grid span {
   min-width: 0;
   white-space: nowrap;
-}
-
-.v6-shell .v6-menu-item__tags {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
-}
-
-.v6-shell .v6-menu-tag {
-  display: inline-grid;
-  place-items: center;
-  min-height: 1.18rem;
-  padding: 0 0.46rem;
-  border-radius: 0;
-  font-size: 0.6rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  line-height: 1;
-  white-space: nowrap;
-}
-
-.v6-shell .v6-menu-tag.is-vegetarian {
-  background: #97a07c;
-  color: #edf2de;
-}
-
-.v6-shell .v6-menu-tag.is-vegan {
-  background: #7d9381;
-  color: #e2ece4;
-}
-
-.v6-shell .v6-menu-tag.is-fish {
-  background: #79909e;
-  color: #e1e8ee;
-}
-
-.v6-shell .v6-menu-tag.is-pork {
-  background: #b38e99;
-  color: #f2e1e7;
-}
-
-.v6-shell .v6-menu-tag.is-spicy {
-  background: #a57572;
-  color: #f0dfdc;
 }
 
 .v6-page--menu .v3-menu-item strong,
@@ -1250,6 +1337,35 @@
 
   .v6-page--menu .v6-menu-tab-panel {
     padding-top: calc(var(--v6-mobile-tabs-height) + 0.2rem);
+  }
+
+  .v6-shell .v6-menu-filters {
+    margin-bottom: 1rem;
+  }
+
+  .v6-shell .v6-menu-filters__button {
+    min-height: 2.7rem;
+    padding: 0.72rem 0.9rem;
+    font-size: 0.68rem;
+  }
+
+  .v6-shell .v6-menu-filters__menu {
+    min-width: 12.8rem;
+    max-width: calc(100vw - 2rem);
+    padding: 0.9rem;
+  }
+
+  .v6-shell .v6-menu-filters__menu::before {
+    display: none;
+  }
+
+  .v6-shell .v6-menu-filters__option {
+    font-size: 0.88rem;
+  }
+
+  .v6-shell .v6-menu-empty {
+    padding: 1.5rem;
+    font-size: 0.88rem;
   }
 
   .v6-page--menu .v3-menu-item h3,
