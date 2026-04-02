@@ -810,6 +810,59 @@
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
+.v6-shell .v6-menu-panel--wine .v3-menu-items {
+  gap: 1rem;
+}
+
+.v6-shell .v6-menu-wine-groups {
+  display: grid;
+  gap: 1.6rem;
+}
+
+.v6-shell .v6-menu-wine-group {
+  display: grid;
+  gap: 1rem;
+}
+
+.v6-shell .v6-menu-wine-group__header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: end;
+}
+
+.v6-shell .v6-menu-wine-group__header .v6-menu-subsection {
+  margin: 0;
+}
+
+.v6-shell .v6-menu-item--wine {
+  align-items: start;
+}
+
+.v6-shell .v6-menu-price-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--menu-price-columns, 1), minmax(2.75rem, auto));
+  gap: 0.9rem;
+  align-items: start;
+  justify-content: end;
+  text-align: right;
+}
+
+.v6-shell .v6-menu-price-grid--header {
+  color: rgba(86, 66, 61, 0.82);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.v6-shell .v6-menu-price-grid strong,
+.v6-shell .v6-menu-price-grid span {
+  min-width: 0;
+  white-space: nowrap;
+}
+
 .v6-shell .v6-menu-item__tags {
   display: inline-flex;
   flex-wrap: wrap;
@@ -1211,6 +1264,24 @@
   .v6-page--menu .v6-menu-item__copy p {
     font-size: 0.84rem;
     line-height: 1.45;
+  }
+
+  .v6-shell .v6-menu-wine-group {
+    gap: 0.85rem;
+  }
+
+  .v6-shell .v6-menu-wine-group__header {
+    gap: 0.85rem;
+  }
+
+  .v6-shell .v6-menu-price-grid {
+    gap: 0.65rem;
+    grid-template-columns: repeat(var(--menu-price-columns, 1), minmax(2.45rem, auto));
+  }
+
+  .v6-shell .v6-menu-price-grid--header {
+    font-size: 0.58rem;
+    letter-spacing: 0.07em;
   }
 
   .v6-page--menu .v6-menu-subsection {

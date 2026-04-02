@@ -1,6 +1,82 @@
 import { useEffect, useRef, useState } from 'react';
 import { useLocale } from '../../App';
 
+const WINE_CATEGORY_IDS = new Set(['french-wines', 'world-wines', 'premium-cellar', 'champagnes']);
+const WINE_PRICE_COLUMN_ORDER = ['glass', '50cl', '75cl'];
+const WINE_PRICE_COLUMN_LABELS = {
+  glass: 'Verre',
+  '50cl': '50 cl',
+  '75cl': '75 cl',
+};
+
+function parseWinePrice(price) {
+  if (!price) return null;
+
+  const columns = {
+    glass: '',
+    '50cl': '',
+    '75cl': '',
+  };
+
+  const parts = price.split('•').map((part) => part.trim()).filter(Boolean);
+
+  parts.forEach((part) => {
+    let match = part.match(/^Verre\s+(.+)$/i);
+    if (match) {
+      columns.glass = match[1].trim();
+      return;
+    }
+
+    match = part.match(/^50\s*cl\s+(.+)$/i);
+    if (match) {
+      columns['50cl'] = match[1].trim();
+      return;
+    }
+
+    match = part.match(/^75\s*cl\s+(.+)$/i);
+    if (match) {
+      columns['75cl'] = match[1].trim();
+      return;
+    }
+
+    columns['75cl'] = part;
+  });
+
+  return columns;
+}
+
+function getWinePriceColumns(items) {
+  const parsedPrices = items
+    .filter((item) => item.kind !== 'section')
+    .map((item) => parseWinePrice(item.price))
+    .filter(Boolean);
+
+  return WINE_PRICE_COLUMN_ORDER.filter((column) => parsedPrices.some((price) => price[column]));
+}
+
+function splitWineCategoryIntoGroups(items) {
+  const groups = [];
+  let currentGroup = { label: null, items: [] };
+
+  items.forEach((item) => {
+    if (item.kind === 'section') {
+      if (currentGroup.items.length || currentGroup.label) {
+        groups.push(currentGroup);
+      }
+      currentGroup = { label: item.label, items: [] };
+      return;
+    }
+
+    currentGroup.items.push(item);
+  });
+
+  if (currentGroup.items.length || currentGroup.label) {
+    groups.push(currentGroup);
+  }
+
+  return groups;
+}
+
 export function MenuPage() {
   const { locale } = useLocale();
   const tagLabels = locale.menuPage.tagLabels ?? {};
@@ -99,7 +175,78 @@ export function MenuPage() {
     );
   }
 
+  function renderWinePriceRow(priceColumns, priceMap) {
+    return (
+      <div className="v6-menu-price-grid" style={{ '--menu-price-columns': priceColumns.length }}>
+        {priceColumns.map((column) => (
+          <strong key={column}>{priceMap[column] || ''}</strong>
+        ))}
+      </div>
+    );
+  }
+
+  function renderWineCategory(category) {
+    const groups = splitWineCategoryIntoGroups(category.items ?? []);
+
+    return (
+      <article key={category.id} id={category.id} className="v3-menu-panel v6-menu-panel--wine">
+        <h2>{category.title}</h2>
+        <div className="v6-menu-wine-groups">
+          {groups.map((group, groupIndex) => {
+            const priceColumns = getWinePriceColumns(group.items);
+
+            return (
+              <section
+                key={`${category.id}-${group.label ?? 'group'}-${groupIndex}`}
+                className="v6-menu-wine-group"
+              >
+                {(group.label || priceColumns.length) && (
+                  <div className="v6-menu-wine-group__header">
+                    {group.label ? <div className="v6-menu-subsection">{group.label}</div> : <div aria-hidden="true" />}
+                    {priceColumns.length ? (
+                      <div
+                        className="v6-menu-price-grid v6-menu-price-grid--header"
+                        style={{ '--menu-price-columns': priceColumns.length }}
+                        aria-hidden="true"
+                      >
+                        {priceColumns.map((column) => (
+                          <span key={column}>{WINE_PRICE_COLUMN_LABELS[column]}</span>
+                        ))}
+                      </div>
+                    ) : null}
+                  </div>
+                )}
+
+                <div className="v3-menu-items">
+                  {group.items.map((item) => {
+                    const priceMap = parseWinePrice(item.price);
+
+                    return (
+                      <div key={`${category.id}-${item.name}`} className="v3-menu-item v6-menu-item--wine">
+                        <div className="v6-menu-item__copy">
+                          <div className="v6-menu-item__title-row">
+                            <h3>{item.name}</h3>
+                          </div>
+                          {item.description ? <p>{item.description}</p> : null}
+                        </div>
+                        {priceMap && priceColumns.length ? renderWinePriceRow(priceColumns, priceMap) : null}
+                      </div>
+                    );
+                  })}
+                </div>
+              </section>
+            );
+          })}
+        </div>
+      </article>
+    );
+  }
+
   function renderCategory(category) {
+    if (WINE_CATEGORY_IDS.has(category.id)) {
+      return renderWineCategory(category);
+    }
+
     const panelClasses = [
       'v3-menu-panel',
       category.layout === 'split-items' ? 'v6-menu-panel--split-items' : '',
