@@ -141,6 +141,22 @@ img {
   gap: 0.15rem;
 }
 
+.v6-brand-logo {
+  display: block;
+  width: clamp(6.24rem, 10.24vw, 7.36rem);
+  max-width: 100%;
+  aspect-ratio: 1920 / 655;
+  background: rgba(255, 247, 240, 0.94);
+  -webkit-mask-image: var(--brand-logo-url);
+  mask-image: var(--brand-logo-url);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
 .v3-brand small {
   font-size: 0.68rem;
   letter-spacing: 0.18em;

@@ -56,6 +56,8 @@ const languageFlags = {
   },
 };
 
+const headerLogoSrc = assetPath('/v5-assets/logos/la-table-header.svg');
+
 const primaryNavKeys = ['home', 'menu'];
 const MOBILE_MENU_DROPDOWN_ID = 'mobile-menu';
 const LANGUAGE_DROPDOWN_ID = 'language-switcher';
@@ -215,9 +217,16 @@ function SiteLayoutInner({ lang, locale, basePath }) {
             <span />
           </button>
 
-          <NavLink className="v3-brand" to={buildPath()}>
-            <small>{locale.brand.district}</small>
-            <strong>{locale.brand.name}</strong>
+          <NavLink
+            className="v3-brand"
+            to={buildPath()}
+            aria-label={`${locale.brand.name} - ${locale.brand.district}`}
+          >
+            <span
+              className="v6-brand-logo"
+              aria-hidden="true"
+              style={{ '--brand-logo-url': `url(${headerLogoSrc})` }}
+            />
           </NavLink>
 
           <nav className="v3-header__nav" aria-label="Primary">

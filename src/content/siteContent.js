@@ -1,3 +1,5 @@
+import { frMenuPage } from './frMenuPage';
+
 export const supportedLanguages = ['fr', 'en', 'it', 'de', 'nl', 'es', 'ru', 'uk', 'zh', 'ja', 'ko'];
 
 export const nativeLanguageLabels = {
@@ -145,77 +147,7 @@ export const siteContent = {
         imageLabel: 'Plan accès',
       },
     },
-    menuPage: {
-      eyebrow: 'Le menu',
-      title: 'Une page lisible, mobile et faite pour être mise à jour proprement.',
-      text:
-        "Le menu final remplacera ces contenus indicatifs. La structure, elle, est déjà pensée pour des catégories claires, des prix visibles et une lecture simple sur téléphone.",
-      note:
-        "Les intitulés ci-dessous sont des exemples de structure. Ils serviront de base au client pour fournir les plats finaux.",
-      tagLabels: {
-        vegetarian: 'Végétarien',
-        vegan: 'Vegan',
-        fish: 'Poisson',
-        pork: 'Porc',
-        spicy: 'Piquant',
-      },
-      categories: [
-        {
-          id: 'starters',
-          title: 'Entrées',
-          items: [
-            { name: 'Assiette du jour', description: 'Entrée de saison à préciser', price: '00 €' },
-            { name: 'Légumes grillés', description: 'Version finale à définir', price: '00 €', tags: ['vegan'] },
-            { name: 'Petite burrata', description: 'Accroche fraîche et estivale', price: '00 €', tags: ['vegetarian'] },
-          ],
-        },
-        {
-          id: 'salads',
-          title: 'Salades',
-          items: [
-            { name: 'Salade maison', description: 'Grande salade déjeuner à préciser', price: '00 €', tags: ['vegetarian'] },
-            { name: 'Poulet croustillant', description: 'Recette et garnitures à confirmer', price: '00 €' },
-            { name: 'Version niçoise', description: 'Interprétation finale à valider', price: '00 €', tags: ['fish'] },
-          ],
-        },
-        {
-          id: 'mains',
-          title: 'Plats',
-          items: [
-            { name: 'Entrecôte signature', description: 'Pièce, sauce et accompagnement à préciser', price: '00 €' },
-            { name: 'Plat mijoté', description: 'Recette de maison à renseigner', price: '00 €', tags: ['pork'] },
-            { name: 'Poisson du moment', description: 'Arrivage et cuisson à définir', price: '00 €', tags: ['fish'] },
-          ],
-        },
-        {
-          id: 'pizzas',
-          title: 'Pizzas au feu de bois',
-          items: [
-            { name: 'Margherita four', description: 'Base bois à préciser', price: '00 €', tags: ['vegetarian'] },
-            { name: 'Pizza signature', description: 'Recette maison à renseigner', price: '00 €', tags: ['pork', 'spicy'] },
-            { name: 'Pizza blanche', description: 'Version finale à confirmer', price: '00 €', tags: ['pork'] },
-          ],
-        },
-        {
-          id: 'desserts',
-          title: 'Desserts',
-          items: [
-            { name: 'Dessert du jour', description: 'Finaliser selon la carte réelle', price: '00 €' },
-            { name: 'Grand classique', description: 'Version bistrot à préciser', price: '00 €' },
-            { name: 'Coupe glacée', description: 'Option fraîche pour l’été', price: '00 €' },
-          ],
-        },
-        {
-          id: 'drinks',
-          title: 'Boissons',
-          items: [
-            { name: 'Cocktail maison', description: 'Signature terrasse à définir', price: '00 €' },
-            { name: 'Verre de vin', description: 'Sélection à confirmer', price: '00 €' },
-            { name: 'Boisson fraîche', description: 'Offre finale à compléter', price: '00 €' },
-          ],
-        },
-      ],
-    },
+    menuPage: frMenuPage,
     galleryPage: {
       eyebrow: 'La galerie',
       title: 'Préparer les futurs visuels sans avoir à refaire le site.',

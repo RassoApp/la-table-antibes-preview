@@ -126,7 +126,7 @@ export function HomePage() {
 
           <figure className="v3-feature-image v6-events__image">
             <img
-              src={siteMedia.galleryCutlery}
+              src={siteMedia.privateEvents}
               alt={events.imageAlt}
               loading="lazy"
               decoding="async"
