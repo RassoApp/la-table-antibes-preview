@@ -133,6 +133,7 @@ export function MenuPage() {
   const [tabFadeState, setTabFadeState] = useState({
     canScrollLeft: false,
     canScrollRight: false,
+    fitsViewport: false,
   });
 
   useEffect(() => {
@@ -213,10 +214,12 @@ export function MenuPage() {
 
     function updateScrollState() {
       const maxScrollLeft = node.scrollWidth - node.clientWidth;
+      const fitsViewport = maxScrollLeft <= 2;
 
       setTabFadeState({
         canScrollLeft: node.scrollLeft > 2,
         canScrollRight: maxScrollLeft - node.scrollLeft > 2,
+        fitsViewport,
       });
     }
 
@@ -451,6 +454,7 @@ export function MenuPage() {
                 className="v6-menu-tabs-shell"
                 data-can-scroll-left={tabFadeState.canScrollLeft}
                 data-can-scroll-right={tabFadeState.canScrollRight}
+                data-tabs-fit={tabFadeState.fitsViewport}
               >
                 <div
                   ref={tabsContainerRef}

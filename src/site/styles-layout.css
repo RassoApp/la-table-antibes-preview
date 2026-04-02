@@ -639,6 +639,10 @@
 
 .v6-shell .v6-menu-tab {
   flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
   min-height: 2.8rem;
   padding: 0.8rem 1rem;
   border: 1px solid rgba(153, 65, 39, 0.62);
@@ -647,7 +651,10 @@
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.12em;
+  line-height: 1;
+  text-align: center;
   text-transform: uppercase;
+  white-space: nowrap;
   cursor: pointer;
   transition:
     background-color 220ms ease,
@@ -1304,6 +1311,21 @@
     -webkit-overflow-scrolling: touch;
   }
 
+  .v6-shell .v6-menu-tabs-shell[data-tabs-fit='true']::before,
+  .v6-shell .v6-menu-tabs-shell[data-tabs-fit='true']::after {
+    opacity: 0;
+  }
+
+  .v6-shell .v6-menu-tabs-shell[data-tabs-fit='true'] .v6-menu-tabs {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .v6-shell .v6-menu-tabs-shell[data-tabs-fit='true'] .v6-menu-tab {
+    flex: 1 1 auto;
+    min-width: max-content;
+  }
+
   .v6-shell .v6-menu-tabs::-webkit-scrollbar {
     display: none;
   }
@@ -1681,6 +1703,10 @@
     overflow: visible;
   }
 
+  .v6-shell .v3-mobile-bar > * {
+    min-width: 0;
+  }
+
   .v6-shell .v6-mobile-action,
   .v6-shell .v6-mobile-bar__reserve .v6-reserve__button,
   .v6-shell .v6-mobile-bar__directions .v6-directions__button,
@@ -1730,6 +1756,11 @@
     width: 100%;
   }
 
+  .v6-shell .v6-mobile-bar__menu {
+    display: flex;
+    width: 100%;
+  }
+
   .v6-shell .v6-mobile-bar__social {
     display: flex;
     width: 100%;
@@ -1746,6 +1777,11 @@
   }
 
   .v6-shell .v6-mobile-bar__directions .v6-directions__button {
+    appearance: none;
+    transform: none;
+  }
+
+  .v6-shell .v6-mobile-bar__menu .v6-mobile-action {
     appearance: none;
     transform: none;
   }

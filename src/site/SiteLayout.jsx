@@ -98,10 +98,32 @@ function LanguageSwitcher({ basePath, lang, locale }) {
   }, [baseSegmentCount, location.pathname]);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      supportsHoverRef.current = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    if (typeof window === 'undefined' || !window.matchMedia) return undefined;
+
+    const mediaQuery = window.matchMedia('(min-width: 960px) and (hover: hover) and (pointer: fine)');
+
+    const updateSupportsHover = () => {
+      supportsHoverRef.current = mediaQuery.matches;
+    };
+
+    updateSupportsHover();
+
+    if (typeof mediaQuery.addEventListener === 'function') {
+      mediaQuery.addEventListener('change', updateSupportsHover);
+    } else {
+      mediaQuery.addListener(updateSupportsHover);
     }
 
+    return () => {
+      if (typeof mediaQuery.removeEventListener === 'function') {
+        mediaQuery.removeEventListener('change', updateSupportsHover);
+      } else {
+        mediaQuery.removeListener(updateSupportsHover);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
     function handlePointerDown(event) {
       if (open && !rootRef.current?.contains(event.target)) {
         closeDropdown(LANGUAGE_DROPDOWN_ID);
@@ -323,10 +345,12 @@ function SiteLayoutInner({ lang, locale, basePath }) {
           buttonLabel={mobileLabels.directions}
           showCaret={false}
         />
-        <NavLink className={({ isActive }) => `v6-mobile-action v6-mobile-action--link ${isActive ? 'is-active' : ''}`} to={buildPath('menu')}>
-          <CutleryIcon className="v6-mobile-action__icon" />
-          <span>{mobileLabels.menu}</span>
-        </NavLink>
+        <div className="v6-mobile-bar__menu">
+          <NavLink className={({ isActive }) => `v6-mobile-action v6-mobile-action--link ${isActive ? 'is-active' : ''}`} to={buildPath('menu')}>
+            <CutleryIcon className="v6-mobile-action__icon" />
+            <span>{mobileLabels.menu}</span>
+          </NavLink>
+        </div>
         <SocialDropdown locale={locale} className="v6-mobile-bar__social" buttonLabel={mobileLabels.social} />
       </nav>
     </div>
