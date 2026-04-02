@@ -30,7 +30,7 @@ export const page = {
       },
       {
         "day": "日曜日",
-        "hours": "要確認"
+        "hours": "12:00 - 15:00 / 19:00 - 23:00"
       }
     ],
     "accessTitle": "アクセス",

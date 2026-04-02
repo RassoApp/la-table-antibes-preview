@@ -30,7 +30,7 @@ export const page = {
       },
       {
         "day": "周日",
-        "hours": "待确认"
+        "hours": "12:00 - 15:00 / 19:00 - 23:00"
       }
     ],
     "accessTitle": "如何前往",

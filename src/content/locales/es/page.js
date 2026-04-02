@@ -30,7 +30,7 @@ export const page = {
       },
       {
         "day": "Domingo",
-        "hours": "Por confirmar"
+        "hours": "12:00 - 15:00 / 19:00 - 23:00"
       }
     ],
     "accessTitle": "Cómo llegar",

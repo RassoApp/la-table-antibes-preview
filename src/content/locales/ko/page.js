@@ -30,7 +30,7 @@ export const page = {
       },
       {
         "day": "일요일",
-        "hours": "추후 확인"
+        "hours": "12:00 - 15:00 / 19:00 - 23:00"
       }
     ],
     "accessTitle": "오시는 길",

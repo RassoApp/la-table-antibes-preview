@@ -30,7 +30,7 @@ export const page = {
       },
       {
         "day": "Zondag",
-        "hours": "Nog te bevestigen"
+        "hours": "12:00 - 15:00 / 19:00 - 23:00"
       }
     ],
     "accessTitle": "Bereikbaarheid",

@@ -30,7 +30,7 @@ export const page = {
       },
       {
         "day": "Dimanche",
-        "hours": "À confirmer"
+        "hours": "12:00 - 15:00 / 19:00 - 23:00"
       }
     ],
     "accessTitle": "Accès",
