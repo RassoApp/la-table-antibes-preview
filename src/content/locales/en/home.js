@@ -8,6 +8,18 @@ export const homePage = {
     "title": "A cuisine rooted in the art of hospitality",
     "text": "At La Table, food is made for sharing: generous takes on traditional recipes, slow-cooked dishes, grilled classics, and wood-fired specialties filled with the warmth and convivial spirit of the South."
   },
+  "story": {
+    "eyebrow": "The chef",
+    "titleLines": [
+      "Behind La Table, there is a vision…",
+      "and a chef behind it too."
+    ],
+    "paragraphs": [
+      "Originally from Milan, Francesco Sita' built his path between Italy and France, working in renowned houses such as Plaza Athénée in Paris, Cap Horn in Chamonix, and Plage Keller in Cap d’Antibes.",
+      "These varied experiences, between the sea and gastronomy, now shape a cuisine that is precise, sincere, and inspired."
+    ],
+    "imageAlt": "Portrait of chef Francesco Sita'"
+  },
   "ambiance": {
     "eyebrow": "Atmosphere",
     "title": "A place to gather and enjoy",

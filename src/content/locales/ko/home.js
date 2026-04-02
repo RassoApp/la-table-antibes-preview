@@ -8,6 +8,18 @@ export const homePage = {
     "title": "환대의 감각에 뿌리를 둔 요리",
     "text": "La Table의 요리는 함께 나누기 위한 순간입니다. 전통 레시피를 넉넉하게 풀어낸 요리, 오래 끓인 음식, 그릴 요리, 장작 화덕 스페셜 메뉴가 남프랑스 특유의 따뜻함과 어울림의 감각을 전합니다."
   },
+  "story": {
+    "eyebrow": "셰프",
+    "titleLines": [
+      "La Table 뒤에는 하나의 비전이 있고…",
+      "그 곁에는 한 명의 셰프가 있습니다."
+    ],
+    "paragraphs": [
+      "밀라노 출신의 Francesco Sita' 는 이탈리아와 프랑스를 오가며 경력을 쌓았고, 파리의 Plaza Athénée, 샤모니의 Cap Horn, 캅 당티브의 Plage Keller 같은 이름 있는 하우스들을 거쳤습니다.",
+      "바다와 미식 사이에서 쌓인 다양한 경험이 오늘날 정교하고 진정성 있으며 영감이 살아 있는 요리를 만들어 냅니다."
+    ],
+    "imageAlt": "셰프 Francesco Sita' 의 초상"
+  },
   "ambiance": {
     "eyebrow": "분위기",
     "title": "즐거움과 만남을 위한 공간",

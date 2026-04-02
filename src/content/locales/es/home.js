@@ -8,6 +8,18 @@ export const homePage = {
     "title": "Una cocina arraigada en el arte de recibir",
     "text": "En La Table, la cocina es un momento para compartir: recetas tradicionales reinterpretadas con generosidad, platos cocinados lentamente, parrilla y especialidades al horno de leña con el sabor del Sur y de la convivialidad."
   },
+  "story": {
+    "eyebrow": "El chef",
+    "titleLines": [
+      "Detrás de La Table hay una visión…",
+      "y también un chef."
+    ],
+    "paragraphs": [
+      "Originario de Milán, Francesco Sita' ha forjado su trayectoria entre Italia y Francia, pasando por casas reconocidas como el Plaza Athénée de París, el Cap Horn de Chamonix o la Plage Keller en Cap d’Antibes.",
+      "Experiencias variadas, entre el mar y la gastronomía, que hoy dan forma a una cocina precisa, sincera e inspirada."
+    ],
+    "imageAlt": "Retrato del chef Francesco Sita'"
+  },
   "ambiance": {
     "eyebrow": "Ambiente",
     "title": "Un lugar de vida y de placer",

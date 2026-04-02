@@ -127,7 +127,8 @@
 }
 
 .v5-shell .v5-cuisine,
-.v5-shell .v5-ambiance {
+.v5-shell .v5-ambiance,
+.v5-shell .v6-home-story {
   display: grid;
   grid-template-columns: 0.82fr 1.18fr;
   gap: clamp(2.8rem, 4vw, 4.2rem);
@@ -135,15 +136,11 @@
 }
 
 @media (min-width: 901px) {
-  .v5-shell .v5-ambiance {
-    grid-template-columns: 1.18fr 0.82fr;
-  }
-
-  .v5-shell .v5-ambiance__media {
+  .v5-shell .v5-feature--reverse .v6-home-story__media {
     order: 1;
   }
 
-  .v5-shell .v5-ambiance .v3-copy {
+  .v5-shell .v5-feature--reverse .v3-copy {
     order: 2;
   }
 }
@@ -165,6 +162,22 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
+}
+
+.v5-shell .v6-home-story__media {
+  min-height: 0;
+}
+
+.v5-shell .v6-home-story__media picture {
+  display: block;
+}
+
+.v5-shell .v6-home-story__media img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  aspect-ratio: auto;
+  filter: none;
 }
 
 .v5-shell .v5-showcase-card,
@@ -396,6 +409,7 @@
 
   .v5-shell .v5-cuisine,
   .v5-shell .v5-ambiance,
+  .v5-shell .v6-home-story,
   .v5-shell .v5-about-promise {
     grid-template-columns: 1fr;
   }

@@ -6,6 +6,8 @@ export const siteMedia = {
   cuisineTopRight: assetPath('/v5-assets/cuisine-top-right-alt.webp'),
   cuisineBottomLeft: assetPath('/v5-assets/cuisine-bottom-left-alt.webp'),
   cuisineBottomRight: assetPath('/v5-assets/cuisine-bottom-right-alt.webp'),
+  chefStoryDesktop: assetPath('/v5-assets/chef-story-desktop.webp'),
+  chefStoryMobile: assetPath('/v5-assets/chef-story-mobile.webp'),
   barInterior: assetPath('/v5-assets/ambiance-top-left-alt.webp'),
   interiorSunlit: assetPath('/v3-stitch/interior-sunlit.webp'),
   homeAccess: assetPath('/v5-assets/home-access-alt.webp'),

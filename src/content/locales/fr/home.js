@@ -8,6 +8,18 @@ export const homePage = {
     "title": "Une cuisine ancrée dans l’art de recevoir",
     "text": "À La Table, la cuisine est un moment de partage : des recettes traditionnelles revisitées avec générosité, des plats mijotés, des grillades et des spécialités au feu de bois qui sentent bon le Sud et la convivialité."
   },
+  "story": {
+    "eyebrow": "Le chef",
+    "titleLines": [
+      "Derrière La Table, il y a une vision…",
+      "mais aussi, un chef."
+    ],
+    "paragraphs": [
+      "Francesco Sita', originaire de Milan, construit son parcours entre l’Italie et la France, en passant par des maisons reconnues comme le Plaza Athénée à Paris, le Cap Horn à Chamonix, ou encore la Plage Keller au Cap d’Antibes.",
+      "Des expériences variées, entre mer et gastronomie, qui façonnent aujourd’hui une cuisine précise, sincère et inspirée."
+    ],
+    "imageAlt": "Portrait de Francesco Sita'"
+  },
   "ambiance": {
     "eyebrow": "Ambiance",
     "title": "Un lieu de Vie et de Plaisir",

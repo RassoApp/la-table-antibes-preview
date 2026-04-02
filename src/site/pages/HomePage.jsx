@@ -22,6 +22,8 @@ export function HomePage() {
   const contact = pages.contact;
   const events = homeEventContent[lang] ?? homeEventContent.en;
   const contactHours = contact.hours ?? [];
+  const storyTitle = home.story?.title ?? home.story?.titleLines?.join(' ');
+  const storyText = home.story?.text ?? home.story?.paragraphs?.join(' ');
 
   return (
     <>
@@ -75,6 +77,34 @@ export function HomePage() {
             <ShowcaseCard src={siteMedia.cuisineBottomLeft} alt="" />
             <ShowcaseCard src={siteMedia.cuisineBottomRight} alt="" />
           </div>
+        </div>
+      </section>
+
+      <section className="v3-section">
+        <div className="v3-container v6-home-story v5-feature--reverse">
+          <div className="v3-copy v6-home-story__copy">
+            {home.story.eyebrow ? <span className="v3-kicker">{home.story.eyebrow}</span> : null}
+            <h2>{storyTitle}</h2>
+            <p>{storyText}</p>
+            <div className="v6-copy-followup">
+              <Link className="v3-button v6-cuisine-menu-button" to={buildLocalizedPath('menu')}>
+                <CutleryIcon />
+                {locale.actions.menu}
+              </Link>
+            </div>
+          </div>
+
+          <figure className="v3-feature-image v6-home-story__media">
+            <picture>
+              <source media="(max-width: 900px)" srcSet={siteMedia.chefStoryMobile} />
+              <img
+                src={siteMedia.chefStoryDesktop}
+                alt={home.story.imageAlt ?? ''}
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+          </figure>
         </div>
       </section>
 

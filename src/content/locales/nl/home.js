@@ -8,6 +8,18 @@ export const homePage = {
     "title": "Een keuken geworteld in de kunst van gastvrijheid",
     "text": "Bij La Table is eten een moment om te delen: traditionele recepten met een gulle toets, langzaam bereide gerechten, grillgerechten en houtovenspecialiteiten die het Zuiden en gezelligheid oproepen."
   },
+  "story": {
+    "eyebrow": "De chef",
+    "titleLines": [
+      "Achter La Table zit een visie…",
+      "maar ook een chef."
+    ],
+    "paragraphs": [
+      "Francesco Sita', afkomstig uit Milaan, bouwde zijn parcours op tussen Italië en Frankrijk, met passages in gerenommeerde huizen zoals Plaza Athénée in Parijs, Cap Horn in Chamonix en Plage Keller in Cap d’Antibes.",
+      "Uiteenlopende ervaringen, tussen zee en gastronomie, die vandaag een keuken vormgeven die precies, oprecht en geïnspireerd is."
+    ],
+    "imageAlt": "Portret van chef Francesco Sita'"
+  },
   "ambiance": {
     "eyebrow": "Sfeer",
     "title": "Een plek van leven en plezier",

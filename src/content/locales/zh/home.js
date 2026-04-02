@@ -8,6 +8,18 @@ export const homePage = {
     "title": "植根于待客之道的料理",
     "text": "在 La Table，用餐首先是分享的时刻：经过丰盛演绎的传统食谱、慢炖菜、烤制料理，以及带着南法气息与欢聚氛围的柴火特色菜。"
   },
+  "story": {
+    "eyebrow": "主厨",
+    "titleLines": [
+      "La Table 背后，有一种理念…",
+      "也有一位主厨。"
+    ],
+    "paragraphs": [
+      "Francesco Sita' 来自米兰，他的职业道路横跨意大利与法国，曾在巴黎的 Plaza Athénée、霞慕尼的 Cap Horn，以及昂蒂布角的 Plage Keller 等知名餐厅历练。",
+      "这些介于海洋与美食之间的多样经历，如今塑造出一种精准、真诚而富有灵感的料理风格。"
+    ],
+    "imageAlt": "主厨 Francesco Sita' 的肖像"
+  },
   "ambiance": {
     "eyebrow": "氛围",
     "title": "一个适合相聚与享受的地方",
