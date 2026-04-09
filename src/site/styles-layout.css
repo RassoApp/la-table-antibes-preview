@@ -1246,11 +1246,11 @@
   transform: translateY(0.08em);
 }
 
-.v6-shell .v6-reserve__phone-desktop {
+.v6-shell .v6-reserve__menu a > .v6-reserve__phone-desktop {
   display: none;
 }
 
-.v6-shell .v6-reserve__phone-mobile {
+.v6-shell .v6-reserve__menu a > .v6-reserve__phone-mobile {
   display: inline-flex;
 }
 
@@ -1260,11 +1260,11 @@
 }
 
 @media (min-width: 901px) {
-  .v6-shell .v6-reserve__phone-mobile {
+  .v6-shell .v6-reserve__menu a > .v6-reserve__phone-mobile {
     display: none;
   }
 
-  .v6-shell .v6-reserve__phone-desktop {
+  .v6-shell .v6-reserve__menu a > .v6-reserve__phone-desktop {
     display: inline-flex;
   }
 }
