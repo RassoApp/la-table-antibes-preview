@@ -71,9 +71,15 @@ export function ReserveDropdown({
       </button>
 
       <div className="v6-reserve__menu" role="menu" aria-label={locale.uiLabels.reserveMenuLabel}>
-        <a href={locale.contactLinks.phoneHref} role="menuitem" onClick={() => closeDropdown(resolvedId)}>
+        <a
+          href={locale.contactLinks.phoneHref}
+          role="menuitem"
+          aria-label={`${locale.uiLabels.reserveMenuPhone} ${locale.contactLinks.phoneDisplayInternational}`}
+          onClick={() => closeDropdown(resolvedId)}
+        >
           <PhoneIcon />
-          <span>{locale.uiLabels.reserveMenuPhone}</span>
+          <span className="v6-reserve__phone-mobile">{locale.uiLabels.reserveMenuPhone}</span>
+          <span className="v6-reserve__phone-desktop">{locale.contactLinks.phoneDisplayInternational}</span>
         </a>
         <a
           href={locale.contactLinks.whatsappHref}

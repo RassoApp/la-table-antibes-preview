@@ -1246,9 +1246,27 @@
   transform: translateY(0.08em);
 }
 
+.v6-shell .v6-reserve__phone-desktop {
+  display: none;
+}
+
+.v6-shell .v6-reserve__phone-mobile {
+  display: inline-flex;
+}
+
 .v6-shell .v6-directions__menu a > span,
 .v6-shell .v6-directions__menu button > span {
   transform: translateY(0.08em);
+}
+
+@media (min-width: 901px) {
+  .v6-shell .v6-reserve__phone-mobile {
+    display: none;
+  }
+
+  .v6-shell .v6-reserve__phone-desktop {
+    display: inline-flex;
+  }
 }
 
 @media (max-width: 900px) {
