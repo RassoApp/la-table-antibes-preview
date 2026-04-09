@@ -405,6 +405,10 @@
     padding-bottom: 5rem;
   }
 
+  .v5-shell .v3-hero__overlay {
+    background: rgba(17, 10, 7, 0.42);
+  }
+
   .v5-shell .v5-cuisine,
   .v5-shell .v5-ambiance,
   .v5-shell .v6-home-story,
