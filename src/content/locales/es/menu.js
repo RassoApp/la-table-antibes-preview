@@ -140,7 +140,7 @@ export const menuPage = {
               ]
             },
             {
-              "name": "Sardinas asadas con salsa vierge de temporada",
+              "name": "Sardinas a la parrilla con salsa vierge de temporada",
               "price": "19 €",
               "filters": [
                 "fish"
@@ -1288,20 +1288,12 @@ export const menuPage = {
               "price": "8 €"
             },
             {
-              "name": "Paris-Antibes",
-              "price": "11 €"
+              "kind": "section",
+              "label": "Postres de Palais de la Friandise"
             },
             {
-              "name": "Tropézienne",
+              "name": "Postres del día",
               "price": "11 €"
-            },
-            {
-              "name": "Pastelería del día",
-              "price": "11 €"
-            },
-            {
-              "name": "Tarta de frutas de temporada",
-              "price": "12 €"
             }
           ]
         },

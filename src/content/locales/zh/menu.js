@@ -140,7 +140,7 @@ export const menuPage = {
               ]
             },
             {
-              "name": "炉烤沙丁鱼配时令 vierge 酱",
+              "name": "炭烤沙丁鱼配时令 vierge 酱",
               "price": "19 €",
               "filters": [
                 "fish"
@@ -1288,20 +1288,12 @@ export const menuPage = {
               "price": "8 €"
             },
             {
-              "name": "Paris-Antibes",
-              "price": "11 €"
+              "kind": "section",
+              "label": "Palais de la Friandise 甜点"
             },
             {
-              "name": "Tropézienne",
+              "name": "当日甜点",
               "price": "11 €"
-            },
-            {
-              "name": "当日糕点",
-              "price": "11 €"
-            },
-            {
-              "name": "时令水果塔",
-              "price": "12 €"
             }
           ]
         },

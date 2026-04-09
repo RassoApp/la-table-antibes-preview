@@ -140,7 +140,7 @@ export const menuPage = {
               ]
             },
             {
-              "name": "Geroosterde sardines met seizoens-vierge-saus",
+              "name": "Gegrilde sardines met seizoens-vierge-saus",
               "price": "19 €",
               "filters": [
                 "fish"
@@ -1288,20 +1288,12 @@ export const menuPage = {
               "price": "8 €"
             },
             {
-              "name": "Paris-Antibes",
-              "price": "11 €"
+              "kind": "section",
+              "label": "Desserts van Palais de la Friandise"
             },
             {
-              "name": "Tropézienne",
+              "name": "Desserts van de dag",
               "price": "11 €"
-            },
-            {
-              "name": "Gebak van de dag",
-              "price": "11 €"
-            },
-            {
-              "name": "Taart met seizoensfruit",
-              "price": "12 €"
             }
           ]
         },

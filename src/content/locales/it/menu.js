@@ -140,7 +140,7 @@ export const menuPage = {
               ]
             },
             {
-              "name": "Sarde arrostite, salsa vierge di stagione",
+              "name": "Sarde grigliate, salsa vierge di stagione",
               "price": "19 €",
               "filters": [
                 "fish"
@@ -1288,20 +1288,12 @@ export const menuPage = {
               "price": "8 €"
             },
             {
-              "name": "Paris-Antibes",
-              "price": "11 €"
+              "kind": "section",
+              "label": "Dolci del Palais de la Friandise"
             },
             {
-              "name": "Tropézienne",
+              "name": "Dolci del giorno",
               "price": "11 €"
-            },
-            {
-              "name": "Pasticceria del giorno",
-              "price": "11 €"
-            },
-            {
-              "name": "Crostata ai frutti di stagione",
-              "price": "12 €"
             }
           ]
         },

@@ -140,7 +140,7 @@ export const menuPage = {
               ]
             },
             {
-              "name": "Запечені сардини з сезонним соусом vierge",
+              "name": "Сардини на грилі з сезонним соусом vierge",
               "price": "19 €",
               "filters": [
                 "fish"
@@ -1288,20 +1288,12 @@ export const menuPage = {
               "price": "8 €"
             },
             {
-              "name": "Paris-Antibes",
-              "price": "11 €"
+              "kind": "section",
+              "label": "Десерти Palais de la Friandise"
             },
             {
-              "name": "Tropézienne",
+              "name": "Десерти дня",
               "price": "11 €"
-            },
-            {
-              "name": "Тістечко дня",
-              "price": "11 €"
-            },
-            {
-              "name": "Тарт із сезонними фруктами",
-              "price": "12 €"
             }
           ]
         },

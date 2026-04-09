@@ -133,7 +133,7 @@ export const menuPage = {
               ]
             },
             {
-              "name": "Sardines rôties, vierge de saison",
+              "name": "Sardines grillées, vierge de saison",
               "price": "19 €",
               "filters": [
                 "fish"
@@ -1277,24 +1277,16 @@ export const menuPage = {
               "price": "8 €"
             },
             {
-              "name": "Tiramisu du jour",
+              "name": "Tiramisu du moment",
               "price": "8 €"
             },
             {
-              "name": "Paris-Antibes",
-              "price": "11 €"
+              "kind": "section",
+              "label": "Desserts du Palais de la Friandise"
             },
             {
-              "name": "Tropézienne",
+              "name": "Nos desserts du jour",
               "price": "11 €"
-            },
-            {
-              "name": "Pâtisserie du jour",
-              "price": "11 €"
-            },
-            {
-              "name": "Tarte aux fruits de saison",
-              "price": "12 €"
             }
           ]
         },

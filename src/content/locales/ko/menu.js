@@ -140,7 +140,7 @@ export const menuPage = {
               ]
             },
             {
-              "name": "로스트한 정어리와 제철 비에르주 소스",
+              "name": "그릴에 구운 정어리와 제철 비에르주 소스",
               "price": "19 €",
               "filters": [
                 "fish"
@@ -1288,20 +1288,12 @@ export const menuPage = {
               "price": "8 €"
             },
             {
-              "name": "Paris-Antibes",
-              "price": "11 €"
+              "kind": "section",
+              "label": "Palais de la Friandise 디저트"
             },
             {
-              "name": "Tropézienne",
+              "name": "오늘의 디저트",
               "price": "11 €"
-            },
-            {
-              "name": "오늘의 페이스트리",
-              "price": "11 €"
-            },
-            {
-              "name": "제철 과일 타르트",
-              "price": "12 €"
             }
           ]
         },

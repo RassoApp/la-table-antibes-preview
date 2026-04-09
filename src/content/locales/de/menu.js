@@ -140,7 +140,7 @@ export const menuPage = {
               ]
             },
             {
-              "name": "Geröstete Sardinen mit saisonaler Vierge-Sauce",
+              "name": "Gegrillte Sardinen mit saisonaler Vierge-Sauce",
               "price": "19 €",
               "filters": [
                 "fish"
@@ -1288,20 +1288,12 @@ export const menuPage = {
               "price": "8 €"
             },
             {
-              "name": "Paris-Antibes",
-              "price": "11 €"
+              "kind": "section",
+              "label": "Desserts von Palais de la Friandise"
             },
             {
-              "name": "Tropézienne",
+              "name": "Desserts des Tages",
               "price": "11 €"
-            },
-            {
-              "name": "Pâtisserie des Tages",
-              "price": "11 €"
-            },
-            {
-              "name": "Tarte mit saisonalen Früchten",
-              "price": "12 €"
             }
           ]
         },

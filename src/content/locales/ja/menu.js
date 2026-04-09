@@ -140,7 +140,7 @@ export const menuPage = {
               ]
             },
             {
-              "name": "イワシのロースト 季節のヴィエルジュソース",
+              "name": "イワシのグリル 季節のヴィエルジュソース",
               "price": "19 €",
               "filters": [
                 "fish"
@@ -1288,20 +1288,12 @@ export const menuPage = {
               "price": "8 €"
             },
             {
-              "name": "Paris-Antibes",
-              "price": "11 €"
+              "kind": "section",
+              "label": "Palais de la Friandise のデザート"
             },
             {
-              "name": "Tropézienne",
+              "name": "本日のデザート",
               "price": "11 €"
-            },
-            {
-              "name": "本日のペストリー",
-              "price": "11 €"
-            },
-            {
-              "name": "季節のフルーツタルト",
-              "price": "12 €"
             }
           ]
         },

@@ -140,7 +140,7 @@ export const menuPage = {
               ]
             },
             {
-              "name": "Roasted sardines, seasonal vierge sauce",
+              "name": "Grilled sardines, seasonal dressing",
               "price": "19 €",
               "filters": [
                 "fish"
@@ -1288,20 +1288,12 @@ export const menuPage = {
               "price": "8 €"
             },
             {
-              "name": "Paris-Antibes",
-              "price": "11 €"
+              "kind": "section",
+              "label": "Desserts by Palais de la Friandise"
             },
             {
-              "name": "Tarte Tropézienne",
+              "name": "Today's desserts",
               "price": "11 €"
-            },
-            {
-              "name": "Pastry of the day",
-              "price": "11 €"
-            },
-            {
-              "name": "Seasonal fruit tart",
-              "price": "12 €"
             }
           ]
         },
