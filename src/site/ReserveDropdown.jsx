@@ -78,7 +78,7 @@ export function ReserveDropdown({
           onClick={() => closeDropdown(resolvedId)}
         >
           <PhoneIcon />
-          <span className="v6-reserve__phone-mobile">{locale.uiLabels.reserveMenuPhone}</span>
+          <span className="v6-reserve__phone-mobile">{locale.actions.call}</span>
           <span className="v6-reserve__phone-desktop">{locale.contactLinks.phoneDisplayInternational}</span>
         </a>
         <a
