@@ -6,31 +6,31 @@ export const page = {
     "hours": [
       {
         "day": "Montag",
-        "hours": "12:00 - 14:30 / 19:00 - 22:30"
+        "hours": "11:00 - 22:00"
       },
       {
         "day": "Dienstag",
-        "hours": "12:00 - 14:30 / 19:00 - 22:30"
+        "hours": "11:00 - 22:00"
       },
       {
         "day": "Mittwoch",
-        "hours": "12:00 - 14:30 / 19:00 - 22:30"
+        "hours": "11:00 - 22:00"
       },
       {
         "day": "Donnerstag",
-        "hours": "12:00 - 14:30 / 19:00 - 22:30"
+        "hours": "11:00 - 22:00"
       },
       {
         "day": "Freitag",
-        "hours": "12:00 - 14:30 / 19:00 - 23:00"
+        "hours": "11:00 - 22:00"
       },
       {
         "day": "Samstag",
-        "hours": "12:00 - 15:00 / 19:00 - 23:00"
+        "hours": "11:00 - 22:00"
       },
       {
         "day": "Sonntag",
-        "hours": "12:00 - 15:00 / 19:00 - 23:00"
+        "hours": "11:00 - 22:00"
       }
     ],
     "accessTitle": "Anfahrt",
