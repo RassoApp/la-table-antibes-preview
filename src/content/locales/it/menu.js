@@ -52,14 +52,7 @@ export const menuPage = {
           "desktopColumn": 0,
           "items": [
             {
-              "name": "Caviale di melanzane al fuoco di legna",
-              "price": "8 €",
-              "filters": [
-                "vegan"
-              ]
-            },
-            {
-              "name": "Peperoni marinati, pane pizza",
+              "name": "Peperoni marinati",
               "price": "8 €",
               "filters": [
                 "vegan"
@@ -73,17 +66,17 @@ export const menuPage = {
               ]
             },
             {
+              "name": "Caviale di melanzane al fuoco di legna",
+              "price": "8 €",
+              "filters": [
+                "vegan"
+              ]
+            },
+            {
               "name": "Prosciutto di Parma",
               "price": "11 €",
               "filters": [
                 "pork"
-              ]
-            },
-            {
-              "name": "Socca dello chef « Yann »",
-              "price": "7 €",
-              "filters": [
-                "vegan"
               ]
             }
           ]
@@ -94,6 +87,13 @@ export const menuPage = {
           "desktopColumn": 0,
           "items": [
             {
+              "name": "Carciofo in insalata",
+              "price": "17 €",
+              "filters": [
+                "vegan"
+              ]
+            },
+            {
               "name": "Burrata, pomodori antichi",
               "price": "19 €",
               "filters": [
@@ -101,15 +101,15 @@ export const menuPage = {
               ]
             },
             {
-              "name": "Caesar di pollo impanato",
-              "price": "18 €"
-            },
-            {
-              "name": "Carciofo in insalata",
-              "price": "17 €",
+              "name": "Quinoa con i condimenti del giorno",
+              "price": "19 €",
               "filters": [
                 "vegan"
               ]
+            },
+            {
+              "name": "Caesar di pollo impanato",
+              "price": "18 €"
             },
             {
               "name": "Ceviche di ricciola",
@@ -124,13 +124,6 @@ export const menuPage = {
               "filters": [
                 "fish"
               ]
-            },
-            {
-              "name": "Quinoa con i condimenti del giorno",
-              "price": "19 €",
-              "filters": [
-                "vegan"
-              ]
             }
           ]
         },
@@ -140,15 +133,32 @@ export const menuPage = {
           "desktopColumn": 1,
           "items": [
             {
-              "name": "Costine di maiale marinate",
-              "price": "23 €",
+              "name": "Cozze alla marinara",
+              "price": "18 €",
               "filters": [
-                "pork"
+                "seafood"
               ]
             },
             {
-              "name": "Tagliata di manzo",
-              "price": "25 €"
+              "name": "Sarde arrostite, salsa vierge di stagione",
+              "price": "19 €",
+              "filters": [
+                "fish"
+              ]
+            },
+            {
+              "name": "Gamberoni selvatici saltati all’aglio",
+              "price": "28 €",
+              "filters": [
+                "seafood"
+              ]
+            },
+            {
+              "name": "Orata reale intera arrostita al forno",
+              "price": "32 €",
+              "filters": [
+                "fish"
+              ]
             },
             {
               "name": "Tartare di manzo all’italiana",
@@ -163,8 +173,23 @@ export const menuPage = {
               "price": "23 €"
             },
             {
+              "name": "Costine di maiale marinate",
+              "price": "23 €",
+              "filters": [
+                "pork"
+              ]
+            },
+            {
+              "name": "Tagliata di manzo",
+              "price": "25 €"
+            },
+            {
               "name": "Suprema di pollo arrosto, salsa ai porcini",
               "price": "25 €"
+            },
+            {
+              "name": "Scaloppina di vitello alla milanese",
+              "price": "26 €"
             },
             {
               "name": "Linguine al pesto",
@@ -172,10 +197,6 @@ export const menuPage = {
               "filters": [
                 "vegetarian"
               ]
-            },
-            {
-              "name": "Scaloppina di vitello alla milanese",
-              "price": "26 €"
             },
             {
               "name": "Rigatoni all’arrabbiata e stracciatella",
@@ -196,34 +217,6 @@ export const menuPage = {
               "price": "32 €",
               "filters": [
                 "vegetarian"
-              ]
-            },
-            {
-              "name": "Cozze alla marinara",
-              "price": "18 €",
-              "filters": [
-                "seafood"
-              ]
-            },
-            {
-              "name": "Sarde alla griglia, salsa vierge di stagione",
-              "price": "19 €",
-              "filters": [
-                "fish"
-              ]
-            },
-            {
-              "name": "Gamberoni selvatici saltati all’aglio",
-              "price": "28 €",
-              "filters": [
-                "seafood"
-              ]
-            },
-            {
-              "name": "Orata reale intera arrostita al forno",
-              "price": "32 €",
-              "filters": [
-                "fish"
               ]
             }
           ]
@@ -529,6 +522,50 @@ export const menuPage = {
               "name": "Espresso Martini",
               "description": "Vodka 5 cl, liquore al caffè 2 cl, espresso, sciroppo di vaniglia",
               "price": "15 €"
+            }
+          ]
+        },
+        {
+          "id": "draught-beers",
+          "title": "Birre alla spina",
+          "desktopColumn": 1,
+          "items": [
+            {
+              "name": "Pietra Bionda",
+              "description": "25 cl / 50 cl",
+              "price": "4,5 € / 8 €"
+            },
+            {
+              "name": "Fada IPA",
+              "description": "25 cl / 50 cl",
+              "price": "5 € / 9,5 €"
+            }
+          ]
+        },
+        {
+          "id": "bottled-beers",
+          "title": "Birre in bottiglia (33 cl)",
+          "desktopColumn": 1,
+          "items": [
+            {
+              "name": "1664 Blanche",
+              "price": "7 €"
+            },
+            {
+              "name": "Corona",
+              "price": "7 €"
+            },
+            {
+              "name": "Corona 0",
+              "price": "7 €"
+            },
+            {
+              "name": "Chill Lemon",
+              "price": "7 €"
+            },
+            {
+              "name": "Chouffe",
+              "price": "8 €"
             }
           ]
         },
@@ -1290,7 +1327,7 @@ export const menuPage = {
             },
             {
               "name": "3 palline",
-              "price": "5,50 €"
+              "price": "8,50 €"
             },
             {
               "kind": "section",

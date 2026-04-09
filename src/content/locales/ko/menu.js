@@ -52,14 +52,7 @@ export const menuPage = {
           "desktopColumn": 0,
           "items": [
             {
-              "name": "장작불에 구운 가지 캐비아",
-              "price": "8 €",
-              "filters": [
-                "vegan"
-              ]
-            },
-            {
-              "name": "마리네이드 파프리카와 피자 브레드",
+              "name": "마리네이드 파프리카",
               "price": "8 €",
               "filters": [
                 "vegan"
@@ -73,17 +66,17 @@ export const menuPage = {
               ]
             },
             {
+              "name": "장작불에 구운 가지 캐비아",
+              "price": "8 €",
+              "filters": [
+                "vegan"
+              ]
+            },
+            {
               "name": "파르마 햄",
               "price": "11 €",
               "filters": [
                 "pork"
-              ]
-            },
-            {
-              "name": "셰프 Yann의 소카",
-              "price": "7 €",
-              "filters": [
-                "vegan"
               ]
             }
           ]
@@ -94,6 +87,13 @@ export const menuPage = {
           "desktopColumn": 0,
           "items": [
             {
+              "name": "아티초크 샐러드",
+              "price": "17 €",
+              "filters": [
+                "vegan"
+              ]
+            },
+            {
               "name": "부라타와 헤리티지 토마토",
               "price": "19 €",
               "filters": [
@@ -101,15 +101,15 @@ export const menuPage = {
               ]
             },
             {
-              "name": "바삭한 치킨 시저",
-              "price": "18 €"
-            },
-            {
-              "name": "아티초크 샐러드",
-              "price": "17 €",
+              "name": "오늘의 컨디먼트와 퀴노아",
+              "price": "19 €",
               "filters": [
                 "vegan"
               ]
+            },
+            {
+              "name": "바삭한 치킨 시저",
+              "price": "18 €"
             },
             {
               "name": "방어 세비체",
@@ -124,13 +124,6 @@ export const menuPage = {
               "filters": [
                 "fish"
               ]
-            },
-            {
-              "name": "오늘의 컨디먼트와 퀴노아",
-              "price": "19 €",
-              "filters": [
-                "vegan"
-              ]
             }
           ]
         },
@@ -140,15 +133,32 @@ export const menuPage = {
           "desktopColumn": 1,
           "items": [
             {
-              "name": "마리네이드 돼지갈비",
-              "price": "23 €",
+              "name": "홍합 마리니에르",
+              "price": "18 €",
               "filters": [
-                "pork"
+                "seafood"
               ]
             },
             {
-              "name": "비프 탈리아타",
-              "price": "25 €"
+              "name": "로스트한 정어리와 제철 비에르주 소스",
+              "price": "19 €",
+              "filters": [
+                "fish"
+              ]
+            },
+            {
+              "name": "마늘에 구운 자연산 새우",
+              "price": "28 €",
+              "filters": [
+                "seafood"
+              ]
+            },
+            {
+              "name": "오븐에 구운 통 도미",
+              "price": "32 €",
+              "filters": [
+                "fish"
+              ]
             },
             {
               "name": "이탈리안 스타일 비프 타르타르",
@@ -163,8 +173,23 @@ export const menuPage = {
               "price": "23 €"
             },
             {
+              "name": "마리네이드 돼지갈비",
+              "price": "23 €",
+              "filters": [
+                "pork"
+              ]
+            },
+            {
+              "name": "비프 탈리아타",
+              "price": "25 €"
+            },
+            {
               "name": "로스트 치킨 수프림과 포르치니 소스",
               "price": "25 €"
+            },
+            {
+              "name": "밀라노식 송아지 커틀릿",
+              "price": "26 €"
             },
             {
               "name": "페스토 링귀니",
@@ -172,10 +197,6 @@ export const menuPage = {
               "filters": [
                 "vegetarian"
               ]
-            },
-            {
-              "name": "밀라노식 송아지 커틀릿",
-              "price": "26 €"
             },
             {
               "name": "아라비아타와 스트라차텔라 리가토니",
@@ -196,34 +217,6 @@ export const menuPage = {
               "price": "32 €",
               "filters": [
                 "vegetarian"
-              ]
-            },
-            {
-              "name": "홍합 마리니에르",
-              "price": "18 €",
-              "filters": [
-                "seafood"
-              ]
-            },
-            {
-              "name": "제철 비에르주 소스를 곁들인 구운 정어리",
-              "price": "19 €",
-              "filters": [
-                "fish"
-              ]
-            },
-            {
-              "name": "마늘에 구운 자연산 새우",
-              "price": "28 €",
-              "filters": [
-                "seafood"
-              ]
-            },
-            {
-              "name": "오븐에 구운 통 도미",
-              "price": "32 €",
-              "filters": [
-                "fish"
               ]
             }
           ]
@@ -529,6 +522,50 @@ export const menuPage = {
               "name": "Espresso Martini",
               "description": "Vodka 5 cl, 커피 리큐어 2 cl, espresso, 바닐라 시럽",
               "price": "15 €"
+            }
+          ]
+        },
+        {
+          "id": "draught-beers",
+          "title": "생맥주",
+          "desktopColumn": 1,
+          "items": [
+            {
+              "name": "Pietra Bionda",
+              "description": "25 cl / 50 cl",
+              "price": "4,5 € / 8 €"
+            },
+            {
+              "name": "Fada IPA",
+              "description": "25 cl / 50 cl",
+              "price": "5 € / 9,5 €"
+            }
+          ]
+        },
+        {
+          "id": "bottled-beers",
+          "title": "병맥주 (33cl)",
+          "desktopColumn": 1,
+          "items": [
+            {
+              "name": "1664 Blanche",
+              "price": "7 €"
+            },
+            {
+              "name": "Corona",
+              "price": "7 €"
+            },
+            {
+              "name": "Corona 0",
+              "price": "7 €"
+            },
+            {
+              "name": "Chill Lemon",
+              "price": "7 €"
+            },
+            {
+              "name": "Chouffe",
+              "price": "8 €"
             }
           ]
         },
@@ -1290,7 +1327,7 @@ export const menuPage = {
             },
             {
               "name": "3스쿱",
-              "price": "5,50 €"
+              "price": "8,50 €"
             },
             {
               "kind": "section",

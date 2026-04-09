@@ -52,14 +52,7 @@ export const menuPage = {
           "desktopColumn": 0,
           "items": [
             {
-              "name": "Баклажанова ікра з дров’яної печі",
-              "price": "8 €",
-              "filters": [
-                "vegan"
-              ]
-            },
-            {
-              "name": "Маринований перець, хліб із тіста для піци",
+              "name": "Мариновані перці",
               "price": "8 €",
               "filters": [
                 "vegan"
@@ -73,17 +66,17 @@ export const menuPage = {
               ]
             },
             {
+              "name": "Баклажанова ікра з дров’яної печі",
+              "price": "8 €",
+              "filters": [
+                "vegan"
+              ]
+            },
+            {
               "name": "Пармська шинка",
               "price": "11 €",
               "filters": [
                 "pork"
-              ]
-            },
-            {
-              "name": "Сокка від шефа «Янна»",
-              "price": "7 €",
-              "filters": [
-                "vegan"
               ]
             }
           ]
@@ -94,6 +87,13 @@ export const menuPage = {
           "desktopColumn": 0,
           "items": [
             {
+              "name": "Салат з артишоком",
+              "price": "17 €",
+              "filters": [
+                "vegan"
+              ]
+            },
+            {
               "name": "Буррата та старовинні томати",
               "price": "19 €",
               "filters": [
@@ -101,15 +101,15 @@ export const menuPage = {
               ]
             },
             {
-              "name": "Цезар із хрусткою куркою",
-              "price": "18 €"
-            },
-            {
-              "name": "Салат з артишоком",
-              "price": "17 €",
+              "name": "Кіноа з приправами дня",
+              "price": "19 €",
               "filters": [
                 "vegan"
               ]
+            },
+            {
+              "name": "Цезар із хрусткою куркою",
+              "price": "18 €"
             },
             {
               "name": "Севиче із серіоли",
@@ -124,13 +124,6 @@ export const menuPage = {
               "filters": [
                 "fish"
               ]
-            },
-            {
-              "name": "Кіноа з приправами дня",
-              "price": "19 €",
-              "filters": [
-                "vegan"
-              ]
             }
           ]
         },
@@ -140,15 +133,32 @@ export const menuPage = {
           "desktopColumn": 1,
           "items": [
             {
-              "name": "Мариновані свинячі реберця",
-              "price": "23 €",
+              "name": "Мідії маріньєр",
+              "price": "18 €",
               "filters": [
-                "pork"
+                "seafood"
               ]
             },
             {
-              "name": "Тальята з яловичини",
-              "price": "25 €"
+              "name": "Запечені сардини з сезонним соусом vierge",
+              "price": "19 €",
+              "filters": [
+                "fish"
+              ]
+            },
+            {
+              "name": "Дикі креветки, обсмажені з часником",
+              "price": "28 €",
+              "filters": [
+                "seafood"
+              ]
+            },
+            {
+              "name": "Ціла дорадо, запечена в духовці",
+              "price": "32 €",
+              "filters": [
+                "fish"
+              ]
             },
             {
               "name": "Тартар із яловичини по-італійськи",
@@ -163,8 +173,23 @@ export const menuPage = {
               "price": "23 €"
             },
             {
+              "name": "Мариновані свинячі реберця",
+              "price": "23 €",
+              "filters": [
+                "pork"
+              ]
+            },
+            {
+              "name": "Тальята з яловичини",
+              "price": "25 €"
+            },
+            {
               "name": "Запечене куряче філе, соус із білими грибами",
               "price": "25 €"
+            },
+            {
+              "name": "Телятина по-міланськи",
+              "price": "26 €"
             },
             {
               "name": "Лінгвіні з песто",
@@ -172,10 +197,6 @@ export const menuPage = {
               "filters": [
                 "vegetarian"
               ]
-            },
-            {
-              "name": "Телятина по-міланськи",
-              "price": "26 €"
             },
             {
               "name": "Рігатоні all’arrabbiata зі страчателою",
@@ -196,34 +217,6 @@ export const menuPage = {
               "price": "32 €",
               "filters": [
                 "vegetarian"
-              ]
-            },
-            {
-              "name": "Мідії маріньєр",
-              "price": "18 €",
-              "filters": [
-                "seafood"
-              ]
-            },
-            {
-              "name": "Сардини на грилі з сезонним соусом vierge",
-              "price": "19 €",
-              "filters": [
-                "fish"
-              ]
-            },
-            {
-              "name": "Дикі креветки, обсмажені з часником",
-              "price": "28 €",
-              "filters": [
-                "seafood"
-              ]
-            },
-            {
-              "name": "Ціла дорадо, запечена в духовці",
-              "price": "32 €",
-              "filters": [
-                "fish"
               ]
             }
           ]
@@ -529,6 +522,50 @@ export const menuPage = {
               "name": "Espresso Martini",
               "description": "Vodka 5 cl, кавовий лікер 2 cl, espresso, ванільний сироп",
               "price": "15 €"
+            }
+          ]
+        },
+        {
+          "id": "draught-beers",
+          "title": "Розливне пиво",
+          "desktopColumn": 1,
+          "items": [
+            {
+              "name": "Pietra Bionda",
+              "description": "25 cl / 50 cl",
+              "price": "4,5 € / 8 €"
+            },
+            {
+              "name": "Fada IPA",
+              "description": "25 cl / 50 cl",
+              "price": "5 € / 9,5 €"
+            }
+          ]
+        },
+        {
+          "id": "bottled-beers",
+          "title": "Пиво в пляшці (33 cl)",
+          "desktopColumn": 1,
+          "items": [
+            {
+              "name": "1664 Blanche",
+              "price": "7 €"
+            },
+            {
+              "name": "Corona",
+              "price": "7 €"
+            },
+            {
+              "name": "Corona 0",
+              "price": "7 €"
+            },
+            {
+              "name": "Chill Lemon",
+              "price": "7 €"
+            },
+            {
+              "name": "Chouffe",
+              "price": "8 €"
             }
           ]
         },
@@ -1290,7 +1327,7 @@ export const menuPage = {
             },
             {
               "name": "3 кульки",
-              "price": "5,50 €"
+              "price": "8,50 €"
             },
             {
               "kind": "section",

@@ -52,14 +52,7 @@ export const menuPage = {
           "desktopColumn": 0,
           "items": [
             {
-              "name": "Auberginenkaviar aus dem Holzofen",
-              "price": "8 €",
-              "filters": [
-                "vegan"
-              ]
-            },
-            {
-              "name": "Marinierte Paprika, Pizzabrot",
+              "name": "Marinierte Paprika",
               "price": "8 €",
               "filters": [
                 "vegan"
@@ -73,17 +66,17 @@ export const menuPage = {
               ]
             },
             {
+              "name": "Auberginenkaviar aus dem Holzofen",
+              "price": "8 €",
+              "filters": [
+                "vegan"
+              ]
+            },
+            {
               "name": "Parmaschinken",
               "price": "11 €",
               "filters": [
                 "pork"
-              ]
-            },
-            {
-              "name": "Socca von Chef « Yann »",
-              "price": "7 €",
-              "filters": [
-                "vegan"
               ]
             }
           ]
@@ -94,6 +87,13 @@ export const menuPage = {
           "desktopColumn": 0,
           "items": [
             {
+              "name": "Artischockensalat",
+              "price": "17 €",
+              "filters": [
+                "vegan"
+              ]
+            },
+            {
               "name": "Burrata mit alten Tomatensorten",
               "price": "19 €",
               "filters": [
@@ -101,15 +101,15 @@ export const menuPage = {
               ]
             },
             {
-              "name": "Caesar mit knusprigem Hähnchen",
-              "price": "18 €"
-            },
-            {
-              "name": "Artischockensalat",
-              "price": "17 €",
+              "name": "Quinoa mit den Condiments des Tages",
+              "price": "19 €",
               "filters": [
                 "vegan"
               ]
+            },
+            {
+              "name": "Caesar mit knusprigem Hähnchen",
+              "price": "18 €"
             },
             {
               "name": "Ceviche von der Bernsteinmakrele",
@@ -124,13 +124,6 @@ export const menuPage = {
               "filters": [
                 "fish"
               ]
-            },
-            {
-              "name": "Quinoa mit den Condiments des Tages",
-              "price": "19 €",
-              "filters": [
-                "vegan"
-              ]
             }
           ]
         },
@@ -140,15 +133,32 @@ export const menuPage = {
           "desktopColumn": 1,
           "items": [
             {
-              "name": "Marinierte Schweinerippchen",
-              "price": "23 €",
+              "name": "Miesmuscheln marinière",
+              "price": "18 €",
               "filters": [
-                "pork"
+                "seafood"
               ]
             },
             {
-              "name": "Tagliata vom Rind",
-              "price": "25 €"
+              "name": "Geröstete Sardinen mit saisonaler Vierge-Sauce",
+              "price": "19 €",
+              "filters": [
+                "fish"
+              ]
+            },
+            {
+              "name": "Wildgarnelen mit Knoblauch gebraten",
+              "price": "28 €",
+              "filters": [
+                "seafood"
+              ]
+            },
+            {
+              "name": "Ganze Dorade aus dem Ofen",
+              "price": "32 €",
+              "filters": [
+                "fish"
+              ]
             },
             {
               "name": "Rindertatar auf italienische Art",
@@ -163,8 +173,23 @@ export const menuPage = {
               "price": "23 €"
             },
             {
+              "name": "Marinierte Schweinerippchen",
+              "price": "23 €",
+              "filters": [
+                "pork"
+              ]
+            },
+            {
+              "name": "Tagliata vom Rind",
+              "price": "25 €"
+            },
+            {
               "name": "Gebratene Hähnchenbrust, Steinpilzsauce",
               "price": "25 €"
+            },
+            {
+              "name": "Kalbsschnitzel alla milanese",
+              "price": "26 €"
             },
             {
               "name": "Linguini mit Pesto",
@@ -172,10 +197,6 @@ export const menuPage = {
               "filters": [
                 "vegetarian"
               ]
-            },
-            {
-              "name": "Kalbsschnitzel alla milanese",
-              "price": "26 €"
             },
             {
               "name": "Rigatoni all’arrabbiata mit Stracciatella",
@@ -196,34 +217,6 @@ export const menuPage = {
               "price": "32 €",
               "filters": [
                 "vegetarian"
-              ]
-            },
-            {
-              "name": "Miesmuscheln marinière",
-              "price": "18 €",
-              "filters": [
-                "seafood"
-              ]
-            },
-            {
-              "name": "Gegrillte Sardinen mit saisonaler Vierge-Sauce",
-              "price": "19 €",
-              "filters": [
-                "fish"
-              ]
-            },
-            {
-              "name": "Wildgarnelen mit Knoblauch gebraten",
-              "price": "28 €",
-              "filters": [
-                "seafood"
-              ]
-            },
-            {
-              "name": "Ganze Dorade aus dem Ofen",
-              "price": "32 €",
-              "filters": [
-                "fish"
               ]
             }
           ]
@@ -529,6 +522,50 @@ export const menuPage = {
               "name": "Espresso Martini",
               "description": "Wodka 5 cl, Kaffeelikör 2 cl, Espresso, Vanillesirup",
               "price": "15 €"
+            }
+          ]
+        },
+        {
+          "id": "draught-beers",
+          "title": "Biere vom Fass",
+          "desktopColumn": 1,
+          "items": [
+            {
+              "name": "Pietra Bionda",
+              "description": "25 cl / 50 cl",
+              "price": "4,5 € / 8 €"
+            },
+            {
+              "name": "Fada IPA",
+              "description": "25 cl / 50 cl",
+              "price": "5 € / 9,5 €"
+            }
+          ]
+        },
+        {
+          "id": "bottled-beers",
+          "title": "Flaschenbiere (33 cl)",
+          "desktopColumn": 1,
+          "items": [
+            {
+              "name": "1664 Blanche",
+              "price": "7 €"
+            },
+            {
+              "name": "Corona",
+              "price": "7 €"
+            },
+            {
+              "name": "Corona 0",
+              "price": "7 €"
+            },
+            {
+              "name": "Chill Lemon",
+              "price": "7 €"
+            },
+            {
+              "name": "Chouffe",
+              "price": "8 €"
             }
           ]
         },
@@ -1290,7 +1327,7 @@ export const menuPage = {
             },
             {
               "name": "3 Kugeln",
-              "price": "5,50 €"
+              "price": "8,50 €"
             },
             {
               "kind": "section",

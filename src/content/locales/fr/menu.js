@@ -45,14 +45,7 @@ export const menuPage = {
           "desktopColumn": 0,
           "items": [
             {
-              "name": "Caviar d’aubergines au feu de bois",
-              "price": "8 €",
-              "filters": [
-                "vegan"
-              ]
-            },
-            {
-              "name": "Poivrons marinés, pain à pizza",
+              "name": "Poivrons marinés",
               "price": "8 €",
               "filters": [
                 "vegan"
@@ -66,17 +59,17 @@ export const menuPage = {
               ]
             },
             {
+              "name": "Caviar d’aubergines au feu de bois",
+              "price": "8 €",
+              "filters": [
+                "vegan"
+              ]
+            },
+            {
               "name": "Jambon de Parme",
               "price": "11 €",
               "filters": [
                 "pork"
-              ]
-            },
-            {
-              "name": "Socca du chef « Yann »",
-              "price": "7 €",
-              "filters": [
-                "vegan"
               ]
             }
           ]
@@ -87,6 +80,13 @@ export const menuPage = {
           "desktopColumn": 0,
           "items": [
             {
+              "name": "Artichaut en salade",
+              "price": "17 €",
+              "filters": [
+                "vegan"
+              ]
+            },
+            {
               "name": "Burrata, tomates anciennes",
               "price": "19 €",
               "filters": [
@@ -94,15 +94,15 @@ export const menuPage = {
               ]
             },
             {
-              "name": "César de volaille panée",
-              "price": "18 €"
-            },
-            {
-              "name": "Artichaut en salade",
-              "price": "17 €",
+              "name": "Quinoa et ses condiments du jour",
+              "price": "19 €",
               "filters": [
                 "vegan"
               ]
+            },
+            {
+              "name": "César de volaille panée",
+              "price": "18 €"
             },
             {
               "name": "Sériole en ceviche",
@@ -117,13 +117,6 @@ export const menuPage = {
               "filters": [
                 "fish"
               ]
-            },
-            {
-              "name": "Quinoa et ses condiments du jour",
-              "price": "19 €",
-              "filters": [
-                "vegan"
-              ]
             }
           ]
         },
@@ -133,15 +126,32 @@ export const menuPage = {
           "desktopColumn": 1,
           "items": [
             {
-              "name": "Travers de porc marinés",
-              "price": "23 €",
+              "name": "Moules marinières",
+              "price": "18 €",
               "filters": [
-                "pork"
+                "seafood"
               ]
             },
             {
-              "name": "Tagliata de bœuf",
-              "price": "25 €"
+              "name": "Sardines rôties, vierge de saison",
+              "price": "19 €",
+              "filters": [
+                "fish"
+              ]
+            },
+            {
+              "name": "Gambas sauvages poêlées à l’ail",
+              "price": "28 €",
+              "filters": [
+                "seafood"
+              ]
+            },
+            {
+              "name": "Daurade royale entière rôtie au four",
+              "price": "32 €",
+              "filters": [
+                "fish"
+              ]
             },
             {
               "name": "Bœuf en tartare à l’italienne",
@@ -156,8 +166,23 @@ export const menuPage = {
               "price": "23 €"
             },
             {
+              "name": "Travers de porc marinés",
+              "price": "23 €",
+              "filters": [
+                "pork"
+              ]
+            },
+            {
+              "name": "Tagliata de bœuf",
+              "price": "25 €"
+            },
+            {
               "name": "Suprême de volaille rôtie, sauce aux cèpes",
               "price": "25 €"
+            },
+            {
+              "name": "Veau, en escalope milanaise",
+              "price": "26 €"
             },
             {
               "name": "Linguini au pesto",
@@ -165,10 +190,6 @@ export const menuPage = {
               "filters": [
                 "vegetarian"
               ]
-            },
-            {
-              "name": "Veau, en escalope milanaise",
-              "price": "26 €"
             },
             {
               "name": "Rigatoni à l’arrabbiata et stracciatella",
@@ -189,34 +210,6 @@ export const menuPage = {
               "price": "32 €",
               "filters": [
                 "vegetarian"
-              ]
-            },
-            {
-              "name": "Moules marinières",
-              "price": "18 €",
-              "filters": [
-                "seafood"
-              ]
-            },
-            {
-              "name": "Sardines grillées, vierge de saison",
-              "price": "19 €",
-              "filters": [
-                "fish"
-              ]
-            },
-            {
-              "name": "Gambas sauvages poêlées à l’ail",
-              "price": "28 €",
-              "filters": [
-                "seafood"
-              ]
-            },
-            {
-              "name": "Daurade royale entière rôtie au four",
-              "price": "32 €",
-              "filters": [
-                "fish"
               ]
             }
           ]
@@ -333,7 +326,7 @@ export const menuPage = {
               ]
             },
             {
-              "name": "Espagnole",
+              "name": "Espagnol",
               "description": "Sauce tomate, mozzarella, spianata, poivrons",
               "price": "18 €",
               "filters": [
@@ -522,6 +515,50 @@ export const menuPage = {
               "name": "Expresso Martini",
               "description": "Vodka 5 cl, liqueur de café 2 cl, espresso, sirop de vanille",
               "price": "15 €"
+            }
+          ]
+        },
+        {
+          "id": "draught-beers",
+          "title": "Bières à la pression",
+          "desktopColumn": 1,
+          "items": [
+            {
+              "name": "Pietra Bionda",
+              "description": "25 cl / 50 cl",
+              "price": "4,5 € / 8 €"
+            },
+            {
+              "name": "Fada IPA",
+              "description": "25 cl / 50 cl",
+              "price": "5 € / 9,5 €"
+            }
+          ]
+        },
+        {
+          "id": "bottled-beers",
+          "title": "Bières en bouteille (33 cl)",
+          "desktopColumn": 1,
+          "items": [
+            {
+              "name": "1664 Blanche",
+              "price": "7 €"
+            },
+            {
+              "name": "Corona",
+              "price": "7 €"
+            },
+            {
+              "name": "Corona 0",
+              "price": "7 €"
+            },
+            {
+              "name": "Chill Lemon",
+              "price": "7 €"
+            },
+            {
+              "name": "Chouffe",
+              "price": "8 €"
             }
           ]
         },
@@ -1283,7 +1320,7 @@ export const menuPage = {
             },
             {
               "name": "3 boules",
-              "price": "5,50 €"
+              "price": "8,50 €"
             },
             {
               "kind": "section",

@@ -52,14 +52,7 @@ export const menuPage = {
           "desktopColumn": 0,
           "items": [
             {
-              "name": "薪火焼きナスのキャビア",
-              "price": "8 €",
-              "filters": [
-                "vegan"
-              ]
-            },
-            {
-              "name": "マリネしたパプリカとピザパン",
+              "name": "マリネしたパプリカ",
               "price": "8 €",
               "filters": [
                 "vegan"
@@ -73,17 +66,17 @@ export const menuPage = {
               ]
             },
             {
+              "name": "薪火焼きナスのキャビア",
+              "price": "8 €",
+              "filters": [
+                "vegan"
+              ]
+            },
+            {
               "name": "パルマハム",
               "price": "11 €",
               "filters": [
                 "pork"
-              ]
-            },
-            {
-              "name": "シェフ Yann のソッカ",
-              "price": "7 €",
-              "filters": [
-                "vegan"
               ]
             }
           ]
@@ -94,6 +87,13 @@ export const menuPage = {
           "desktopColumn": 0,
           "items": [
             {
+              "name": "アーティチョークのサラダ",
+              "price": "17 €",
+              "filters": [
+                "vegan"
+              ]
+            },
+            {
               "name": "ブッラータと古来種トマト",
               "price": "19 €",
               "filters": [
@@ -101,15 +101,15 @@ export const menuPage = {
               ]
             },
             {
-              "name": "衣付きチキンのシーザー",
-              "price": "18 €"
-            },
-            {
-              "name": "アーティチョークのサラダ",
-              "price": "17 €",
+              "name": "キヌアと本日のコンディマン",
+              "price": "19 €",
               "filters": [
                 "vegan"
               ]
+            },
+            {
+              "name": "衣付きチキンのシーザー",
+              "price": "18 €"
             },
             {
               "name": "シオのセビーチェ",
@@ -124,13 +124,6 @@ export const menuPage = {
               "filters": [
                 "fish"
               ]
-            },
-            {
-              "name": "キヌアと本日のコンディマン",
-              "price": "19 €",
-              "filters": [
-                "vegan"
-              ]
             }
           ]
         },
@@ -140,15 +133,32 @@ export const menuPage = {
           "desktopColumn": 1,
           "items": [
             {
-              "name": "豚スペアリブのマリネ",
-              "price": "23 €",
+              "name": "ムール貝のマリニエール",
+              "price": "18 €",
               "filters": [
-                "pork"
+                "seafood"
               ]
             },
             {
-              "name": "牛肉のタリアータ",
-              "price": "25 €"
+              "name": "イワシのロースト 季節のヴィエルジュソース",
+              "price": "19 €",
+              "filters": [
+                "fish"
+              ]
+            },
+            {
+              "name": "天然エビのガーリックソテー",
+              "price": "28 €",
+              "filters": [
+                "seafood"
+              ]
+            },
+            {
+              "name": "丸ごと真鯛のオーブン焼き",
+              "price": "32 €",
+              "filters": [
+                "fish"
+              ]
             },
             {
               "name": "イタリア風牛肉タルタル",
@@ -163,8 +173,23 @@ export const menuPage = {
               "price": "23 €"
             },
             {
+              "name": "豚スペアリブのマリネ",
+              "price": "23 €",
+              "filters": [
+                "pork"
+              ]
+            },
+            {
+              "name": "牛肉のタリアータ",
+              "price": "25 €"
+            },
+            {
               "name": "ローストチキン胸肉 ポルチーニソース",
               "price": "25 €"
+            },
+            {
+              "name": "仔牛のミラノ風カツレツ",
+              "price": "26 €"
             },
             {
               "name": "ジェノベーゼのリングイネ",
@@ -172,10 +197,6 @@ export const menuPage = {
               "filters": [
                 "vegetarian"
               ]
-            },
-            {
-              "name": "仔牛のミラノ風カツレツ",
-              "price": "26 €"
             },
             {
               "name": "アラビアータとストラッチャテッラのリガトーニ",
@@ -196,34 +217,6 @@ export const menuPage = {
               "price": "32 €",
               "filters": [
                 "vegetarian"
-              ]
-            },
-            {
-              "name": "ムール貝のマリニエール",
-              "price": "18 €",
-              "filters": [
-                "seafood"
-              ]
-            },
-            {
-              "name": "焼きイワシ 季節のヴィエルジュソース",
-              "price": "19 €",
-              "filters": [
-                "fish"
-              ]
-            },
-            {
-              "name": "天然エビのガーリックソテー",
-              "price": "28 €",
-              "filters": [
-                "seafood"
-              ]
-            },
-            {
-              "name": "丸ごと真鯛のオーブン焼き",
-              "price": "32 €",
-              "filters": [
-                "fish"
               ]
             }
           ]
@@ -529,6 +522,50 @@ export const menuPage = {
               "name": "Espresso Martini",
               "description": "Vodka 5 cl、コーヒーリキュール 2 cl、espresso、バニラシロップ",
               "price": "15 €"
+            }
+          ]
+        },
+        {
+          "id": "draught-beers",
+          "title": "生ビール",
+          "desktopColumn": 1,
+          "items": [
+            {
+              "name": "Pietra Bionda",
+              "description": "25 cl / 50 cl",
+              "price": "4,5 € / 8 €"
+            },
+            {
+              "name": "Fada IPA",
+              "description": "25 cl / 50 cl",
+              "price": "5 € / 9,5 €"
+            }
+          ]
+        },
+        {
+          "id": "bottled-beers",
+          "title": "瓶ビール（33cl）",
+          "desktopColumn": 1,
+          "items": [
+            {
+              "name": "1664 Blanche",
+              "price": "7 €"
+            },
+            {
+              "name": "Corona",
+              "price": "7 €"
+            },
+            {
+              "name": "Corona 0",
+              "price": "7 €"
+            },
+            {
+              "name": "Chill Lemon",
+              "price": "7 €"
+            },
+            {
+              "name": "Chouffe",
+              "price": "8 €"
             }
           ]
         },
@@ -1290,7 +1327,7 @@ export const menuPage = {
             },
             {
               "name": "3スクープ",
-              "price": "5,50 €"
+              "price": "8,50 €"
             },
             {
               "kind": "section",
