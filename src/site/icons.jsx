@@ -12,7 +12,16 @@ import wazeIcon from './assets/icons/waze.svg';
 import whatsappIcon from './assets/icons/whatsapp.svg';
 
 function MaskIcon({ className = 'v5-icon', src }) {
-  return <span className={`${className} v5-icon--mask`} style={{ '--icon-url': `url('${src}')` }} aria-hidden="true" />;
+  return (
+    <span
+      className={`${className} v5-icon--mask`}
+      style={{
+        WebkitMaskImage: `url("${src}")`,
+        maskImage: `url("${src}")`,
+      }}
+      aria-hidden="true"
+    />
+  );
 }
 
 export function PhoneIcon({ className = 'v5-icon' }) {
