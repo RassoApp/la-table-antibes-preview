@@ -127,9 +127,10 @@
 .v5-shell .v5-cuisine,
 .v5-shell .v5-ambiance,
 .v5-shell .v6-home-story {
+  --v5-feature-gap: clamp(2.8rem, 4vw, 4.2rem);
   display: grid;
   grid-template-columns: 0.82fr 1.18fr;
-  gap: clamp(2.8rem, 4vw, 4.2rem);
+  gap: var(--v5-feature-gap);
   align-items: start;
 }
 
@@ -155,11 +156,31 @@
   color: var(--muted);
 }
 
-.v5-shell .v5-cuisine__grid,
-.v5-shell .v5-ambiance__media {
+.v5-shell .v5-cuisine__grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
+}
+
+.v5-shell .v5-ambiance__media {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.v5-shell .v5-ambiance__card {
+  width: 100%;
+}
+
+@media (min-width: 901px) {
+  .v5-shell .v5-ambiance {
+    --v5-ambiance-media-width: calc((100% - var(--v5-feature-gap)) * 0.295 - 0.5rem);
+    grid-template-columns: minmax(0, 1fr) var(--v5-ambiance-media-width);
+  }
+
+  .v5-shell .v5-ambiance__media {
+    justify-items: stretch;
+  }
 }
 
 .v5-shell .v6-home-story__media {
@@ -465,16 +486,23 @@
     line-height: 1.02;
   }
 
-  .v5-shell .v5-cuisine__grid,
+  .v5-shell .v5-cuisine__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
   .v5-shell .v5-ambiance__media {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.75rem;
   }
 
   .v5-shell .v5-showcase-card img,
-  .v5-shell .v5-ambiance__card img,
   .v5-shell .v5-contact-figure img {
     aspect-ratio: 5 / 4;
+  }
+
+  .v5-shell .v5-ambiance__card img {
+    aspect-ratio: 1 / 1;
   }
 
   .v5-shell .v5-about-highlights {

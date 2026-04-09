@@ -118,18 +118,12 @@ export function HomePage() {
             </div>
           </div>
 
-          <div className="v5-cuisine__grid v5-ambiance__media">
+          <div className="v5-ambiance__media">
             <figure className="v5-showcase-card v5-ambiance__card">
-              <img src={siteMedia.ambianceTopLeft} alt="" loading="lazy" decoding="async" />
+              <img src={siteMedia.ambianceInterior} alt="" loading="lazy" decoding="async" />
             </figure>
             <figure className="v5-showcase-card v5-ambiance__card">
-              <img src={siteMedia.ambianceTopRight} alt="" loading="lazy" decoding="async" />
-            </figure>
-            <figure className="v5-showcase-card v5-ambiance__card">
-              <img src={siteMedia.ambianceBottomLeft} alt="" loading="lazy" decoding="async" />
-            </figure>
-            <figure className="v5-showcase-card v5-ambiance__card">
-              <img src={siteMedia.ambianceBottomRight} alt="" loading="lazy" decoding="async" />
+              <img src={siteMedia.ambiancePizza} alt="" loading="lazy" decoding="async" />
             </figure>
           </div>
         </div>

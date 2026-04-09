@@ -1,8 +1,6 @@
 import access from './assets/images/home/access.webp';
-import ambianceBottomLeft from './assets/images/home/ambiance-bottom-left.webp';
-import ambianceBottomRight from './assets/images/home/ambiance-bottom-right.webp';
-import ambianceTopLeft from './assets/images/home/ambiance-top-left.webp';
-import ambianceTopRight from './assets/images/home/ambiance-top-right.webp';
+import ambianceInterior from './assets/images/home/ambiance-interior.webp';
+import ambiancePizza from './assets/images/home/ambiance-pizza.webp';
 import chefDesktop from './assets/images/home/chef-desktop.webp';
 import chefMobile from './assets/images/home/chef-mobile.webp';
 import cuisineBottomLeft from './assets/images/home/cuisine-bottom-left.webp';
@@ -20,10 +18,8 @@ export const siteMedia = {
   cuisineBottomRight,
   chefDesktop,
   chefMobile,
-  ambianceTopLeft,
-  ambianceTopRight,
-  ambianceBottomLeft,
-  ambianceBottomRight,
+  ambianceInterior,
+  ambiancePizza,
   access,
   privateEvents,
 };
