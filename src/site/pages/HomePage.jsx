@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useLocale } from '../../App';
-import { homeEventContent, homePageContent } from '../content/homePageContent';
-import { pageContent } from '../content/pageContent';
+import { homeEventContent, homePageContent, pageContent } from '../../content/locales/index.js';
 import { CutleryIcon } from '../icons';
 import { DirectionsDropdown } from '../DirectionsDropdown';
 import { siteMedia } from '../media';
@@ -72,7 +71,7 @@ export function HomePage() {
           </div>
 
           <div className="v5-cuisine__grid">
-            <ShowcaseCard src={siteMedia.pizzaPainted} alt="" />
+            <ShowcaseCard src={siteMedia.cuisineTopLeft} alt="" />
             <ShowcaseCard src={siteMedia.cuisineTopRight} alt="" />
             <ShowcaseCard src={siteMedia.cuisineBottomLeft} alt="" />
             <ShowcaseCard src={siteMedia.cuisineBottomRight} alt="" />
@@ -96,9 +95,9 @@ export function HomePage() {
 
           <figure className="v3-feature-image v6-home-story__media">
             <picture>
-              <source media="(max-width: 900px)" srcSet={siteMedia.chefStoryMobile} />
+              <source media="(max-width: 900px)" srcSet={siteMedia.chefMobile} />
               <img
-                src={siteMedia.chefStoryDesktop}
+                src={siteMedia.chefDesktop}
                 alt={home.story.imageAlt ?? ''}
                 loading="lazy"
                 decoding="async"
@@ -121,16 +120,16 @@ export function HomePage() {
 
           <div className="v5-cuisine__grid v5-ambiance__media">
             <figure className="v5-showcase-card v5-ambiance__card">
-              <img src={siteMedia.barInterior} alt="" loading="lazy" decoding="async" />
+              <img src={siteMedia.ambianceTopLeft} alt="" loading="lazy" decoding="async" />
             </figure>
             <figure className="v5-showcase-card v5-ambiance__card">
-              <img src={siteMedia.interiorSunlit} alt="" loading="lazy" decoding="async" />
+              <img src={siteMedia.ambianceTopRight} alt="" loading="lazy" decoding="async" />
             </figure>
             <figure className="v5-showcase-card v5-ambiance__card">
-              <img src={siteMedia.galleryRoom} alt="" loading="lazy" decoding="async" />
+              <img src={siteMedia.ambianceBottomLeft} alt="" loading="lazy" decoding="async" />
             </figure>
             <figure className="v5-showcase-card v5-ambiance__card">
-              <img src={siteMedia.galleryCutlery} alt="" loading="lazy" decoding="async" />
+              <img src={siteMedia.ambianceBottomRight} alt="" loading="lazy" decoding="async" />
             </figure>
           </div>
         </div>
@@ -198,7 +197,7 @@ export function HomePage() {
 
             <div className="v3-contact-media v5-contact-media">
               <figure className="v3-feature-image">
-                <img src={siteMedia.homeAccess} alt="" loading="lazy" decoding="async" />
+                <img src={siteMedia.access} alt="" loading="lazy" decoding="async" />
               </figure>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import { Navigate, Route, Routes, useLocation, useOutletContext, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
-import { siteContent, supportedLanguages } from './content/siteContent';
+import { siteContent, supportedLanguages } from './content/locales/index.js';
 import { SiteLayout } from './site/SiteLayout';
 import { HomePage } from './site/pages/HomePage';
 import { MenuPage } from './site/pages/MenuPage';

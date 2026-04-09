@@ -4,6 +4,4 @@ review_shots/
 .DS_Store
 IMAGE_EXPORT_V6_FOR_WEBP/
 CLIENT_DOCUMENTS/
-public/v5-assets/fonts/anko/Anko-Trial-Bold.ttf
-public/v5-assets/fonts/anko/Anko-Trial-Regular.ttf
-public/v5-assets/fonts/anko/Anko-Trial-SemiBold.ttf
+*-upload.zip

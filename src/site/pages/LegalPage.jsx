@@ -1,5 +1,5 @@
 import { useLocale } from '../../App';
-import { pageContent } from '../content/pageContent';
+import { pageContent } from '../../content/locales/index.js';
 
 export function LegalPage() {
   const { lang } = useLocale();

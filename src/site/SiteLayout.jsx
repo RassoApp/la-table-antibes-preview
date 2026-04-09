@@ -1,9 +1,20 @@
 import { useEffect, useMemo, useRef } from 'react';
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
-import { nativeLanguageLabels, supportedLanguages } from '../content/siteContent';
-import { assetPath } from '../utils/assets';
+import { nativeLanguageLabels, supportedLanguages } from '../content/locales/index.js';
 import { buildLocalizedPath } from '../utils/paths';
 import { DropdownProvider, useDropdowns } from './DropdownContext';
+import deFlag from './assets/flags/de.svg';
+import enFlag from './assets/flags/en.svg';
+import esFlag from './assets/flags/es.svg';
+import frFlag from './assets/flags/fr.svg';
+import itFlag from './assets/flags/it.svg';
+import jaFlag from './assets/flags/ja.svg';
+import koFlag from './assets/flags/ko.svg';
+import nlFlag from './assets/flags/nl.svg';
+import ruFlag from './assets/flags/ru.svg';
+import ukFlag from './assets/flags/uk.svg';
+import zhFlag from './assets/flags/zh.svg';
+import headerLogoSrc from './assets/logos/header.svg';
 import { CutleryIcon, FacebookIcon, InstagramIcon } from './icons';
 import { DirectionsDropdown } from './DirectionsDropdown';
 import { ReserveDropdown } from './ReserveDropdown';
@@ -11,52 +22,50 @@ import { SocialDropdown } from './SocialDropdown';
 
 const languageFlags = {
   fr: {
-    src: assetPath('/v5-assets/flags/france.svg'),
+    src: frFlag,
     alt: 'Français',
   },
   en: {
-    src: assetPath('/v5-assets/flags/uk.svg'),
+    src: enFlag,
     alt: 'English',
   },
   it: {
-    src: assetPath('/v5-assets/flags/italy.svg'),
+    src: itFlag,
     alt: 'Italiano',
   },
   de: {
-    src: assetPath('/v5-assets/flags/germany.svg'),
+    src: deFlag,
     alt: 'Deutsch',
   },
   nl: {
-    src: assetPath('/v5-assets/flags/netherland.svg'),
+    src: nlFlag,
     alt: 'Nederlands',
   },
   es: {
-    src: assetPath('/v5-assets/flags/spain.svg'),
+    src: esFlag,
     alt: 'Español',
   },
   ru: {
-    src: assetPath('/v5-assets/flags/russia.svg'),
+    src: ruFlag,
     alt: 'Русский',
   },
   uk: {
-    src: assetPath('/v5-assets/flags/ukraine-flag.svg'),
+    src: ukFlag,
     alt: 'Українська',
   },
   zh: {
-    src: assetPath('/v5-assets/flags/china.svg'),
+    src: zhFlag,
     alt: '中文',
   },
   ja: {
-    src: assetPath('/v5-assets/flags/japan.svg'),
+    src: jaFlag,
     alt: '日本語',
   },
   ko: {
-    src: assetPath('/v5-assets/flags/south-korea.svg'),
+    src: koFlag,
     alt: '한국어',
   },
 };
-
-const headerLogoSrc = assetPath('/v5-assets/logos/la-table-header.svg');
 
 const primaryNavKeys = ['home', 'menu'];
 const MOBILE_MENU_DROPDOWN_ID = 'mobile-menu';
