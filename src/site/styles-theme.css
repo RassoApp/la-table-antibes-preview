@@ -78,20 +78,7 @@
 }
 
 .v5-shell .v3-hero__overlay {
-  background:
-    linear-gradient(
-      180deg,
-      rgba(17, 10, 7, 0) 0%,
-      rgba(17, 10, 7, 0.02) 28%,
-      rgba(17, 10, 7, 0.14) 60%,
-      rgba(17, 10, 7, 0.54) 100%
-    ),
-    radial-gradient(
-      110% 95% at 16% 78%,
-      rgba(17, 10, 7, 0.54) 0%,
-      rgba(17, 10, 7, 0.24) 34%,
-      rgba(17, 10, 7, 0) 68%
-    );
+  background: rgba(17, 10, 7, 0.42);
 }
 
 .v5-shell .v3-hero {
@@ -424,10 +411,6 @@
 @media (max-width: 900px) {
   .v5-shell .v3-main {
     padding-bottom: 5rem;
-  }
-
-  .v5-shell .v3-hero__overlay {
-    background: rgba(17, 10, 7, 0.42);
   }
 
   .v5-shell .v5-cuisine,
