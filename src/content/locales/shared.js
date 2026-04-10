@@ -17,7 +17,7 @@ export const commonContactLinks = {
   "phoneHref": "tel:+33645163574",
   "phoneDisplayInternational": "+33 6 45 16 35 74",
   "whatsappHref": "https://wa.me/33645163574",
-  "emailHref": "mailto:bonjour@latable-antibes.fr",
+  "emailHref": "mailto:contact@la-table-antibes.com",
   "directionsHref": "https://www.google.com/maps/search/?api=1&query=25-27%20rue%20Sade%2C%2006600%20Antibes",
   "googleMapsHref": "https://www.google.com/maps/search/?api=1&query=25-27%20rue%20Sade%2C%2006600%20Antibes",
   "appleMapsHref": "https://maps.apple.com/?daddr=25-27%20rue%20Sade%2C%2006600%20Antibes&dirflg=d",

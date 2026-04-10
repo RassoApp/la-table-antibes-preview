@@ -117,7 +117,7 @@ function buildRestaurantSchema(routeUrl) {
     url: routeUrl,
     image: SHARE_IMAGE_URL,
     telephone: '+33645163574',
-    email: 'bonjour@latable-antibes.fr',
+    email: 'contact@la-table-antibes.com',
     servesCuisine: ['Cuisine traditionnelle', 'Cuisine méditerranéenne', 'Pizzas au feu de bois'],
     address: {
       '@type': 'PostalAddress',
