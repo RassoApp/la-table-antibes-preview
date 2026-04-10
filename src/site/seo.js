@@ -3,7 +3,7 @@ import { buildLocalizedPath } from '../utils/paths.js';
 
 export const SITE_ORIGIN = 'https://la-table-antibes.com';
 export const DEFAULT_LANGUAGE = 'fr';
-export const SHARE_IMAGE_URL = `${SITE_ORIGIN}/og-image.jpg`;
+export const SHARE_IMAGE_URL = `${SITE_ORIGIN}/og-image-v2.jpg`;
 
 const homeTitleByLanguage = {
   fr: 'Restaurant au coeur du Vieil Antibes',

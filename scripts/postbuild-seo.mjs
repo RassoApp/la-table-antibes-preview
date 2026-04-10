@@ -49,12 +49,20 @@ function applySeoToHtml(template, seo) {
       `<meta property="og:locale" content="${seo.ogLocale}" />`,
     )
     .replace(
+      /<meta\s+property="og:image"\s+content="[^"]*"\s*\/>/,
+      `<meta property="og:image" content="https://la-table-antibes.com/og-image-v2.jpg" />`,
+    )
+    .replace(
       /<meta\s+name="twitter:title"\s+content="[^"]*"\s*\/>/,
       `<meta name="twitter:title" content="${escapeHtml(seo.title)}" />`,
     )
     .replace(
       /<meta\s+name="twitter:description"\s+content="[^"]*"\s*\/>/,
       `<meta name="twitter:description" content="${escapeHtml(seo.description)}" />`,
+    )
+    .replace(
+      /<meta\s+name="twitter:image"\s+content="[^"]*"\s*\/>/,
+      `<meta name="twitter:image" content="https://la-table-antibes.com/og-image-v2.jpg" />`,
     )
     .replace(
       /<link rel="canonical" href="[^"]*" data-seo-marker="canonical" \/>/,

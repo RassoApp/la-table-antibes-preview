@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { buildSeoData } from './seo.js';
+import { buildSeoData, SHARE_IMAGE_URL } from './seo.js';
 
 function upsertMeta({ key, value, content }) {
   let node = document.head.querySelector(`meta[${key}="${value}"]`);
@@ -47,7 +47,7 @@ export function SeoHead({ lang }) {
     upsertMeta({ key: 'property', value: 'og:title', content: seo.title });
     upsertMeta({ key: 'property', value: 'og:description', content: seo.description });
     upsertMeta({ key: 'property', value: 'og:url', content: seo.canonicalUrl });
-    upsertMeta({ key: 'property', value: 'og:image', content: 'https://la-table-antibes.com/og-image.jpg' });
+    upsertMeta({ key: 'property', value: 'og:image', content: SHARE_IMAGE_URL });
     upsertMeta({ key: 'property', value: 'og:image:width', content: '1200' });
     upsertMeta({ key: 'property', value: 'og:image:height', content: '630' });
     upsertMeta({
@@ -59,7 +59,7 @@ export function SeoHead({ lang }) {
     upsertMeta({ key: 'name', value: 'twitter:card', content: 'summary_large_image' });
     upsertMeta({ key: 'name', value: 'twitter:title', content: seo.title });
     upsertMeta({ key: 'name', value: 'twitter:description', content: seo.description });
-    upsertMeta({ key: 'name', value: 'twitter:image', content: 'https://la-table-antibes.com/og-image.jpg' });
+    upsertMeta({ key: 'name', value: 'twitter:image', content: SHARE_IMAGE_URL });
 
     upsertLink({ rel: 'canonical', href: seo.canonicalUrl, marker: 'canonical' });
 
