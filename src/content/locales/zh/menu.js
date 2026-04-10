@@ -140,7 +140,7 @@ export const menuPage = {
               ]
             },
             {
-              "name": "炭烤沙丁鱼配时令 vierge 酱",
+              "name": "炉烤沙丁鱼配时令 vierge 酱",
               "price": "19 €",
               "filters": [
                 "fish"

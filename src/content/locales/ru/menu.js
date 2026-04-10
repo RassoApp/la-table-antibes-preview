@@ -140,7 +140,7 @@ export const menuPage = {
               ]
             },
             {
-              "name": "Сардины на гриле с сезонным соусом vierge",
+              "name": "Запечённые сардины с сезонным соусом vierge",
               "price": "19 €",
               "filters": [
                 "fish"

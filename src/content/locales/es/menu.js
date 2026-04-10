@@ -140,7 +140,7 @@ export const menuPage = {
               ]
             },
             {
-              "name": "Sardinas a la parrilla con salsa vierge de temporada",
+              "name": "Sardinas asadas con salsa vierge de temporada",
               "price": "19 €",
               "filters": [
                 "fish"

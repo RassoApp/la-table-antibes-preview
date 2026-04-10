@@ -140,7 +140,7 @@ export const menuPage = {
               ]
             },
             {
-              "name": "イワシのグリル 季節のヴィエルジュソース",
+              "name": "ローストしたイワシ 季節のヴィエルジュソース",
               "price": "19 €",
               "filters": [
                 "fish"

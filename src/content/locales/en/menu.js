@@ -140,7 +140,7 @@ export const menuPage = {
               ]
             },
             {
-              "name": "Grilled sardines, seasonal dressing",
+              "name": "Roasted sardines, seasonal dressing",
               "price": "19 €",
               "filters": [
                 "fish"

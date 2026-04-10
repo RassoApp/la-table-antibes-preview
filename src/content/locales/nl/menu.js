@@ -140,7 +140,7 @@ export const menuPage = {
               ]
             },
             {
-              "name": "Gegrilde sardines met seizoens-vierge-saus",
+              "name": "Geroosterde sardines met seizoens-vierge-saus",
               "price": "19 €",
               "filters": [
                 "fish"

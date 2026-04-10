@@ -133,7 +133,7 @@ export const menuPage = {
               ]
             },
             {
-              "name": "Sardines grillées, vierge de saison",
+              "name": "Sardines rôties, vierge de saison",
               "price": "19 €",
               "filters": [
                 "fish"
@@ -326,7 +326,7 @@ export const menuPage = {
               ]
             },
             {
-              "name": "Espagnol",
+              "name": "Espagnole",
               "description": "Sauce tomate, mozzarella, spianata, poivrons",
               "price": "18 €",
               "filters": [

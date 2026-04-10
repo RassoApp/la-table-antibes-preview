@@ -140,7 +140,7 @@ export const menuPage = {
               ]
             },
             {
-              "name": "Sarde grigliate, salsa vierge di stagione",
+              "name": "Sarde arrostite, salsa vierge di stagione",
               "price": "19 €",
               "filters": [
                 "fish"

@@ -140,7 +140,7 @@ export const menuPage = {
               ]
             },
             {
-              "name": "Gegrillte Sardinen mit saisonaler Vierge-Sauce",
+              "name": "Geröstete Sardinen mit saisonaler Vierge-Sauce",
               "price": "19 €",
               "filters": [
                 "fish"

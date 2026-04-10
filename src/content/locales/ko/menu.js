@@ -140,7 +140,7 @@ export const menuPage = {
               ]
             },
             {
-              "name": "그릴에 구운 정어리와 제철 비에르주 소스",
+              "name": "로스트 정어리와 제철 비에르주 소스",
               "price": "19 €",
               "filters": [
                 "fish"
