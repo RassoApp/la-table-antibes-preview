@@ -2,6 +2,10 @@
   RewriteEngine On
   RewriteBase /
 
+  RewriteCond %{HTTP_HOST} ^www\.la-table-antibes\.com$ [NC]
+  RewriteRule ^ https://la-table-antibes.com%{REQUEST_URI} [R=301,L]
+
+  RewriteRule ^$ /fr [R=301,L]
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d

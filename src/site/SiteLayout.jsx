@@ -3,6 +3,7 @@ import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import { nativeLanguageLabels, supportedLanguages } from '../content/locales/index.js';
 import { buildLocalizedPath } from '../utils/paths';
 import { DropdownProvider, useDropdowns } from './DropdownContext';
+import { SeoHead } from './SeoHead';
 import deFlag from './assets/flags/de.svg';
 import enFlag from './assets/flags/en.svg';
 import esFlag from './assets/flags/es.svg';
@@ -234,6 +235,7 @@ function SiteLayoutInner({ lang, locale, basePath }) {
 
   return (
     <div className="v3-shell v5-shell v6-shell">
+      <SeoHead lang={lang} />
       <header className="v3-header">
         <div className="v3-header__inner">
           <button
