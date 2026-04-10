@@ -22,6 +22,6 @@ export const commonContactLinks = {
   "googleMapsHref": "https://www.google.com/maps/search/?api=1&query=25-27%20rue%20Sade%2C%2006600%20Antibes",
   "appleMapsHref": "https://maps.apple.com/?daddr=25-27%20rue%20Sade%2C%2006600%20Antibes&dirflg=d",
   "wazeHref": "https://waze.com/ul?q=25-27%20rue%20Sade%2C%2006600%20Antibes&navigate=yes",
-  "instagramHref": "#",
-  "facebookHref": "#"
+  "instagramHref": "https://www.instagram.com/latable_antibes",
+  "facebookHref": "https://www.facebook.com/profile.php?id=61576438820847"
 };
