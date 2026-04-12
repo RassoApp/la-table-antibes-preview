@@ -969,7 +969,7 @@ export const menuPage = {
               "price": "75 cl 94 €"
             },
             {
-              "name": "Château Simone | AOC",
+              "name": "Château Simone | AOC Palette",
               "price": "75 cl 99 €"
             },
             {
