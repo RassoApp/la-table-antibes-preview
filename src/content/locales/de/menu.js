@@ -973,11 +973,11 @@ export const menuPage = {
               "price": "75 cl 99 €"
             },
             {
-              "name": "Chassagne-Montrachet AOP | Guy Amiot et Fils",
+              "name": "Guy Amiot et Fils | Chassagne-Montrachet AOP",
               "price": "75 cl 110 €"
             },
             {
-              "name": "Meursault AOC | Albert Grivault",
+              "name": "Albert Grivault | Meursault AOC",
               "price": "75 cl 135 €"
             },
             {
@@ -985,7 +985,7 @@ export const menuPage = {
               "label": "Rotweine"
             },
             {
-              "name": "Château Carbonnieux",
+              "name": "Château Carbonnieux | Pessac Léognan AOC",
               "price": "75 cl 85 €"
             },
             {
@@ -997,15 +997,15 @@ export const menuPage = {
               "price": "75 cl 110 €"
             },
             {
-              "name": "Côte-Rôtie AOP | Domaine du Monteillet « Fortis »",
+              "name": "Domaine du Monteillet « Fortis » | Côte-Rôtie AOP",
               "price": "75 cl 140 €"
             },
             {
-              "name": "Nuits-Saint-Georges AOC | Domaine Faiveley « Montroziers »",
+              "name": "Domaine Faiveley « Montroziers » | Nuits-Saint-Georges AOC",
               "price": "75 cl 145 €"
             },
             {
-              "name": "Vosne-Romanée AOC | Domaine Faiveley",
+              "name": "Domaine Faiveley | Vosne-Romanée AOC",
               "price": "75 cl 155 €"
             },
             {
@@ -1307,7 +1307,7 @@ export const menuPage = {
             },
             {
               "name": "Sorten",
-              "description": "Kaffee, Schokolade, Vanille, Minze, Kokosnuss, Zitrone, Erdbeere, Mango, Passionsfrucht, Himbeere, Karamell, Fior di Latte, Ananas, Pistazie, Bananerella, Basilikum"
+              "description": "Kaffee, Schokolade, Vanille, Minze, Kokosnuss, Zitrone, Erdbeere, Mango, Passionsfrucht, Himbeere, Karamell, Fior di Latte, Ananas, Pistazie"
             },
             {
               "name": "1 Kugel",

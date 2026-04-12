@@ -973,11 +973,11 @@ export const menuPage = {
               "price": "75 cl 99 €"
             },
             {
-              "name": "Chassagne-Montrachet AOP | Guy Amiot et Fils",
+              "name": "Guy Amiot et Fils | Chassagne-Montrachet AOP",
               "price": "75 cl 110 €"
             },
             {
-              "name": "Meursault AOC | Albert Grivault",
+              "name": "Albert Grivault | Meursault AOC",
               "price": "75 cl 135 €"
             },
             {
@@ -985,7 +985,7 @@ export const menuPage = {
               "label": "红葡萄酒"
             },
             {
-              "name": "Château Carbonnieux",
+              "name": "Château Carbonnieux | Pessac Léognan AOC",
               "price": "75 cl 85 €"
             },
             {
@@ -997,15 +997,15 @@ export const menuPage = {
               "price": "75 cl 110 €"
             },
             {
-              "name": "Côte-Rôtie AOP | Domaine du Monteillet « Fortis »",
+              "name": "Domaine du Monteillet « Fortis » | Côte-Rôtie AOP",
               "price": "75 cl 140 €"
             },
             {
-              "name": "Nuits-Saint-Georges AOC | Domaine Faiveley « Montroziers »",
+              "name": "Domaine Faiveley « Montroziers » | Nuits-Saint-Georges AOC",
               "price": "75 cl 145 €"
             },
             {
-              "name": "Vosne-Romanée AOC | Domaine Faiveley",
+              "name": "Domaine Faiveley | Vosne-Romanée AOC",
               "price": "75 cl 155 €"
             },
             {
@@ -1307,7 +1307,7 @@ export const menuPage = {
             },
             {
               "name": "口味",
-              "description": "咖啡、巧克力、香草、薄荷、椰子、柠檬、草莓、芒果、百香果、覆盆子、焦糖、佛罗伦萨牛奶、菠萝、开心果、bananerella、罗勒"
+              "description": "咖啡、巧克力、香草、薄荷、椰子、柠檬、草莓、芒果、百香果、覆盆子、焦糖、佛罗伦萨牛奶、菠萝、开心果"
             },
             {
               "name": "1 球",
