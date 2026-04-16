@@ -1215,10 +1215,6 @@ export const menuPage = {
               "price": "4 €"
             },
             {
-              "name": "Té, infusión",
-              "price": "4 €"
-            },
-            {
               "name": "Chocolate vienés",
               "price": "5 €"
             },

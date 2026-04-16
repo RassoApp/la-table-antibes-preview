@@ -1215,10 +1215,6 @@ export const menuPage = {
               "price": "4 €"
             },
             {
-              "name": "차·허브티",
-              "price": "4 €"
-            },
-            {
               "name": "비엔나 초콜릿",
               "price": "5 €"
             },

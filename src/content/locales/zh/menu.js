@@ -1215,10 +1215,6 @@ export const menuPage = {
               "price": "4 €"
             },
             {
-              "name": "茶／花草茶",
-              "price": "4 €"
-            },
-            {
               "name": "维也纳巧克力",
               "price": "5 €"
             },

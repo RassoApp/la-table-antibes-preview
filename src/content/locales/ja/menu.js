@@ -1215,10 +1215,6 @@ export const menuPage = {
               "price": "4 €"
             },
             {
-              "name": "紅茶・ハーブティー",
-              "price": "4 €"
-            },
-            {
               "name": "ウィーン風チョコレート",
               "price": "5 €"
             },

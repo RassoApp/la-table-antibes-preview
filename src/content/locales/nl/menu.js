@@ -1215,10 +1215,6 @@ export const menuPage = {
               "price": "4 €"
             },
             {
-              "name": "Thee, infusie",
-              "price": "4 €"
-            },
-            {
               "name": "Weense chocolademelk",
               "price": "5 €"
             },
