@@ -1,6 +1,7 @@
 export const homePage = {
   "hero": {
     "title": "La Table is een plek, koken is een kunst. Wij brengen die twee samen.",
+    "seoHeading": "La Table Antibes, mediterraan restaurant en houtovenpizza’s in Vieil Antibes",
     "text": "La Table biedt traditionele gerechten die met zorg worden bereid, samen met heerlijke houtovenpizza’s, in een warme en gezellige sfeer."
   },
   "cuisine": {

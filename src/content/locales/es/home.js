@@ -1,6 +1,7 @@
 export const homePage = {
   "hero": {
     "title": "La Table es un lugar, la cocina es un arte. Reunimos las dos cosas.",
+    "seoHeading": "La Table Antibes, restaurante mediterráneo y pizzas al horno de leña en el Vieil Antibes",
     "text": "La Table propone una cocina tradicional hecha con cuidado, además de deliciosas pizzas al horno de leña, en un ambiente cálido y acogedor."
   },
   "cuisine": {

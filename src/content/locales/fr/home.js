@@ -1,6 +1,7 @@
 export const homePage = {
   "hero": {
     "title": "La Table est un lieu, la cuisine est un art. Nous réunissons les deux.",
+    "seoHeading": "La Table Antibes, restaurant méditerranéen et pizzas au feu de bois dans le Vieil Antibes",
     "text": "La Table propose une cuisine traditionnelle faite avec amour, mais également de délicieuses pizzas au four à bois, dans une ambiance chaleureuse et conviviale."
   },
   "cuisine": {

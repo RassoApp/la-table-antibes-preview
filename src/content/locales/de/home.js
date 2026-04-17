@@ -1,6 +1,7 @@
 export const homePage = {
   "hero": {
     "title": "La Table ist ein Ort, und Küche ist eine Kunst. Wir bringen beides zusammen.",
+    "seoHeading": "La Table Antibes, mediterranes Restaurant und Pizzen aus dem Holzofen in Vieil Antibes",
     "text": "La Table bietet traditionelle Küche mit viel Sorgfalt sowie köstliche Pizza aus dem Holzofen in einer warmen und einladenden Atmosphäre."
   },
   "cuisine": {

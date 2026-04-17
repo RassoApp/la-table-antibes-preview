@@ -1,6 +1,7 @@
 export const homePage = {
   "hero": {
     "title": "La Table은 하나의 장소이고, 요리는 하나의 예술입니다. 우리는 그 둘을 하나로 잇습니다.",
+    "seoHeading": "La Table Antibes, 비에유 앙티브의 지중해 레스토랑과 장작 화덕 피자",
     "text": "La Table은 정성스럽게 만든 전통 요리와 장작 화덕 피자를 따뜻하고 편안한 분위기 속에서 선보입니다."
   },
   "cuisine": {

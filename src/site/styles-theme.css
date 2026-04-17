@@ -16,6 +16,7 @@
 .v5-shell h1,
 .v5-shell h2,
 .v5-shell h3,
+.v5-shell .v3-hero__headline,
 .v5-shell .v3-brand strong,
 .v5-shell .v3-quote {
   font-family: 'Anko', serif;
@@ -90,7 +91,7 @@
   padding-bottom: 1.2rem;
 }
 
-.v5-shell .v3-hero__content h1 {
+.v5-shell .v3-hero__content .v3-hero__headline {
   font-size: clamp(2.7rem, 5.4vw, 4.85rem);
   line-height: 0.92;
 }
@@ -454,7 +455,7 @@
     padding-top: 1.25rem;
   }
 
-  .v5-shell .v3-hero__content h1,
+  .v5-shell .v3-hero__content .v3-hero__headline,
   .v5-shell .v3-copy h2,
   .v5-shell .v3-section-head h2,
   .v5-shell .v3-page-hero h1,
@@ -463,7 +464,7 @@
     line-height: 1.08;
   }
 
-  .v5-shell .v3-hero__content h1 {
+  .v5-shell .v3-hero__content .v3-hero__headline {
     max-width: 20.4ch;
     font-size: clamp(2rem, 8.2vw, 2.65rem);
     line-height: 1.02;

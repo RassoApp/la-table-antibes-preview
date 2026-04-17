@@ -1,6 +1,7 @@
 export const homePage = {
   "hero": {
     "title": "La Table はひとつの場所であり、料理はひとつの芸術です。私たちはその二つを結びつけます。",
+    "seoHeading": "La Table Antibes、ヴィエイユ・アンティーブの地中海レストランと薪窯ピッツァ",
     "text": "La Table では、丁寧に作る伝統料理と薪窯ピッツァを、温かく心地よい雰囲気の中で楽しめます。"
   },
   "cuisine": {

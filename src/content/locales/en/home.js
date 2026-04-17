@@ -1,6 +1,7 @@
 export const homePage = {
   "hero": {
     "title": "La Table is a place, and cooking is an art. We bring the two together.",
+    "seoHeading": "La Table Antibes, Mediterranean restaurant and wood-fired pizzas in Vieil Antibes",
     "text": "La Table serves traditional cooking made with care, alongside delicious wood-fired pizzas, in a warm and welcoming atmosphere."
   },
   "cuisine": {

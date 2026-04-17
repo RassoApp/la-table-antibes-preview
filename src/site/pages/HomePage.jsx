@@ -21,6 +21,7 @@ export function HomePage() {
   const contact = pages.contact;
   const events = homeEventContent[lang] ?? homeEventContent.en;
   const contactHours = contact.hours ?? [];
+  const seoHeading = home.hero?.seoHeading ?? home.hero?.title;
   const storyTitle = home.story?.title ?? home.story?.titleLines?.join(' ');
   const storyText = home.story?.text ?? home.story?.paragraphs?.join(' ');
 
@@ -37,7 +38,8 @@ export function HomePage() {
         <div className="v3-hero__overlay" />
 
         <div className="v3-hero__content">
-          <h1>{home.hero.title}</h1>
+          <h1 className="visually-hidden">{seoHeading}</h1>
+          <p className="v3-hero__headline">{home.hero.title}</p>
           <p>{home.hero.text}</p>
 
           <div className="v3-button-row">

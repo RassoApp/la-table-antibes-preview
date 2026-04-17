@@ -1,6 +1,7 @@
 export const homePage = {
   "hero": {
     "title": "La Table 是一个地方，料理是一门艺术。我们把两者结合在一起。",
+    "seoHeading": "La Table Antibes，位于昂蒂布老城的地中海餐厅与柴火烤披萨",
     "text": "La Table 提供用心制作的传统料理，也有美味的柴火烤披萨，整体氛围温暖而友好。"
   },
   "cuisine": {

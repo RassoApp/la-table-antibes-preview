@@ -1945,7 +1945,7 @@
     grid-template-columns: 1fr;
   }
 
-  .v6-shell .v3-hero__content h1 {
+  .v6-shell .v3-hero__content .v3-hero__headline {
     max-width: 23.4ch;
   }
 
