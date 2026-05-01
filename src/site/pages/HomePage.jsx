@@ -75,8 +75,8 @@ export function HomePage() {
           <div className="v5-cuisine__grid">
             <ShowcaseCard src={siteMedia.cuisineTopLeft} alt="" />
             <ShowcaseCard src={siteMedia.cuisineTopRight} alt="" />
-            <ShowcaseCard src={siteMedia.cuisineBottomLeft} alt="" />
             <ShowcaseCard src={siteMedia.cuisineBottomRight} alt="" />
+            <ShowcaseCard src={siteMedia.cuisineBottomLeft} alt="" />
           </div>
         </div>
       </section>
