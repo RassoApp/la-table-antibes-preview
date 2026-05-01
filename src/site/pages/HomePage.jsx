@@ -58,7 +58,7 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="v3-section v3-section--soft">
+      <section className="v3-section v3-section--soft v6-home-section--soft-desktop">
         <div className="v3-container v5-cuisine">
           <div className="v5-cuisine__intro">
             <span className="v3-kicker">{home.cuisine.eyebrow}</span>
@@ -109,9 +109,9 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="v3-section">
-        <div className="v3-container v5-ambiance">
-          <div className="v3-copy">
+      <section className="v3-section v6-home-section--soft-desktop">
+        <div className="v3-container v5-cuisine v5-ambiance">
+          <div className="v3-copy v5-cuisine__intro v5-ambiance__intro">
             <span className="v3-kicker">{home.ambiance.eyebrow}</span>
             <h2>{home.ambiance.title}</h2>
             <p>{home.ambiance.text}</p>
@@ -120,19 +120,25 @@ export function HomePage() {
             </div>
           </div>
 
-          <div className="v5-ambiance__media">
+          <div className="v5-cuisine__grid v5-ambiance__media">
             <figure className="v5-showcase-card v5-ambiance__card">
               <img src={siteMedia.ambianceInterior} alt="" loading="lazy" decoding="async" />
             </figure>
             <figure className="v5-showcase-card v5-ambiance__card">
               <img src={siteMedia.ambiancePizza} alt="" loading="lazy" decoding="async" />
             </figure>
+            <figure className="v5-showcase-card v5-ambiance__card">
+              <img src={siteMedia.ambianceCocktail} alt="" loading="lazy" decoding="async" />
+            </figure>
+            <figure className="v5-showcase-card v5-ambiance__card">
+              <img src={siteMedia.ambianceDrinks} alt="" loading="lazy" decoding="async" />
+            </figure>
           </div>
         </div>
       </section>
 
-      <section className="v3-section v3-section--soft">
-        <div className="v3-container v6-events__grid">
+      <section className="v3-section">
+        <div className="v3-container v6-events__grid v6-events__grid--reverse">
           <div className="v3-copy v6-events__copy">
             <span className="v3-kicker">{events.eyebrow}</span>
             <h2>{events.title}</h2>
@@ -155,7 +161,7 @@ export function HomePage() {
         </div>
       </section>
 
-      <section id="access" className="v3-section">
+      <section id="access" className="v3-section v6-home-section--soft-desktop">
         <div className="v3-container v6-contact-stack">
           <div className="v3-grid v3-grid--contact-page">
             <div className="v3-contact-copy">

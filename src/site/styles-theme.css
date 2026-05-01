@@ -123,6 +123,15 @@
 }
 
 @media (min-width: 901px) {
+  .v5-shell .v5-cuisine,
+  .v5-shell .v5-ambiance {
+    grid-template-columns: 1.115fr 0.885fr;
+  }
+
+  .v5-shell .v6-home-story {
+    grid-template-columns: minmax(0, 20rem) minmax(0, 1fr);
+  }
+
   .v5-shell .v5-feature--reverse .v6-home-story__media {
     order: 1;
   }
@@ -152,7 +161,7 @@
 
 .v5-shell .v5-ambiance__media {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
 }
 
@@ -161,13 +170,23 @@
 }
 
 @media (min-width: 901px) {
-  .v5-shell .v5-ambiance {
-    --v5-ambiance-media-width: calc((100% - var(--v5-feature-gap)) * 0.295 - 0.5rem);
-    grid-template-columns: minmax(0, 1fr) var(--v5-ambiance-media-width);
-  }
-
   .v5-shell .v5-ambiance__media {
     justify-items: stretch;
+  }
+
+  .v5-shell .v6-home-story__media,
+  .v5-shell .v6-home-story__media picture {
+    width: 100%;
+  }
+
+  .v5-shell .v6-home-story__media picture,
+  .v5-shell .v6-home-story__media img {
+    aspect-ratio: 1500 / 2157;
+  }
+
+  .v5-shell .v6-home-story__media img {
+    height: 100%;
+    object-fit: cover;
   }
 }
 

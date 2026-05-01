@@ -1,3 +1,5 @@
+import ambianceCocktail from './assets/images/home/ambiance-cocktail.webp';
+import ambianceDrinks from './assets/images/home/ambiance-drinks.webp';
 import access from './assets/images/home/access.webp';
 import ambianceInterior from './assets/images/home/ambiance-interior.webp';
 import ambiancePizza from './assets/images/home/ambiance-pizza.webp';
@@ -18,6 +20,8 @@ export const siteMedia = {
   cuisineBottomRight,
   chefDesktop,
   chefMobile,
+  ambianceCocktail,
+  ambianceDrinks,
   ambianceInterior,
   ambiancePizza,
   access,

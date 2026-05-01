@@ -618,6 +618,38 @@
   display: block;
 }
 
+@media (min-width: 901px) {
+  .v6-shell .v6-events__grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 20rem);
+  }
+
+  .v6-shell .v6-events__grid--reverse {
+    grid-template-columns: minmax(0, 20rem) minmax(0, 1fr);
+  }
+
+  .v6-shell .v6-events__grid--reverse .v6-events__image {
+    order: 1;
+  }
+
+  .v6-shell .v6-events__grid--reverse .v6-events__copy {
+    order: 2;
+  }
+
+  .v6-shell .v6-events__image {
+    max-width: none;
+    justify-self: start;
+  }
+
+  .v6-shell .v6-events__image,
+  .v6-shell .v6-events__image img {
+    aspect-ratio: 1500 / 2157;
+  }
+
+  .v6-shell .v6-events__image img {
+    min-height: 0;
+  }
+}
+
 .v6-shell .v6-menu-chip-row {
   margin-bottom: 1.6rem;
   justify-content: center;
@@ -1992,5 +2024,11 @@
 @media (min-width: 960px) and (hover: hover) and (pointer: fine) {
   .v6-shell .v6-menu-tab:not(.is-active):hover {
     transform: translateY(-2px);
+  }
+}
+
+@media (min-width: 960px) {
+  .v6-shell .v6-home-section--soft-desktop {
+    background: var(--surface);
   }
 }
